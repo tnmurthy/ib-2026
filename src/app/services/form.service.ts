@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
+import { environment } from '../../environments/environment';
 
 export interface CollegeFormData {
   name: string;
@@ -44,29 +45,31 @@ export interface ApiResponse {
   providedIn: 'root',
 })
 export class FormService {
+  private base = environment.apiUrl;
+
   constructor(private http: HttpClient) {}
 
   submitCollegeInvite(data: CollegeFormData): Observable<ApiResponse> {
     return this.http
-      .post<ApiResponse>('/api/contact', data)
+      .post<ApiResponse>(`${this.base}/api/contact`, data)
       .pipe(catchError(this.handleError));
   }
 
   submitPartnerInterest(data: PartnerFormData): Observable<ApiResponse> {
     return this.http
-      .post<ApiResponse>('/api/partner', data)
+      .post<ApiResponse>(`${this.base}/api/partner`, data)
       .pipe(catchError(this.handleError));
   }
 
   submitCommunityMessage(data: CommunityFormData): Observable<ApiResponse> {
     return this.http
-      .post<ApiResponse>('/api/partner', data)
+      .post<ApiResponse>(`${this.base}/api/partner`, data)
       .pipe(catchError(this.handleError));
   }
 
   subscribeNewsletter(data: NewsletterData): Observable<ApiResponse> {
     return this.http
-      .post<ApiResponse>('/api/newsletter', data)
+      .post<ApiResponse>(`${this.base}/api/newsletter`, data)
       .pipe(catchError(this.handleError));
   }
 
