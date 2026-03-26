@@ -1,0 +1,34 @@
+################################################################################
+# Innovat Bharat — Splash / Coming Soon Page
+# Separate Render Blueprint (independent of the main ib-2026 site)
+#
+# Deploy: https://dashboard.render.com → New → Blueprint
+# Point to repo: tnmurthy/ib-2026  root dir: splash
+# (or a separate repo if you prefer)
+#
+# After deploy, set these env vars in the Render dashboard:
+#   GOOGLE_SERVICE_ACCOUNT_EMAIL
+#   GOOGLE_PRIVATE_KEY
+#   GOOGLE_SHEET_ID
+################################################################################
+
+services:
+  - type: web
+    name: innovat-bharat-splash
+    runtime: node
+    rootDir: splash          # relative path inside the repo
+    buildCommand: npm install
+    startCommand: node server.js
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000          # Render free tier uses port 10000 internally
+      - key: GOOGLE_SERVICE_ACCOUNT_EMAIL
+        sync: false           # Set manually in dashboard
+      - key: GOOGLE_PRIVATE_KEY
+        sync: false           # Set manually in dashboard
+      - key: GOOGLE_SHEET_ID
+        sync: false           # Set manually in dashboard
