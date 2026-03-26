@@ -39,6 +39,19 @@
           <li><a href="mailto:info@innovatbharat.org">info@innovatbharat.org</a></li>
         </ul>
       </div>
+
+      <div class="footer-section">
+        <h4>Stay Updated</h4>
+        <p>Subscribe to our newsletter for insights on rural education and tech.</p>
+        <form class="newsletter-form" (submit)="subscribeNewsletter($event)">
+          <input type="email" name="email" [(ngModel)]="email" placeholder="Email address" required [disabled]="submitting">
+          <button type="submit" [disabled]="submitting" class="btn-subscribe">
+            {{ submitting ? 'Wait...' : 'Subs' }}
+          </button>
+        </form>
+        <p *ngIf="successMessage" class="feedback success">{{ successMessage }}</p>
+        <p *ngIf="errorMessage" class="feedback error">{{ errorMessage }}</p>
+      </div>
     </div>
 
     <div class="footer-bottom">
