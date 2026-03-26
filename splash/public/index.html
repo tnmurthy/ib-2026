@@ -25,10 +25,11 @@
     }
 
     html, body {
+      height: 100%;
       font-family: 'Poppins', sans-serif;
       background: var(--cream);
       color: var(--navy);
-      overflow-x: hidden;
+      overflow: hidden;  /* no scrollbars at all */
     }
 
     /* ══════════════════════════════════════
@@ -46,7 +47,7 @@
     .ticker-track {
       display: flex;
       width: max-content;
-      animation: ticker 38s linear infinite;
+      animation: ticker 76s linear infinite;
     }
 
     .ticker-track:hover { animation-play-state: paused; }
@@ -82,6 +83,8 @@
     .page {
       display: flex;
       flex-direction: column;
+      height: calc(100dvh - 52px); /* full viewport minus ticker */
+      overflow: hidden;
     }
 
     /* ── HERO ── */
@@ -89,10 +92,9 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 0;
-      /* Height: full viewport minus ticker (≈52px) minus footer (≈260px) */
-      height: calc(100vh - 52px - 260px);
-      min-height: 420px;
-      max-height: 680px;
+      flex: 1;          /* fill remaining space between ticker and footer */
+      min-height: 0;    /* allow shrinking */
+      overflow: hidden;
     }
 
     /* Left panel */
@@ -101,10 +103,12 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 3rem 3rem 3rem 4rem;
-      gap: 2rem;
+      padding: 2rem 2.5rem 2rem 3rem;
+      gap: 1.25rem;
       background: var(--cream);
       position: relative;
+      overflow: hidden;   /* never cause hero to grow */
+      min-height: 0;
     }
 
     .hero-left::after {
@@ -124,7 +128,7 @@
     }
 
     .logo-img {
-      width: min(220px, 55vw);
+      width: min(160px, 40vw);
       height: auto;
       filter: drop-shadow(0 6px 18px rgba(26,47,94,0.18));
       animation: logoFloat 4s ease-in-out infinite;
@@ -170,7 +174,7 @@
       border: 1px solid rgba(200,149,42,0.3);
       border-top: 4px solid var(--saffron);
       border-radius: 16px;
-      padding: 1.5rem 2rem;
+      padding: 1rem 1.5rem;
       text-align: center;
       box-shadow: 0 8px 32px rgba(26,47,94,0.08);
       width: 100%;
@@ -178,9 +182,9 @@
     }
 
     .greeting-card .om {
-      font-size: 2rem;
+      font-size: 1.6rem;
       color: var(--gold);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.3rem;
     }
 
     .greeting-card .main-greeting {
@@ -207,9 +211,10 @@
     .hero-right img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      object-position: center top;
+      object-fit: contain;       /* show full image, no cropping */
+      object-position: center center;
       display: block;
+      background: #f5f0e8;       /* warm cream behind any letterbox gaps */
     }
 
     .hero-right .image-overlay {
@@ -230,10 +235,11 @@
     .footer {
       background: linear-gradient(135deg, var(--navy) 0%, #0f1f42 100%);
       color: var(--white);
-      padding: 2.5rem 2rem;
+      padding: 1.5rem 2rem;   /* tighter padding to keep everything in viewport */
       text-align: center;
       position: relative;
       overflow: hidden;
+      flex-shrink: 0;         /* footer never shrinks */
     }
 
     .footer::before {
@@ -262,22 +268,22 @@
       text-transform: uppercase;
       padding: 0.3rem 0.9rem;
       border-radius: 99px;
-      margin-bottom: 1rem;
+      margin-bottom: 0.6rem;
     }
 
     .footer h2 {
-      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-size: clamp(1.2rem, 2.5vw, 1.75rem);
       font-weight: 800;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.35rem;
       line-height: 1.2;
     }
 
     .footer h2 span { color: var(--saffron); }
 
     .footer p {
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       color: rgba(255,255,255,0.7);
-      margin-bottom: 1.75rem;
+      margin-bottom: 1rem;
       max-width: 420px;
       margin-left: auto;
       margin-right: auto;
@@ -336,7 +342,7 @@
     .footer-note {
       font-size: 0.72rem;
       color: rgba(255,255,255,0.35);
-      margin-top: 1.5rem;
+      margin-top: 0.75rem;
     }
 
     .footer-note a {
@@ -348,39 +354,65 @@
        RESPONSIVE
     ══════════════════════════════════════ */
     @media (max-width: 768px) {
+      html, body { overflow: hidden; }
+
+      .page {
+        height: calc(100dvh - 44px);
+      }
+
       .hero {
         grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
-        height: auto;
-        max-height: none;
+        grid-template-rows: 38% 1fr; /* image takes top 38%, content below */
+        overflow: hidden;
       }
 
       .hero-right {
-        height: 55vw;
-        max-height: 300px;
-        min-height: 200px;
+        height: 100%;
         order: -1;
       }
 
+      .hero-right img {
+        object-fit: contain;
+        background: #f5f0e8;
+      }
+
       .hero-left {
-        padding: 1.75rem 1.5rem 2rem;
+        padding: 1rem 1.5rem 1.25rem;
         border-right: none;
-        gap: 1.5rem;
+        gap: 0.75rem;
+        overflow: hidden;
       }
 
       .hero-left::after { display: none; }
 
-      .greeting-card { max-width: 100%; }
+      .logo-img { width: 120px; }
+      .brand-name { font-size: 1rem; }
+      .brand-tagline { font-size: 0.75rem; }
 
-      .email-form { flex-direction: column; }
-      .email-form button { width: 100%; }
+      .greeting-card {
+        max-width: 100%;
+        padding: 0.9rem 1rem;
+      }
+      .greeting-card .main-greeting { font-size: 1.1rem; }
+      .greeting-card .om { font-size: 1.4rem; margin-bottom: 0.25rem; }
 
-      .ticker-item { font-size: 0.88rem; }
+      .footer { padding: 1rem 1.25rem; }
+      .footer h2 { font-size: 1.1rem; margin-bottom: 0.25rem; }
+      .footer p { font-size: 0.78rem; margin-bottom: 0.6rem; }
+      .footer-badge { margin-bottom: 0.4rem; }
+      .footer-note { margin-top: 0.4rem; }
+
+      .email-form { flex-direction: row; gap: 0.4rem; }
+      .email-form input { font-size: 0.82rem; padding: 0.6rem 0.75rem; }
+      .email-form button { font-size: 0.82rem; padding: 0.6rem 0.9rem; white-space: nowrap; }
+
+      .ticker-item { font-size: 0.82rem; }
     }
 
     @media (max-width: 420px) {
-      .logo-img { width: 160px; }
-      .greeting-card .main-greeting { font-size: 1.3rem; }
+      .logo-img { width: 100px; }
+      .greeting-card .main-greeting { font-size: 0.95rem; }
+      .hero { grid-template-rows: 35% 1fr; }
     }
   </style>
 </head>
@@ -492,6 +524,15 @@
     }
 
     buildTicker();
+
+    /* ── Dynamic ticker height: measure real height and set CSS var ── */
+    function adjustLayout() {
+      const ticker = document.querySelector('.ticker-bar');
+      const h = ticker ? ticker.offsetHeight : 52;
+      document.querySelector('.page').style.height = `calc(100dvh - ${h}px)`;
+    }
+    adjustLayout();
+    window.addEventListener('resize', adjustLayout);
 
     /* ──────────────────────────────────────
        EMAIL FORM SUBMIT
