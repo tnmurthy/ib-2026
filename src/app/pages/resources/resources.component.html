@@ -183,11 +183,25 @@
       <div class="newsletter-content">
         <h2>Stay Updated</h2>
         <p>Get our latest articles, resources, and program updates directly in your inbox. No spam — just useful content for students, educators, and changemakers.</p>
-        <div class="newsletter-form">
-          <input type="email" placeholder="Enter your email address" class="newsletter-input">
-          <button class="btn btn-primary">Subscribe</button>
+
+        <div *ngIf="!newsletterSubmitted">
+          <div class="newsletter-form">
+            <input type="email" [(ngModel)]="newsletterEmail"
+              placeholder="Enter your email address" class="newsletter-input">
+            <button class="btn btn-primary"
+              (click)="subscribeNewsletter()"
+              [disabled]="!newsletterEmail || newsletterLoading">
+              <span *ngIf="!newsletterLoading">Subscribe</span>
+              <span *ngIf="newsletterLoading">Subscribing…</span>
+            </button>
+          </div>
+          <div *ngIf="newsletterError" class="newsletter-error">{{ newsletterError }}</div>
+          <p class="newsletter-note">We respect your privacy. Unsubscribe anytime.</p>
         </div>
-        <p class="newsletter-note">We respect your privacy. Unsubscribe anytime.</p>
+
+        <div *ngIf="newsletterSubmitted" class="newsletter-success">
+          <span>✓</span> You're subscribed! Check your inbox for a welcome email.
+        </div>
       </div>
     </div>
   </section>

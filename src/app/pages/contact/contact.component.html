@@ -128,8 +128,14 @@
                 <textarea id="c-message" [(ngModel)]="collegeForm.message" name="message" rows="4" placeholder="Any specific context, questions, or requests for the session…"></textarea>
               </div>
 
-              <button type="submit" class="btn btn-primary btn-full btn-large" [disabled]="!cForm.valid">
-                Request Introduction Session
+              <div *ngIf="collegeFormError" class="form-error">
+                {{ collegeFormError }}
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full btn-large"
+                [disabled]="!cForm.valid || collegeFormLoading">
+                <span *ngIf="!collegeFormLoading">Request Introduction Session</span>
+                <span *ngIf="collegeFormLoading">Sending…</span>
               </button>
               <p class="form-note">We'll respond within 48 hours. No commitment required.</p>
             </form>
@@ -140,7 +146,7 @@
             <h3>Request Received!</h3>
             <p>
               Thank you for reaching out. Our team will contact you within 48 hours to confirm the introduction session.
-              We look forward to connecting with your institution.
+              A confirmation has been sent to your email.
             </p>
           </div>
         </div>
@@ -206,12 +212,21 @@
               <label for="com-message">Message *</label>
               <textarea id="com-message" [(ngModel)]="communityForm.message" name="message" required rows="4" placeholder="What would you like to know or share?"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary" [disabled]="!comForm.valid">Send Message</button>
+
+            <div *ngIf="communityFormError" class="form-error">
+              {{ communityFormError }}
+            </div>
+
+            <button type="submit" class="btn btn-primary"
+              [disabled]="!comForm.valid || communityFormLoading">
+              <span *ngIf="!communityFormLoading">Send Message</span>
+              <span *ngIf="communityFormLoading">Sending…</span>
+            </button>
           </form>
         </div>
         <div *ngIf="communityFormSubmitted" class="form-success small-success">
           <span class="success-icon">✓</span>
-          <p>Message sent! We'll get back to you soon.</p>
+          <p>Message sent! A copy has been emailed to you.</p>
         </div>
       </div>
     </div>

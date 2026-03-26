@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { provideRouter, RouterOutlet } from '@angular/router';
+import { provideHttpClient } from '@angular/common/http';
 import { routes } from './app/app.routes';
 import { HeaderComponent } from './app/components/header/header.component';
 import { FooterComponent } from './app/components/footer/footer.component';
@@ -20,5 +21,8 @@ import { FooterComponent } from './app/components/footer/footer.component';
 export class App {}
 
 bootstrapApplication(App, {
-  providers: [provideRouter(routes)]
+  providers: [
+    provideRouter(routes),
+    provideHttpClient(),
+  ]
 });
