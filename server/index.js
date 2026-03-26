@@ -10,6 +10,7 @@
 const express = require('express');
 const cors = require('cors');
 const { Resend } = require('resend');
+const { google } = require('googleapis');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -179,6 +180,53 @@ app.post('/api/newsletter', async (req, res) => {
   }
 
   try {
+    // ── Google Sheets Integration ──
+    const timestamp = new Date().toISOString();
+    let sheetId = process.env.GOOGLE_SHEET_ID;
+
+    if (sheetId && process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL) {
+      // If user pasted a full URL instead of the ID, extract it
+      if (sheetId.includes('/d/')) {
+        const match = sheetId.match(/\/d\/([a-zA-Z0-9-_]+)/);
+        if (match) sheetId = match[1];
+      }
+      try {
+        const sheets = getSheetsClient();
+        
+        // Ensure header row exists
+        const check = await sheets.spreadsheets.values.get({
+          spreadsheetId: sheetId,
+          range: 'A1',
+        }).catch(() => ({ data: {} }));
+
+        if (!check.data.values || check.data.values.length === 0) {
+          await sheets.spreadsheets.values.update({
+            spreadsheetId: sheetId,
+            range: 'A1',
+            valueInputOption: 'RAW',
+            requestBody: { values: [['Email', 'Timestamp', 'Source']] },
+          });
+        }
+
+        // Append to sheet
+        await sheets.spreadsheets.values.append({
+          spreadsheetId: sheetId,
+          range: 'A:C',
+          valueInputOption: 'RAW',
+          insertDataOption: 'INSERT_ROWS',
+          requestBody: {
+            values: [[email, timestamp, 'newsletter-form']],
+          },
+        });
+        console.log(`[NEWSLETTER] Saved to Sheet: ${email}`);
+      } catch (sheetErr) {
+        console.error('[NEWSLETTER] Google Sheets error:', sheetErr.message);
+        // Continue with email sending even if sheet fails
+      }
+    } else {
+      console.log(`[NEWSLETTER] ${timestamp} | ${email} (sheet env not configured)`);
+    }
+
     await resend.emails.send({
       from: `Innovat Bharat Forms <${FROM_EMAIL}>`,
       to: [TEAM_EMAIL],
@@ -217,6 +265,36 @@ app.post('/api/newsletter', async (req, res) => {
 });
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
+function getSheetsClient() {
+  let rawKey = process.env.GOOGLE_PRIVATE_KEY || '';
+
+  if (rawKey.trim().startsWith('{')) {
+    try {
+      const parsed = JSON.parse(rawKey);
+      if (parsed.private_key) rawKey = parsed.private_key;
+    } catch (e) {}
+  }
+
+  if (rawKey.startsWith('"') && rawKey.endsWith('"')) {
+    try {
+      rawKey = JSON.parse(rawKey);
+    } catch (e) {
+      rawKey = rawKey.replace(/^"|"$/g, '');
+    }
+  }
+
+  const privateKey = rawKey.replace(/\\n/g, '\n').replace(/\r/g, '').trim();
+
+  const auth = new google.auth.GoogleAuth({
+    credentials: {
+      client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
+      private_key: privateKey,
+    },
+    scopes: ['https://www.googleapis.com/auth/spreadsheets'],
+  });
+  return google.sheets({ version: 'v4', auth });
+}
+
 function row(label, value, last = false) {
   return `<tr style="${last ? '' : 'border-bottom:1px solid #e2e8f0;'}">
     <td style="padding:14px 20px;font-weight:600;color:#4a5568;width:40%;background:#f7fafc;">${label}</td>
