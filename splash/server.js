@@ -29,10 +29,33 @@ app.get('/health', (_, res) => res.json({ status: 'ok', service: 'ib-splash' }))
      GOOGLE_SHEET_ID               — the spreadsheet ID to write into
 ────────────────────────────────────────── */
 function getSheetsClient() {
-  const privateKey = (process.env.GOOGLE_PRIVATE_KEY || '')
-    .replace(/^"|"$/g, '')        // Strip leading/trailing quotes if user pasted them
-    .replace(/\\n/g, '\n');       // Fix escaped newlines
-    
+  let rawKey = process.env.GOOGLE_PRIVATE_KEY || '';
+
+  // 1. If user accidentally pasted the ENTIRE JSON file block
+  if (rawKey.trim().startsWith('{')) {
+    try {
+      const parsed = JSON.parse(rawKey);
+      if (parsed.private_key) rawKey = parsed.private_key;
+    } catch (e) {
+      // ignore JSON parse errors, move on
+    }
+  }
+
+  // 2. If user pasted a string wrapped in literal quotes
+  if (rawKey.startsWith('"') && rawKey.endsWith('"')) {
+    try {
+      rawKey = JSON.parse(rawKey); // will safely unescape \n inside it
+    } catch (e) {
+      rawKey = rawKey.replace(/^"|"$/g, ''); // fallback fallback
+    }
+  }
+
+  // 3. Normalize newlines: fix literal \n and completely remove Windows \r
+  const privateKey = rawKey
+    .replace(/\\n/g, '\n')
+    .replace(/\r/g, '')
+    .trim();
+
   const auth = new google.auth.GoogleAuth({
     credentials: {
       client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
