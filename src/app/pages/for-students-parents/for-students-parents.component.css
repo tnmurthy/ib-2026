@@ -1,0 +1,197 @@
+.page-hero {
+  background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.page-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.page-hero p {
+  font-size: 1.25rem;
+  color: #e2e8f0;
+}
+
+.journey-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.journey-stage {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.journey-stage h3 {
+  color: #1a365d;
+  margin-bottom: 1rem;
+}
+
+.journey-stage p {
+  line-height: 1.8;
+  color: #2d3748;
+}
+
+.journey-stage.highlight {
+  border-left: 4px solid #e67e22;
+  background: linear-gradient(135deg, #fff5eb 0%, #ffffff 100%);
+}
+
+.journey-stage.success {
+  border-left: 4px solid #27ae60;
+  background: linear-gradient(135deg, #e8f5e9 0%, #ffffff 100%);
+}
+
+.journey-arrow {
+  text-align: center;
+  font-size: 2rem;
+  color: #e67e22;
+  margin: 1rem 0;
+}
+
+.benefits {
+  background: #f7fafc;
+}
+
+.benefits-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+}
+
+.benefit-column h2 {
+  color: #e67e22;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.benefit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.benefit-item {
+  display: flex;
+  gap: 1rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.benefit-content h3 {
+  color: #1a365d;
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+}
+
+.benefit-content p {
+  color: #2d3748;
+  line-height: 1.6;
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: white;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.faq-question {
+  padding: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+  background: #f7fafc;
+}
+
+.faq-question h3 {
+  color: #1a365d;
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+.faq-toggle {
+  font-size: 1.5rem;
+  color: #e67e22;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.faq-answer {
+  padding: 0 1.5rem 1.5rem;
+  animation: slideDown 0.3s ease;
+}
+
+.faq-answer p {
+  color: #2d3748;
+  line-height: 1.8;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cta-students {
+  background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+  color: white;
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta-content p {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .page-hero h1 {
+    font-size: 2rem;
+  }
+
+  .benefits-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .benefit-item {
+    flex-direction: column;
+    text-align: center;
+  }
+}
