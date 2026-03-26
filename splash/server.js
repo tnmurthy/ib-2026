@@ -29,10 +29,14 @@ app.get('/health', (_, res) => res.json({ status: 'ok', service: 'ib-splash' }))
      GOOGLE_SHEET_ID               — the spreadsheet ID to write into
 ────────────────────────────────────────── */
 function getSheetsClient() {
+  const privateKey = (process.env.GOOGLE_PRIVATE_KEY || '')
+    .replace(/^"|"$/g, '')        // Strip leading/trailing quotes if user pasted them
+    .replace(/\\n/g, '\n');       // Fix escaped newlines
+    
   const auth = new google.auth.GoogleAuth({
     credentials: {
       client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
-      private_key:  (process.env.GOOGLE_PRIVATE_KEY || '').replace(/\\n/g, '\n'),
+      private_key: privateKey,
     },
     scopes: ['https://www.googleapis.com/auth/spreadsheets'],
   });
@@ -49,7 +53,7 @@ app.post('/api/notify', async (req, res) => {
   }
 
   const timestamp = new Date().toISOString();
-  const sheetId   = process.env.GOOGLE_SHEET_ID;
+  let sheetId = process.env.GOOGLE_SHEET_ID;
 
   /* ── Fallback: log to console if env vars not set ── */
   if (!sheetId || !process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL) {
@@ -57,19 +61,25 @@ app.post('/api/notify', async (req, res) => {
     return res.json({ message: 'Noted — will be saved once configured.' });
   }
 
+  // If user pasted a full URL instead of the ID, extract it
+  if (sheetId.includes('/d/')) {
+    const match = sheetId.match(/\/d\/([a-zA-Z0-9-_]+)/);
+    if (match) sheetId = match[1];
+  }
+
   try {
     const sheets = getSheetsClient();
 
-    /* Ensure header row exists on first run */
+    /* Ensure header row exists on first run using generic range */
     const check = await sheets.spreadsheets.values.get({
       spreadsheetId: sheetId,
-      range: 'Sheet1!A1',
-    });
+      range: 'A1',
+    }).catch(() => ({ data: {} })); // If the sheet is completely empty or A1 lacks data, it might throw or return no values, ignore get error
 
     if (!check.data.values || check.data.values.length === 0) {
       await sheets.spreadsheets.values.update({
         spreadsheetId: sheetId,
-        range: 'Sheet1!A1',
+        range: 'A1',
         valueInputOption: 'RAW',
         requestBody: { values: [['Email', 'Timestamp', 'Source']] },
       });
@@ -78,7 +88,7 @@ app.post('/api/notify', async (req, res) => {
     /* Append the new row */
     await sheets.spreadsheets.values.append({
       spreadsheetId: sheetId,
-      range: 'Sheet1!A:C',
+      range: 'A:C',
       valueInputOption: 'RAW',
       insertDataOption: 'INSERT_ROWS',
       requestBody: {
@@ -91,7 +101,8 @@ app.post('/api/notify', async (req, res) => {
 
   } catch (err) {
     console.error('[NOTIFY] Google Sheets error:', err.message);
-    return res.status(500).json({ message: 'Could not save — please try again.' });
+    // Return original error message so the user actually sees why it failed (e.g., config error)
+    return res.status(500).json({ message: err.message || 'Could not save — please try again.' });
   }
 });
 
