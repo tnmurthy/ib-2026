@@ -1,181 +1,70 @@
 <div class="for-students-parents">
-  <section class="page-hero">
-    <div class="container">
-      <h1>For Students & Parents</h1>
-      <p>Your journey to clarity, skills, and real opportunities starts here</p>
+  <!-- Tabs Navigation -->
+  <app-pill-tabs [tabs]="tabs" [activeTabId]="activeTabId" (tabChange)="onTabChange($event)"></app-pill-tabs>
+
+  <div class="content-wrapper transition-fade">
+    
+    <!-- TAB 1: THE JOURNEY -->
+    <div *ngIf="activeTabId === 'journey'" class="tab-view">
+      <app-hero-block 
+        title="Your Journey to Success Starts Here" 
+        subtitle="Moving from confusion to clarity, skills, and real opportunities."
+        background="gradient"
+      ></app-hero-block>
+
+      <div class="container py-3">
+        <h2 class="section-title text-center">A Typical Student Growth Cycle</h2>
+        <app-step-flow [steps]="studentJourney"></app-step-flow>
+      </div>
+
+      <app-cta-block 
+        title="Ready to Start?" 
+        value="Join the ecosystem if your college is partnered."
+        primaryText="Connect with Coordinator"
+        variant="emphasized"
+      ></app-cta-block>
     </div>
-  </section>
 
-  <section class="section student-journey">
-    <div class="container">
-      <h2 class="section-title">A Typical Student Journey</h2>
-      <div class="journey-content">
-        <div class="journey-stage">
-          <h3>Before: Confusion & Uncertainty</h3>
-          <p>
-            Ravi joins a tier 3 engineering college. He attends classes, studies for exams, but has no clarity about
-            his future. By third year, he's anxious—his degree alone won't get him a job. His parents pay for external
-            courses, hoping something works out.
-          </p>
-        </div>
+    <!-- TAB 2: WHY JOIN? (BENEFITS) -->
+    <div *ngIf="activeTabId === 'benefits'" class="tab-view">
+      <app-hero-block 
+        title="Why Students & Parents Trust Us" 
+        subtitle="Addressing the real-world needs of families and the jobs of tomorrow."
+        align="center"
+      ></app-hero-block>
 
-        <div class="journey-arrow">↓</div>
+      <div class="container py-3">
+        <h2 class="section-title text-center">For Students</h2>
+        <app-card-grid [cards]="studentBenefits" [columns]="3" cardStyle="accent"></app-card-grid>
 
-        <div class="journey-stage highlight">
-          <h3>Joining Innovat Bharat Ecosystem</h3>
-          <p>
-            In first year, Ravi attends orientation sessions. He learns about career paths, entrepreneurship, and
-            what industries actually value. He gains clarity on where he wants to go and what skills he needs.
-          </p>
-        </div>
-
-        <div class="journey-arrow">↓</div>
-
-        <div class="journey-stage">
-          <h3>Second Year: Real Exposure</h3>
-          <p>
-            Ravi starts a part-time internship requiring 3 hours daily, earning ₹10,000/month. He works on real
-            projects, learns practical skills, and builds confidence. He's no longer just studying theory—he's
-            applying it.
-          </p>
-        </div>
-
-        <div class="journey-arrow">↓</div>
-
-        <div class="journey-stage">
-          <h3>Third & Fourth Year: Thriving</h3>
-          <p>
-            Ravi joins a startup team on campus, mentored by industry professionals. He completes multiple projects,
-            builds a portfolio, and explores entrepreneurship. By final year, he has job offers and the confidence
-            to negotiate or start his own venture.
-          </p>
-        </div>
-
-        <div class="journey-arrow">↓</div>
-
-        <div class="journey-stage success">
-          <h3>After: Clarity, Confidence, Success</h3>
-          <p>
-            Ravi graduates with skills, experience, and direction. His parents didn't pay extra for coaching. He's
-            ready for the world—employable, entrepreneurial, and confident. He stays connected with the ecosystem,
-            mentoring juniors.
-          </p>
-        </div>
+        <h2 class="section-title text-center mt-5">For Parents</h2>
+        <app-card-grid [cards]="parentBenefits" [columns]="3" cardStyle="default"></app-card-grid>
       </div>
     </div>
-  </section>
 
-  <section class="section benefits">
-    <div class="container">
-      <div class="benefits-columns">
-        <div class="benefit-column">
-          <h2>For Students</h2>
-          <div class="benefit-list">
-            <div class="benefit-item">
-              <div class="benefit-icon">🎯</div>
-              <div class="benefit-content">
-                <h3>Clarity from Day One</h3>
-                <p>No more confusion about career paths. Understand your options, strengths, and direction early.</p>
-              </div>
-            </div>
-            <div class="benefit-item">
-              <div class="benefit-icon">💼</div>
-              <div class="benefit-content">
-                <h3>Real Industry Exposure</h3>
-                <p>Internships, projects, and mentorship from practitioners—not just classroom theory.</p>
-              </div>
-            </div>
-            <div class="benefit-item">
-              <div class="benefit-icon">💰</div>
-              <div class="benefit-content">
-                <h3>Earn While You Learn</h3>
-                <p>Paid internships starting second year, reducing family burden and building financial independence.</p>
-              </div>
-            </div>
-            <div class="benefit-item">
-              <div class="benefit-icon">🚀</div>
-              <div class="benefit-content">
-                <h3>Entrepreneurial Skills</h3>
-                <p>Learn to think like founders, solve problems, and create opportunities—valuable in any path.</p>
-              </div>
-            </div>
-            <div class="benefit-item">
-              <div class="benefit-icon">🤝</div>
-              <div class="benefit-content">
-                <h3>Confidence & Communication</h3>
-                <p>Develop soft skills, emotional intelligence, and the confidence to navigate professional environments.</p>
-              </div>
-            </div>
-          </div>
-        </div>
+    <!-- TAB 3: FAQS -->
+    <div *ngIf="activeTabId === 'faqs'" class="tab-view">
+      <app-hero-block 
+        title="Got Questions? We Have Answers" 
+        subtitle="Everything you need to know about joining the Innovat Bharat ecosystem."
+        align="center"
+        background="light"
+      ></app-hero-block>
 
-        <div class="benefit-column">
-          <h2>For Parents</h2>
-          <div class="benefit-list">
-            <div class="benefit-item">
-              <div class="benefit-icon">✓</div>
-              <div class="benefit-content">
-                <h3>Real Employability</h3>
-                <p>Your child gains skills employers actually want, not just a degree certificate.</p>
-              </div>
+      <div class="container py-3">
+        <div class="faq-list">
+          <div class="faq-item" *ngFor="let faq of faqs; let i = index" [class.open]="faq.isOpen">
+            <div class="faq-question" (click)="toggleFaq(i)">
+              <h3>{{ faq.question }}</h3>
+              <span class="faq-toggle">{{ faq.isOpen ? '−' : '+' }}</span>
             </div>
-            <div class="benefit-item">
-              <div class="benefit-icon">💵</div>
-              <div class="benefit-content">
-                <h3>Reduced Extra Costs</h3>
-                <p>No need to pay separately for external coaching, courses, or crash programs.</p>
-              </div>
-            </div>
-            <div class="benefit-item">
-              <div class="benefit-icon">📊</div>
-              <div class="benefit-content">
-                <h3>Transparent Progress</h3>
-                <p>See tangible outcomes: projects completed, internships secured, skills developed.</p>
-              </div>
-            </div>
-            <div class="benefit-item">
-              <div class="benefit-icon">🎓</div>
-              <div class="benefit-content">
-                <h3>Holistic Development</h3>
-                <p>Your child grows not just academically, but in character, confidence, and practical wisdom.</p>
-              </div>
-            </div>
-            <div class="benefit-item">
-              <div class="benefit-icon">🌟</div>
-              <div class="benefit-content">
-                <h3>Peace of Mind</h3>
-                <p>Confidence that your investment in education will lead to real opportunities and success.</p>
-              </div>
+            <div class="faq-answer" *ngIf="faq.isOpen">
+              <p>{{ faq.answer }}</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
 
-  <section class="section faq">
-    <div class="container">
-      <h2 class="section-title">Frequently Asked Questions</h2>
-      <div class="faq-list">
-        <div class="faq-item" *ngFor="let faq of faqs; let i = index" [class.open]="faq.isOpen">
-          <div class="faq-question" (click)="toggleFaq(i)">
-            <h3>{{ faq.question }}</h3>
-            <span class="faq-toggle">{{ faq.isOpen ? '−' : '+' }}</span>
-          </div>
-          <div class="faq-answer" *ngIf="faq.isOpen">
-            <p>{{ faq.answer }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section cta-students">
-    <div class="container">
-      <div class="cta-content">
-        <h2>Ready to Start Your Journey?</h2>
-        <p>If your college is part of our ecosystem, reach out to the campus coordinator. If not, encourage your college to connect with us!</p>
-      </div>
-    </div>
-  </section>
+  </div>
 </div>
