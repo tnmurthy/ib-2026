@@ -2,17 +2,17 @@
   <!-- Top Navigation Tabs (Sticky) -->
   <app-pill-tabs [tabs]="tabs" [activeTabId]="activeTabId" (tabChange)="onTabChange($event)"></app-pill-tabs>
 
-  <div class="content-wrapper">
+  <div class="content-wrapper transition-fade">
     
     <!-- SECTION 1: HOW IT WORKS -->
-    <div id="how-it-works" class="tab-section">
+    <div *ngIf="activeTabId === 'how-it-works'" class="tab-view">
       <app-hero-block 
-        title="Bridging the Gap Between Education and Industry" 
-        subtitle="Transforming rural and tier-3 engineering colleges into ecosystems of innovation."
+        title="Education Meets Industry" 
+        subtitle="Transforming rural engineering colleges into innovation ecosystems."
         background="gradient"
       ></app-hero-block>
       
-      <div class="container py-5">
+      <div class="container py-3">
         <app-step-flow [steps]="howItWorksSteps"></app-step-flow>
       </div>
 
@@ -25,14 +25,14 @@
     </div>
 
     <!-- SECTION 2: SOLUTIONS -->
-    <div id="solutions" class="tab-section">
+    <div *ngIf="activeTabId === 'solutions'" class="tab-view">
       <app-hero-block 
-        title="Why Tier-3 College Students Struggle" 
-        subtitle="We address the disconnect between degrees and industry expectations."
+        title="Why Students Struggle" 
+        subtitle="Addressing the disconnect between degrees and industry expectations."
         align="center"
       ></app-hero-block>
 
-      <div class="container py-4">
+      <div class="container py-3">
         <app-card-grid [cards]="solutionCards" [columns]="2" cardStyle="accent"></app-card-grid>
       </div>
 
@@ -46,23 +46,23 @@
     </div>
 
     <!-- SECTION 3: OUR METHOD -->
-    <div id="method" class="tab-section">
+    <div *ngIf="activeTabId === 'method'" class="tab-view">
       <app-hero-block 
-        title="The AMLA Model: Our Core Philosophy" 
+        title="The AMLA Model" 
         subtitle="The conceptual framework that drives our impact."
         align="center"
         background="light"
       ></app-hero-block>
 
-      <div class="container py-4">
+      <div class="container py-3">
         <app-amla-flow></app-amla-flow>
       </div>
 
-      <div class="container text-center mb-5">
+      <div class="container text-center mb-4">
         <div class="tagline highlight-container">
-          <span class="highlight">Right direction.</span>
-          <span class="highlight">Right mentorship.</span>
-          <span class="highlight">Real exposure.</span>
+          <span class="highlight">Direction.</span>
+          <span class="highlight">Mentorship.</span>
+          <span class="highlight">Exposure.</span>
         </div>
       </div>
 
@@ -75,19 +75,19 @@
     </div>
 
     <!-- SECTION 4: STRATEGY & DATA -->
-    <div id="strategy" class="tab-section">
+    <div *ngIf="activeTabId === 'strategy'" class="tab-view">
       <app-hero-block 
-        title="Our Focus: Three Pillars of Data" 
-        subtitle="Focusing on sustainable startups, government schemes, and society-linked problems."
+        title="Three Pillars of Data" 
+        subtitle="Sustainable startups, government schemes, and society-linked problems."
         align="left"
       ></app-hero-block>
 
-      <div class="container py-4">
+      <div class="container py-3">
         <app-vertical-pillars 
           leftTitle="Strategy & Framework"
-          leftDescription="We prioritize successful 'Made in India' models and problem statements with business opportunities."
+          leftDescription="We prioritize successful 'Made in India' models."
           rightContentTitle="Educational Strategy"
-          rightContentDescription="Focusing on traits like resourcefulness and risk-taking through real-world stories."
+          rightContentDescription="Trait-based learning through real-world stories."
         >
           <div leftSide>
             <app-card-grid [cards]="dataPillars" [columns]="1" cardStyle="outline"></app-card-grid>
@@ -105,21 +105,21 @@
     </div>
 
     <!-- SECTION 5: WHO IT’S FOR -->
-    <div id="who-for" class="tab-section">
+    <div *ngIf="activeTabId === 'who-for'" class="tab-view">
       <app-hero-block 
-        title="Who Benefit's? Creating Impact at Every Level" 
+        title="Impact at Every Level" 
         subtitle="From students to society, our mission builds a stronger nation."
         align="center"
       ></app-hero-block>
 
-      <div class="container py-4">
+      <div class="container py-3">
         <app-card-grid [cards]="personaCards" [columns]="3" cardStyle="default"></app-card-grid>
       </div>
 
       <app-cta-block 
         title="Ready to Build the Nation?" 
         value="Connect with us to start your journey."
-        primaryText="Book Call (BIG)"
+        primaryText="Book Call"
         primaryLink="/contact"
         variant="emphasized"
       ></app-cta-block>

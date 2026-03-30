@@ -28,7 +28,7 @@ import { PillTabsComponent, TabItem } from '../../components/shared/pill-tabs/pi
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements AfterViewInit, OnDestroy {
+export class HomeComponent {
   
   // Navigation Tabs
   tabs: TabItem[] = [
@@ -40,7 +40,6 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
   ];
   
   activeTabId: string = 'how-it-works';
-  private observer: IntersectionObserver | null = null;
 
   // Section 1: How It Works Data
   howItWorksSteps: StepItem[] = [
@@ -71,53 +70,12 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
     { icon: '🏢', title: 'Industry', description: 'Access to job-ready talent pool with practical project experience.', list: ['Low training cost', 'Talent pipeline', 'CSR Impact'] }
   ];
 
-  ngAfterViewInit() {
-    this.setupIntersectionObserver();
-  }
-
-  ngOnDestroy() {
-    if (this.observer) {
-      this.observer.disconnect();
-    }
-  }
-
-  private setupIntersectionObserver() {
-    const options = {
-      root: null,
-      rootMargin: '-20% 0px -70% 0px',
-      threshold: 0
-    };
-
-    this.observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          this.activeTabId = entry.target.id;
-        }
-      });
-    }, options);
-
-    this.tabs.forEach(tab => {
-      const element = document.getElementById(tab.id);
-      if (element) {
-        this.observer?.observe(element);
-      }
-    });
-  }
-
   onTabChange(id: string) {
-    const element = document.getElementById(id);
-    if (element) {
-      const offset = 140; // Navbar + Tabs height
-      const bodyRect = document.body.getBoundingClientRect().top;
-      const elementRect = element.getBoundingClientRect().top;
-      const elementPosition = elementRect - bodyRect;
-      const offsetPosition = elementPosition - offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-      this.activeTabId = id;
-    }
+    this.activeTabId = id;
+    // Scroll to top of content wrapper to ensure user sees the start of new section
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   }
 }

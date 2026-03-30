@@ -1,13 +1,13 @@
 .section-title {
   color: #1a365d;
-  font-size: 2.25rem;
+  font-size: 2rem;
   font-weight: 800;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 .text-center { text-align: center; }
-.mb-5 { margin-bottom: 3rem; }
-.py-5 { padding: 4rem 0; }
+.mb-5 { margin-bottom: 1.5rem; }
+.py-5 { padding: 1.5rem 0; }
 .bg-light { background: #f8fafc; }
 
 @media (max-width: 768px) {

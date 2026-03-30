@@ -1,5 +1,5 @@
 .hero-block {
-  padding: 5rem 0;
+  padding: 1.5rem 0;
   transition: all 0.3s ease;
 }
 
@@ -17,18 +17,18 @@
 }
 
 .hero-title {
-  font-size: 3rem;
+  font-size: 2.25rem;
   font-weight: 800;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;
   line-height: 1.2;
   color: #1a365d;
 }
 
 .hero-subtitle {
-  font-size: 1.25rem;
-  line-height: 1.8;
+  font-size: 1.1rem;
+  line-height: 1.5;
   color: #4a5568;
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
 }
 
 /* Background Variants */
