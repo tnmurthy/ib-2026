@@ -1,171 +1,37 @@
-<div class="for-colleges">
-  <section class="page-hero">
+<div class="for-colleges-modular">
+  <app-hero-block 
+    title="For Colleges" 
+    subtitle="Transform your institution into a hub of innovation and opportunity"
+    background="gradient"
+  ></app-hero-block>
+
+  <section class="py-5">
     <div class="container">
-      <h1>For Colleges</h1>
-      <p>Transform your institution into a hub of innovation and opportunity</p>
+      <h2 class="section-title text-center mb-5">Why Partner with Innovat Bharat?</h2>
+      <!-- Aligned in single line (4 columns) -->
+      <app-card-grid [cards]="whyPartnerCards" [columns]="4" cardStyle="accent"></app-card-grid>
     </div>
   </section>
 
-  <section class="section why-partner">
+  <section class="py-5 bg-light">
     <div class="container">
-      <h2 class="section-title">Why Partner with Innovat Bharat?</h2>
-      <div class="why-grid">
-        <div class="why-card">
-          <div class="icon">🎯</div>
-          <h3>Beyond Placements</h3>
-          <p>Build reputation through real outcomes: student startups, innovation projects, industry partnerships, and holistic development.</p>
-        </div>
-        <div class="why-card">
-          <div class="icon">🌟</div>
-          <h3>Stronger Ecosystem</h3>
-          <p>Create a vibrant campus culture with mentorship, industry connections, and entrepreneurial energy that attracts better students.</p>
-        </div>
-        <div class="why-card">
-          <div class="icon">📈</div>
-          <h3>Better Student Outcomes</h3>
-          <p>Students gain skills, confidence, and opportunities—leading to improved employment, higher education success, and entrepreneurship.</p>
-        </div>
-        <div class="why-card">
-          <div class="icon">🤝</div>
-          <h3>Turnkey Solution</h3>
-          <p>We handle everything: curriculum design, mentor networks, industry connections, program delivery, and ongoing support.</p>
-        </div>
-      </div>
+      <h2 class="section-title text-center mb-5">Engagement Models</h2>
+      <app-step-flow [steps]="engagementSteps" [showConnector]="true"></app-step-flow>
     </div>
   </section>
 
-  <section class="section engagement-models">
+  <section class="py-5">
     <div class="container">
-      <h2 class="section-title">Engagement Models</h2>
-      <p class="section-subtitle">Flexible approaches tailored to your college's needs and readiness</p>
-
-      <div class="models-list">
-        <div class="model-card">
-          <div class="model-number">01</div>
-          <div class="model-content">
-            <h3>Awareness & Orientation Sessions</h3>
-            <p>
-              Start with introductory sessions for students, faculty, and management. We explain the ecosystem concept,
-              share case studies, and help stakeholders understand the potential impact.
-            </p>
-            <ul>
-              <li>Duration: 1-2 days</li>
-              <li>Audience: Students, faculty, management</li>
-              <li>Outcome: Clarity on approach and benefits</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="model-card">
-          <div class="model-number">02</div>
-          <div class="model-content">
-            <h3>Department-Level Pilots</h3>
-            <p>
-              Launch a pilot program with one or two departments. Test the ecosystem approach, refine delivery, and
-              demonstrate results before expanding campus-wide.
-            </p>
-            <ul>
-              <li>Duration: One semester/academic year</li>
-              <li>Scope: Selected departments and year groups</li>
-              <li>Outcome: Proven results and learnings for scale-up</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="model-card">
-          <div class="model-number">03</div>
-          <div class="model-content">
-            <h3>Full Campus Ecosystem Rollout</h3>
-            <p>
-              Implement the complete Innovat Bharat ecosystem across all years and departments. Build a comprehensive
-              program with industry partnerships, startup support, and long-term mentorship.
-            </p>
-            <ul>
-              <li>Duration: Multi-year partnership</li>
-              <li>Scope: Entire college, all students</li>
-              <li>Outcome: Transformed institution with sustained impact</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <h2 class="section-title text-center mb-5">Expected Outcomes</h2>
+      <app-card-grid [cards]="outcomeCards" [columns]="2" cardStyle="outline"></app-card-grid>
     </div>
   </section>
 
-  <section class="section outcomes">
-    <div class="container">
-      <h2 class="section-title">Expected Outcomes & Metrics</h2>
-      <div class="outcomes-grid">
-        <div class="outcome-card">
-          <h3>Student Engagement</h3>
-          <ul>
-            <li>80%+ participation in ecosystem programs</li>
-            <li>Improved attendance and motivation</li>
-            <li>Active student communities and clubs</li>
-          </ul>
-        </div>
-        <div class="outcome-card">
-          <h3>Skills & Employability</h3>
-          <ul>
-            <li>Students complete real projects and internships</li>
-            <li>Measurable skill development</li>
-            <li>Improved placement outcomes</li>
-          </ul>
-        </div>
-        <div class="outcome-card">
-          <h3>Entrepreneurship & Innovation</h3>
-          <ul>
-            <li>Student startup teams formed</li>
-            <li>Innovation projects and patents</li>
-            <li>Jobs created by student ventures</li>
-          </ul>
-        </div>
-        <div class="outcome-card">
-          <h3>Industry Connections</h3>
-          <ul>
-            <li>Regular mentor sessions with industry experts</li>
-            <li>Internship and project partnerships</li>
-            <li>Guest lectures and field visits</li>
-          </ul>
-        </div>
-        <div class="outcome-card">
-          <h3>Reputation & Growth</h3>
-          <ul>
-            <li>Positive word-of-mouth from students and parents</li>
-            <li>Competitive advantage in admissions</li>
-            <li>Recognition as innovative institution</li>
-          </ul>
-        </div>
-        <div class="outcome-card">
-          <h3>Long-term Impact</h3>
-          <ul>
-            <li>Alumni network and mentorship culture</li>
-            <li>Sustained student success stories</li>
-            <li>Contribution to regional development</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section testimonial-placeholder">
-    <div class="container">
-      <div class="testimonial-content">
-        <h2>Success Stories Coming Soon</h2>
-        <p>
-          We're currently piloting our ecosystem in partner colleges. This section will soon feature testimonials
-          from college leadership, faculty, and students experiencing the transformation firsthand.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section cta-colleges">
-    <div class="container">
-      <div class="cta-content">
-        <h2>Let's Build Something Exceptional Together</h2>
-        <p>Schedule a conversation with our team to explore how Innovat Bharat can transform your college.</p>
-        <a routerLink="/contact" class="btn btn-primary btn-large">Schedule Introduction Session</a>
-      </div>
-    </div>
-  </section>
+  <app-cta-block 
+    title="Let's Build Something Exceptional" 
+    value="Schedule a conversation to explore how we can transform your college."
+    primaryText="Schedule Session"
+    primaryLink="/contact"
+    variant="emphasized"
+  ></app-cta-block>
 </div>

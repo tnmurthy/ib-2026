@@ -1,4 +1,4 @@
-<div class="card-grid" [style.grid-template-columns]="'repeat(auto-fit, minmax(280px, 1fr))'">
+<div class="card-grid" [class.force-cols]="columns > 0" [style.--grid-cols]="columns">
   <div class="card-item" *ngFor="let card of cards" [ngClass]="['style-' + cardStyle]">
     <div class="card-icon" *ngIf="card.icon">{{ card.icon }}</div>
     <h3 class="card-title">{{ card.title }}</h3>

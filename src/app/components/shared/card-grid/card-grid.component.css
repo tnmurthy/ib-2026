@@ -2,6 +2,17 @@
   display: grid;
   gap: 2rem;
   padding: 1rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card-grid.force-cols {
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+}
+
+@media (max-width: 1024px) {
+  .card-grid.force-cols {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
 }
 
 .card-item {
