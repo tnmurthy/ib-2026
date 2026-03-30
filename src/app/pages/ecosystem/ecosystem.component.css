@@ -159,6 +159,81 @@
   position: relative;
 }
 
+.timeline-cont.ecosystem {
+  position: relative;
+}
+
+.content-wrapper {
+  padding-bottom: 5rem;
+}
+
+.tab-view {
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.py-3 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+.text-center { text-align: center; }
+
+.problem-content-block {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4a5568;
+}
+
+.problem-content-block p {
+  margin-bottom: 1.5rem;
+}
+
+.grid-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.community-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.info-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid #edf2f7;
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  border-color: #e67e22;
+}
+
+.info-card h3 {
+  color: #1a365d;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.info-card p {
+  color: #4a5568;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 992px) {
+  .community-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .timeline-content {
   background: white;
   padding: 2rem;
