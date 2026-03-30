@@ -1,0 +1,9 @@
+<section class="hero-block" [ngClass]="['align-' + align, 'bg-' + background]">
+  <div class="container">
+    <div class="hero-content">
+      <h1 class="hero-title">{{ title }}</h1>
+      <p class="hero-subtitle" *ngIf="subtitle">{{ subtitle }}</p>
+      <ng-content></ng-content>
+    </div>
+  </div>
+</section>

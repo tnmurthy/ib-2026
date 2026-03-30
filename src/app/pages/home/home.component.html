@@ -1,232 +1,134 @@
-<div class="home">
-  <section class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <h1>Bridging the Gap Between Education and Industry</h1>
-        <p class="hero-subtitle">
-          Transforming rural and tier-3 engineering colleges across Telangana and Andhra Pradesh into ecosystems of innovation, where students gain real-world skills, industry exposure, and entrepreneurial thinking from day one.
-        </p>
-        <div class="hero-buttons">
-          <a routerLink="/contact" class="btn btn-primary">Invite Us To Your College</a>
-          <a routerLink="/ecosystem" class="btn btn-secondary">Explore Ecosystem</a>
-        </div>
-      </div>
-    </div>
-  </section>
+<div class="home-modular">
+  <!-- Top Navigation Tabs (Sticky) -->
+  <app-pill-tabs [tabs]="tabs" [activeTabId]="activeTabId" (tabChange)="onTabChange($event)"></app-pill-tabs>
 
-  <section class="section metrics-section">
-    <div class="container">
-      <div class="metrics-grid">
-        <div class="metric-item">
-          <span class="metric-number">10k+</span>
-          <span class="metric-label">Students Guided</span>
-        </div>
-        <div class="metric-item">
-          <span class="metric-number">30+</span>
-          <span class="metric-label">Industry Partners</span>
-        </div>
-        <div class="metric-item">
-          <span class="metric-number">15+</span>
-          <span class="metric-label">Tier-3 Colleges</span>
-        </div>
-        <div class="metric-item">
-          <span class="metric-number">100%</span>
-          <span class="metric-label">Job-Ready Focus</span>
-        </div>
+  <div class="content-wrapper">
+    
+    <!-- SECTION 1: HOW IT WORKS -->
+    <div id="how-it-works" class="tab-section">
+      <app-hero-block 
+        title="Bridging the Gap Between Education and Industry" 
+        subtitle="Transforming rural and tier-3 engineering colleges into ecosystems of innovation."
+        background="gradient"
+      ></app-hero-block>
+      
+      <div class="container py-5">
+        <app-step-flow [steps]="howItWorksSteps"></app-step-flow>
       </div>
-    </div>
-  </section>
 
-  <section class="section problem-reality">
-    <div class="container">
-      <h2 class="section-title">Why Tier-3 College Students Struggle with Placements</h2>
-      <div class="problem-grid">
-        <div class="problem-card">
-          <div class="icon">🎓</div>
-          <h3>Degree vs. Industry Disconnect</h3>
-          <p>Traditional degrees don't align with what startups and modern industries actually value: practical skills, problem-solving ability, and real-world experience.</p>
-        </div>
-        <div class="problem-card">
-          <div class="icon">⏰</div>
-          <h3>Too Late to Start</h3>
-          <p>Training begins only in final years, leaving students unprepared and anxious. The first 2-3 years of potential learning and growth are lost.</p>
-        </div>
-        <div class="problem-card">
-          <div class="icon">💰</div>
-          <h3>Double Financial Burden</h3>
-          <p>Parents pay for degrees, then pay again for extra courses. Students lose 4-5 critical years while families bear unnecessary costs.</p>
-        </div>
+      <app-cta-block 
+        title="Invite Us To Your College" 
+        value="Join the ecosystem transformation today."
+        primaryText="Schedule Introduction"
+        primaryLink="/contact"
+      ></app-cta-block>
+    </div>
+
+    <!-- SECTION 2: SOLUTIONS -->
+    <div id="solutions" class="tab-section">
+      <app-hero-block 
+        title="Why Tier-3 College Students Struggle" 
+        subtitle="We address the disconnect between degrees and industry expectations."
+        align="center"
+      ></app-hero-block>
+
+      <div class="container py-4">
+        <app-card-grid [cards]="solutionCards" [columns]="2" cardStyle="accent"></app-card-grid>
       </div>
-    </div>
-  </section>
 
-  <section class="section vision-promise">
-    <div class="container">
-      <div class="vision-content">
-        <h2 class="section-title">Our Vision & Promise</h2>
-        <p class="vision-text">
-          Innovat Bharat creates a premier institute-like ecosystem within ordinary rural and semi-urban colleges.
-          We don't replace formal education—we enhance it with structured learning journeys, industry exposure,
-          and entrepreneurial mindset development from the first year itself.
-        </p>
-        <div class="tagline">
+      <app-cta-block 
+        title="Ready to See It in Action?" 
+        value="Discover how our pillars transform campuses."
+        primaryText="Explore Ecosystem"
+        primaryLink="/ecosystem"
+        variant="dark"
+      ></app-cta-block>
+    </div>
+
+    <!-- SECTION 3: OUR METHOD -->
+    <div id="method" class="tab-section">
+      <app-hero-block 
+        title="The AMLA Model: Our Core Philosophy" 
+        subtitle="The conceptual framework that drives our impact."
+        align="center"
+        background="light"
+      ></app-hero-block>
+
+      <div class="container py-4">
+        <app-amla-flow></app-amla-flow>
+      </div>
+
+      <div class="container text-center mb-5">
+        <div class="tagline highlight-container">
           <span class="highlight">Right direction.</span>
           <span class="highlight">Right mentorship.</span>
           <span class="highlight">Real exposure.</span>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section class="section how-it-works">
-    <div class="container">
-      <h2 class="section-title">How It Works: The 1-2-3 Journey</h2>
-      <div class="steps-grid">
-        <div class="step-card">
-          <div class="step-number">1</div>
-          <h3>Audit & Strategy</h3>
-          <p>We assess the college's current gap, align with management, and map out a localized ecosystem strategy tailored for engineering or management cohorts.</p>
-        </div>
-        <div class="step-card">
-          <div class="step-number">2</div>
-          <h3>Ecosystem Setup</h3>
-          <p>Deploying dedicated mentors, establishing the foundation of entrepreneurial thinking, and curating the student talent pool directly inside your campus.</p>
-        </div>
-        <div class="step-card">
-          <div class="step-number">3</div>
-          <h3>Growth & Placement</h3>
-          <p>Integrating students into real-world projects, guaranteeing paid internships in year two, and driving final placements through our robust tech partner network.</p>
-        </div>
+      <app-cta-block 
+        title="Get a Strategy Demo" 
+        value="Learn how the AMLA model applies to your institution."
+        primaryText="Book Demo Call"
+        variant="emphasized"
+      ></app-cta-block>
+    </div>
+
+    <!-- SECTION 4: STRATEGY & DATA -->
+    <div id="strategy" class="tab-section">
+      <app-hero-block 
+        title="Our Focus: Three Pillars of Data" 
+        subtitle="Focusing on sustainable startups, government schemes, and society-linked problems."
+        align="left"
+      ></app-hero-block>
+
+      <div class="container py-4">
+        <app-vertical-pillars 
+          leftTitle="Strategy & Framework"
+          leftDescription="We prioritize successful 'Made in India' models and problem statements with business opportunities."
+          rightContentTitle="Educational Strategy"
+          rightContentDescription="Focusing on traits like resourcefulness and risk-taking through real-world stories."
+        >
+          <div leftSide>
+            <app-card-grid [cards]="dataPillars" [columns]="1" cardStyle="outline"></app-card-grid>
+          </div>
+          <div rightSide class="strategy-vibe">
+            <div class="story-badges">
+              <span>Ambani</span>
+              <span>Steve Jobs</span>
+              <span>Blinkit</span>
+            </div>
+            <p class="mt-3 text-muted italic small">"Bits and pieces of stories that inspire real action."</p>
+          </div>
+        </app-vertical-pillars>
       </div>
     </div>
-  </section>
 
-  <section class="section four-pillars">
-    <div class="container">
-      <h2 class="section-title">What We Do: 4 Pillars of Transformation</h2>
-      <div class="pillars-grid">
-        <div class="pillar-card">
-          <div class="pillar-icon">🧠</div>
-          <h3>Mindset & Foundation</h3>
-          <p>Early-year clarity sessions, entrepreneurial thinking, and foundational skills that set students on the right path from day one.</p>
-        </div>
-        <div class="pillar-card">
-          <div class="pillar-icon">🏢</div>
-          <h3>Industry & Career Exposure</h3>
-          <p>Real internships, live projects, and mentorship from industry practitioners who share genuine insights and opportunities.</p>
-        </div>
-        <div class="pillar-card">
-          <div class="pillar-icon">🚀</div>
-          <h3>Startup & Innovation Culture</h3>
-          <p>Student startup teams, incubation support, and a culture that encourages experimentation and entrepreneurial ventures.</p>
-        </div>
-        <div class="pillar-card">
-          <div class="pillar-icon">🤝</div>
-          <h3>Community & Mentorship</h3>
-          <p>Alumni-like networks, traditional business wisdom from local entrepreneurs, and a supportive community for lifelong learning.</p>
-        </div>
+    <!-- SECTION 5: WHO IT’S FOR -->
+    <div id="who-for" class="tab-section">
+      <app-hero-block 
+        title="Who Benefit's? Creating Impact at Every Level" 
+        subtitle="From students to society, our mission builds a stronger nation."
+        align="center"
+      ></app-hero-block>
+
+      <div class="container py-4">
+        <app-card-grid [cards]="personaCards" [columns]="3" cardStyle="default"></app-card-grid>
       </div>
+
+      <app-cta-block 
+        title="Ready to Build the Nation?" 
+        value="Connect with us to start your journey."
+        primaryText="Book Call (BIG)"
+        primaryLink="/contact"
+        variant="emphasized"
+      ></app-cta-block>
     </div>
-  </section>
 
-  <section class="section who-benefits">
-    <div class="container">
-      <h2 class="section-title">Who Benefits?</h2>
-      <div class="benefits-grid">
-        <div class="benefit-card">
-          <h3>Students & Families</h3>
-          <ul>
-            <li>Clear career direction from year one</li>
-            <li>Paid internships starting second year</li>
-            <li>Real skills that lead to employment</li>
-            <li>Reduced need for expensive external courses</li>
-            <li>Confidence and employability</li>
-          </ul>
-        </div>
-        <div class="benefit-card">
-          <h3>Colleges</h3>
-          <ul>
-            <li>Enhanced reputation beyond placements</li>
-            <li>Stronger ecosystem and student outcomes</li>
-            <li>Industry partnerships and collaborations</li>
-            <li>Student startups and innovation culture</li>
-            <li>Competitive advantage in admissions</li>
-          </ul>
-        </div>
-        <div class="benefit-card">
-          <h3>Industry</h3>
-          <ul>
-            <li>Access to job-ready talent pool</li>
-            <li>Students with practical experience</li>
-            <li>Reduced onboarding and training costs</li>
-            <li>Partnership opportunities</li>
-            <li>CSR and impact initiatives</li>
-          </ul>
-        </div>
-        <div class="benefit-card">
-          <h3>Society & Nation</h3>
-          <ul>
-            <li>Youth employment and entrepreneurship</li>
-            <li>Economic development in tier 3 regions</li>
-            <li>Reduced migration to cities</li>
-            <li>Local innovation and startups</li>
-            <li>Nation-building through education</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+  </div>
 
-  <section class="section founder-team">
-    <div class="container">
-      <h2 class="section-title">Leadership & Core Team</h2>
-
-      <div class="founder-spotlight">
-        <div class="founder-content">
-          <h3>Mahesh Chillakuru</h3>
-          <p class="founder-title">Founder – Innovat Bharat</p>
-          <p class="founder-bio">
-            8+ years in SaaS sales, marketing & industrial business development. Founded Mana Dukaan (IIT Mandi incubated),
-            Jagriti Yatra Fellow. Transforming rural education by building clarity, confidence, and entrepreneurial thinking
-            in tier-3 colleges.
-          </p>
-        </div>
-      </div>
-
-      <h3 class="core-team-heading">Core Team</h3>
-      <div class="team-grid">
-        <div class="team-card">
-          <h4>Kiran Kadadasu</h4>
-          <p class="team-role">Content & Operations Advisor</p>
-        </div>
-        <div class="team-card">
-          <h4>Uday Kumar T</h4>
-          <p class="team-role">Student Reach & Community Lead</p>
-        </div>
-        <div class="team-card">
-          <h4>Hareesh V</h4>
-          <p class="team-role">College Partnerships Lead</p>
-        </div>
-        <div class="team-card">
-          <h4>Deepak Gupta</h4>
-          <p class="team-role">Technology & Program Delivery Advisor</p>
-          <p class="team-details">MSc IT, 19+ years with Accenture/Virtusa</p>
-        </div>
-        <div class="team-card">
-          <h4>Narayanamurthy T</h4>
-          <p class="team-role">Strategic Advisor</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section cta-final">
-    <div class="container">
-      <div class="cta-content">
-        <h2>Ready to Transform Your College?</h2>
-        <p>Schedule an introduction session with our team and discover how we can build a thriving ecosystem at your institution.</p>
-        <a routerLink="/contact" class="btn btn-primary btn-large">Schedule Introduction Session</a>
-      </div>
-    </div>
-  </section>
+  <!-- Sticky Bottom CTA for Mobile -->
+  <div class="mobile-sticky-cta d-md-none">
+    <a routerLink="/contact" class="btn btn-primary w-100">Get Strategy Call</a>
+  </div>
 </div>

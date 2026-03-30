@@ -43,6 +43,13 @@ app.post('/api/contact', async (req, res) => {
   }
 
   try {
+    // ── Google Sheets Integration ──
+    const timestamp = new Date().toISOString();
+    appendToSheet('Contact',
+      ['Timestamp', 'Name', 'Designation', 'College', 'Location', 'Email', 'Phone', 'Preferred Date/Time', 'Message'],
+      [timestamp, name, designation || '—', collegeName, location || '—', email, phone, preferredDateTime || '—', message || '—']
+    );
+
     // Notify team
     await resend.emails.send({
       from: `Innovat Bharat Forms <${FROM_EMAIL}>`,
@@ -122,6 +129,13 @@ app.post('/api/partner', async (req, res) => {
   const roleLabel = ROLE_LABELS[type || role] || type || role || '—';
 
   try {
+    // ── Google Sheets Integration ──
+    const timestamp = new Date().toISOString();
+    appendToSheet('Partner',
+      ['Timestamp', 'Form Type', 'Name', 'Email', 'Phone', 'Role/Type', 'Expertise', 'Message'],
+      [timestamp, formType, name, email, phone || '—', roleLabel, expertise || '—', message || '—']
+    );
+
     await resend.emails.send({
       from: `Innovat Bharat Forms <${FROM_EMAIL}>`,
       to: [TEAM_EMAIL],
@@ -182,50 +196,10 @@ app.post('/api/newsletter', async (req, res) => {
   try {
     // ── Google Sheets Integration ──
     const timestamp = new Date().toISOString();
-    let sheetId = process.env.GOOGLE_SHEET_ID;
-
-    if (sheetId && process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL) {
-      // If user pasted a full URL instead of the ID, extract it
-      if (sheetId.includes('/d/')) {
-        const match = sheetId.match(/\/d\/([a-zA-Z0-9-_]+)/);
-        if (match) sheetId = match[1];
-      }
-      try {
-        const sheets = getSheetsClient();
-        
-        // Ensure header row exists
-        const check = await sheets.spreadsheets.values.get({
-          spreadsheetId: sheetId,
-          range: 'A1',
-        }).catch(() => ({ data: {} }));
-
-        if (!check.data.values || check.data.values.length === 0) {
-          await sheets.spreadsheets.values.update({
-            spreadsheetId: sheetId,
-            range: 'A1',
-            valueInputOption: 'RAW',
-            requestBody: { values: [['Email', 'Timestamp', 'Source']] },
-          });
-        }
-
-        // Append to sheet
-        await sheets.spreadsheets.values.append({
-          spreadsheetId: sheetId,
-          range: 'A:C',
-          valueInputOption: 'RAW',
-          insertDataOption: 'INSERT_ROWS',
-          requestBody: {
-            values: [[email, timestamp, 'newsletter-form']],
-          },
-        });
-        console.log(`[NEWSLETTER] Saved to Sheet: ${email}`);
-      } catch (sheetErr) {
-        console.error('[NEWSLETTER] Google Sheets error:', sheetErr.message);
-        // Continue with email sending even if sheet fails
-      }
-    } else {
-      console.log(`[NEWSLETTER] ${timestamp} | ${email} (sheet env not configured)`);
-    }
+    appendToSheet('Newsletter',
+      ['Timestamp', 'Email', 'Source'],
+      [timestamp, email, 'newsletter-form']
+    );
 
     await resend.emails.send({
       from: `Innovat Bharat Forms <${FROM_EMAIL}>`,
@@ -293,6 +267,58 @@ function getSheetsClient() {
     scopes: ['https://www.googleapis.com/auth/spreadsheets'],
   });
   return google.sheets({ version: 'v4', auth });
+}
+
+async function appendToSheet(sheetName, headers, rowData) {
+  let sheetId = process.env.GOOGLE_SHEET_ID;
+  if (!sheetId || !process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL) return;
+  if (sheetId.includes('/d/')) {
+    const match = sheetId.match(/\/d\/([a-zA-Z0-9-_]+)/);
+    if (match) sheetId = match[1];
+  }
+
+  try {
+    const sheets = getSheetsClient();
+    const spreadsheet = await sheets.spreadsheets.get({ spreadsheetId: sheetId });
+    const sheetExists = spreadsheet.data.sheets.some(s => s.properties.title === sheetName);
+
+    if (!sheetExists) {
+      await sheets.spreadsheets.batchUpdate({
+        spreadsheetId: sheetId,
+        requestBody: { requests: [{ addSheet: { properties: { title: sheetName } } }] }
+      });
+      await sheets.spreadsheets.values.update({
+        spreadsheetId: sheetId,
+        range: `${sheetName}!A1`,
+        valueInputOption: 'RAW',
+        requestBody: { values: [headers] },
+      });
+    } else {
+      const check = await sheets.spreadsheets.values.get({
+        spreadsheetId: sheetId,
+        range: `${sheetName}!A1`,
+      }).catch(() => null);
+      if (!check || !check.data.values || check.data.values.length === 0) {
+        await sheets.spreadsheets.values.update({
+          spreadsheetId: sheetId,
+          range: `${sheetName}!A1`,
+          valueInputOption: 'RAW',
+          requestBody: { values: [headers] },
+        });
+      }
+    }
+
+    await sheets.spreadsheets.values.append({
+      spreadsheetId: sheetId,
+      range: `${sheetName}!A:A`,
+      valueInputOption: 'RAW',
+      insertDataOption: 'INSERT_ROWS',
+      requestBody: { values: [rowData] },
+    });
+    console.log(`[SHEETS] Saved to ${sheetName}`);
+  } catch (err) {
+    console.error(`[SHEETS] Error appending to ${sheetName}:`, err.message);
+  }
 }
 
 function row(label, value, last = false) {

@@ -1,0 +1,14 @@
+<div class="vertical-pillars">
+  <div class="pillars-grid">
+    <div class="pillar-content left">
+      <h3 class="pillar-title">{{ leftTitle }}</h3>
+      <p class="pillar-text">{{ leftDescription }}</p>
+      <ng-content select="[leftSide]"></ng-content>
+    </div>
+    <div class="pillar-content right">
+      <h3 class="pillar-title">{{ rightContentTitle }}</h3>
+      <p class="pillar-text">{{ rightContentDescription }}</p>
+      <ng-content select="[rightSide]"></ng-content>
+    </div>
+  </div>
+</div>

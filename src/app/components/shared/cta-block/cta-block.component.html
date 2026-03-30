@@ -1,0 +1,10 @@
+<div class="cta-block" [ngClass]="['variant-' + variant]">
+  <div class="cta-inner">
+    <h2 class="cta-title">{{ title }}</h2>
+    <p class="cta-value" *ngIf="value">{{ value }}</p>
+    <div class="cta-buttons">
+      <a [routerLink]="primaryLink" class="btn btn-primary btn-large">{{ primaryText }}</a>
+      <a *ngIf="secondaryText" [routerLink]="secondaryLink" class="btn btn-secondary">{{ secondaryText }}</a>
+    </div>
+  </div>
+</div>
