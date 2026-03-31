@@ -1,183 +1,51 @@
 <div class="programs">
-  <section class="page-hero">
-    <div class="container">
-      <h1>Our Programs</h1>
-      <p>Structured pathways that transform students from day one to graduation</p>
+  <!-- Tabs Navigation -->
+  <app-pill-tabs [tabs]="tabs" [activeTabId]="activeTabId" (tabChange)="onTabChange($event)"></app-pill-tabs>
+
+  <div class="content-wrapper transition-fade">
+    
+    <div *ngIf="currentProgram" class="tab-view">
+      <app-hero-block 
+        [title]="currentProgram.title" 
+        [subtitle]="currentProgram.subtitle"
+        background="gradient"
+      ></app-hero-block>
+
+      <div class="container py-3">
+        <div class="program-detail-layout">
+          <div class="program-main">
+            <div class="program-icon-large">{{ currentProgram.icon }}</div>
+            <p class="description">{{ currentProgram.description }}</p>
+            
+            <div class="features-box">
+              <h3>Key Features</h3>
+              <ul class="feature-list">
+                <li *ngFor="let feature of currentProgram.features">
+                  <span class="bullet">✓</span> {{ feature }}
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="program-sidebar">
+            <div class="meta-card">
+              <h3>Program Stats</h3>
+              <div class="meta-item" *ngFor="let m of currentProgram.meta">
+                {{ m }}
+              </div>
+              <button routerLink="/contact" class="btn btn-primary btn-full mt-3">Inquire for Campus</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <app-cta-block 
+        title="Customized for Your Campus" 
+        value="We adapt programs based on regional industry and student needs."
+        primaryText="Talk to an Advisor"
+        variant="standard"
+      ></app-cta-block>
     </div>
-  </section>
 
-  <section class="section programs-intro">
-    <div class="container">
-      <p class="intro-text">
-        Every program at Innovat Bharat is designed around one principle: learning that creates real outcomes.
-        Whether you're a first-year student finding your direction or a final-year student ready to launch a venture,
-        there's a structured path waiting for you.
-      </p>
-    </div>
-  </section>
-
-  <section class="section programs-list">
-    <div class="container">
-      <div class="program-card featured">
-        <div class="program-badge">Flagship</div>
-        <div class="program-content">
-          <div class="program-header">
-            <div class="program-icon">🏛️</div>
-            <div>
-              <h2>Campus Ecosystem Program</h2>
-              <span class="program-tag">All Years · All Streams</span>
-            </div>
-          </div>
-          <p>
-            Our core offering — a structured, year-round parallel ecosystem built inside your college.
-            It integrates mindset training, industry exposure, mentorship, and startup culture alongside
-            regular academics. Delivered through weekly sessions, field visits, guest lectures, and project
-            work that students can pursue without sacrificing their formal coursework.
-          </p>
-          <ul class="program-features">
-            <li>Weekly sessions (2–3 hrs) integrated with college timetable</li>
-            <li>Dedicated mentors assigned to each batch</li>
-            <li>Semester-wise milestones and outcome tracking</li>
-            <li>Industry visits and live project assignments</li>
-            <li>Peer learning groups and startup ideation circles</li>
-          </ul>
-          <div class="program-meta">
-            <span class="meta-item">📅 Full academic year</span>
-            <span class="meta-item">👥 1st – 4th year students</span>
-            <span class="meta-item">🎓 All engineering & commerce streams</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="program-card">
-        <div class="program-content">
-          <div class="program-header">
-            <div class="program-icon">🧠</div>
-            <div>
-              <h2>Foundation & Mindset Series</h2>
-              <span class="program-tag">1st Year Focus</span>
-            </div>
-          </div>
-          <p>
-            A high-impact orientation and development series for first-year students. This program builds
-            the mental foundation—career clarity, goal-setting, entrepreneurial thinking, and learning
-            habits—before students get lost in semester cycles. It's the difference between 4 purposeful
-            years and 4 wasted ones.
-          </p>
-          <ul class="program-features">
-            <li>Career clarity workshops and self-discovery exercises</li>
-            <li>Introduction to entrepreneurship and startup culture</li>
-            <li>Communication, confidence, and soft skills training</li>
-            <li>Goal-setting frameworks and accountability systems</li>
-            <li>Exposure to alumni journeys and industry realities</li>
-          </ul>
-          <div class="program-meta">
-            <span class="meta-item">📅 First two semesters</span>
-            <span class="meta-item">👥 1st year students</span>
-            <span class="meta-item">🎓 All streams</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="program-card">
-        <div class="program-content">
-          <div class="program-header">
-            <div class="program-icon">💼</div>
-            <div>
-              <h2>Earn-While-You-Learn Internship Pathways</h2>
-              <span class="program-tag">2nd Year Onwards</span>
-            </div>
-          </div>
-          <p>
-            Real internships, real work, real income. We connect students from second year onwards with
-            companies and startups where they contribute ~3 hours per day and earn stipends of approximately
-            ₹10,000/month. This isn't shadowing—it's live project work that builds portfolios and reduces
-            the financial burden on families.
-          </p>
-          <ul class="program-features">
-            <li>Matched placements based on stream and interest</li>
-            <li>~3 hrs/day commitment, compatible with college schedule</li>
-            <li>Stipends ranging ₹5,000–₹15,000/month (where feasible)</li>
-            <li>Mentored by company leads and Innovat Bharat advisors</li>
-            <li>Internship certificate and portfolio documentation</li>
-          </ul>
-          <div class="program-meta">
-            <span class="meta-item">📅 Ongoing — semester-based cycles</span>
-            <span class="meta-item">👥 2nd year onwards</span>
-            <span class="meta-item">🎓 Tech, Commerce, Agriculture & more</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="program-card">
-        <div class="program-content">
-          <div class="program-header">
-            <div class="program-icon">🚀</div>
-            <div>
-              <h2>Startup & Innovation Labs</h2>
-              <span class="program-tag">3rd & 4th Year Focus</span>
-            </div>
-          </div>
-          <p>
-            For students ready to build something. This program supports student teams in ideating, validating,
-            and launching micro-ventures or social impact projects. Guided by experienced mentors, teams go
-            through structured stages: idea exploration, market validation, prototype, and pitch. Some teams
-            move toward incubation support.
-          </p>
-          <ul class="program-features">
-            <li>Team formation with cross-domain collaboration</li>
-            <li>Structured innovation sprints (idea → prototype)</li>
-            <li>Mentorship from entrepreneurs and domain experts</li>
-            <li>Pitch preparation and investor/grant exposure</li>
-            <li>Pathway to incubation partnerships (IIT/IIM networks)</li>
-          </ul>
-          <div class="program-meta">
-            <span class="meta-item">📅 Two semesters minimum</span>
-            <span class="meta-item">👥 3rd & 4th year students</span>
-            <span class="meta-item">🎓 All streams — cross-domain teams encouraged</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="program-card">
-        <div class="program-content">
-          <div class="program-header">
-            <div class="program-icon">🌐</div>
-            <div>
-              <h2>Domain Expert & Industry Connect Series</h2>
-              <span class="program-tag">All Years · Regular Cadence</span>
-            </div>
-          </div>
-          <p>
-            A regular series of sessions, workshops, and field visits delivered by working professionals,
-            entrepreneurs, and domain specialists. Not motivational speakers — real practitioners sharing
-            real insights. Covers technology, agriculture, manufacturing, finance, healthcare, and more,
-            depending on the college's regional industry context.
-          </p>
-          <ul class="program-features">
-            <li>Monthly expert sessions with Q&A</li>
-            <li>Quarterly field visits to companies and factories</li>
-            <li>Domain-specific workshops (tech, agri, civil, commerce)</li>
-            <li>Networking sessions with local and national entrepreneurs</li>
-            <li>Access to Jagriti Yatra alumni and IIT/IIM mentor network</li>
-          </ul>
-          <div class="program-meta">
-            <span class="meta-item">📅 Monthly/quarterly cadence</span>
-            <span class="meta-item">👥 All year students</span>
-            <span class="meta-item">🎓 Domain-specific tracks available</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section program-cta">
-    <div class="container">
-      <div class="cta-content">
-        <h2>Want These Programs at Your College?</h2>
-        <p>We'll customize the program mix based on your institution's needs, student profile, and available infrastructure.</p>
-        <a routerLink="/contact" class="btn btn-primary btn-large">Schedule a Conversation</a>
-      </div>
-    </div>
-  </section>
+  </div>
 </div>
