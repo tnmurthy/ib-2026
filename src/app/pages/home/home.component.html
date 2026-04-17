@@ -1,134 +1,273 @@
-<div class="home-modular">
-  <!-- Top Navigation Tabs (Sticky) -->
-  <app-pill-tabs [tabs]="tabs" [activeTabId]="activeTabId" (tabChange)="onTabChange($event)"></app-pill-tabs>
+<div class="home-page">
 
-  <div class="content-wrapper transition-fade">
-    
-    <!-- SECTION 1: HOW IT WORKS -->
-    <div *ngIf="activeTabId === 'how-it-works'" class="tab-view">
-      <app-hero-block 
-        title="Education Meets Industry" 
-        subtitle="Transforming rural engineering colleges into innovation ecosystems."
-        background="gradient"
-      ></app-hero-block>
-      
-      <div class="container py-3">
-        <app-step-flow [steps]="howItWorksSteps"></app-step-flow>
+  <!-- ===== SECTION 1: HERO ===== -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-content">
+        <p class="hero-eyebrow">India's Campus Transformation Initiative</p>
+        <h1 class="hero-headline">The Gap Between Degrees and Real-World Readiness is Costing Millions of Students Their Future</h1>
+        <p class="hero-subheadline">
+          Innovat Bharat is a campus ecosystem built inside normal colleges — embedding industry exposure, entrepreneurship, and innovation directly within Tier 3 and rural campuses.
+        </p>
+        <p class="hero-description">
+          Innovat Bharat is a transformative initiative designed to bridge the gap between Tier 3 state-affiliated colleges and the global industry by embedding a high-octane innovation ecosystem directly within "normal" campus walls. Unlike elite IITs that have historical access to resources, Innovat Bharat targets the "missing middle" — the millions of talented students in regional colleges who lack exposure.
+        </p>
+        <div class="hero-pillars">
+          <div class="hero-pillar">
+            <span class="pillar-icon">🏭</span>
+            <div>
+              <strong>Industry-Integrated Micro-Hubs</strong>
+              <p>Co-working spaces and maker-labs where students work on live industry projects — moving pedagogy from "theory-first" to "build-first."</p>
+            </div>
+          </div>
+          <div class="hero-pillar">
+            <span class="pillar-icon">🌐</span>
+            <div>
+              <strong>Mentorship Democratization</strong>
+              <p>Connects students with a digital network of global mentors and AI-driven career agents.</p>
+            </div>
+          </div>
+          <div class="hero-pillar">
+            <span class="pillar-icon">💡</span>
+            <div>
+              <strong>The Venture Studio Model</strong>
+              <p>Treats the campus as an incubator — providing structured training in IP filing, R&amp;D, and startup fundamentals.</p>
+            </div>
+          </div>
+        </div>
+        <div class="hero-buttons">
+          <a routerLink="/contact" class="btn btn-primary btn-large">Invite Us To Your College</a>
+          <a routerLink="/ecosystem" class="btn btn-secondary-dark btn-large">Explore Ecosystem</a>
+        </div>
       </div>
-
-      <app-cta-block 
-        title="Invite Us To Your College" 
-        value="Join the ecosystem transformation today."
-        primaryText="Schedule Introduction"
-        primaryLink="/contact"
-      ></app-cta-block>
     </div>
+  </section>
 
-    <!-- SECTION 2: SOLUTIONS -->
-    <div *ngIf="activeTabId === 'solutions'" class="tab-view">
-      <app-hero-block 
-        title="Why Students Struggle" 
-        subtitle="Addressing the disconnect between degrees and industry expectations."
-        align="center"
-      ></app-hero-block>
+  <!-- ===== SECTION 2: PROBLEM & REALITY ===== -->
+  <section class="section problem-section">
+    <div class="container">
+      <h2 class="section-title">Problem &amp; Reality</h2>
+      <p class="section-subtitle">Three hard truths that millions of Indian families face every year.</p>
+      <div class="problem-grid">
 
-      <div class="container py-3">
-        <app-card-grid [cards]="solutionCards" [columns]="2" cardStyle="accent"></app-card-grid>
+        <div class="problem-card">
+          <div class="problem-number">01</div>
+          <h3>Mismatch Between Industry Needs and Formal Degrees</h3>
+          <p>
+            There is a fundamental mismatch between the theoretical depth of a four-year formal degree and the rapid, execution-heavy needs of the modern tech and pharma industries. While degrees provide a vital academic foundation, the "tool-stack" used in global companies evolves every six months. Students often graduate with strong conceptual knowledge but require significant "re-learning" to handle live production environments or real-world laboratory compliance.
+          </p>
+        </div>
+
+        <div class="problem-card">
+          <div class="problem-number">02</div>
+          <h3>Training Starts Only in Pre-Final or Final Years</h3>
+          <p>
+            In many colleges, students spend the first three years focused only on books and exams. Job training — like coding, communication, and interview prep — usually starts pre-final or final year. By then, it is already too late to build the depth of skills that modern employers demand.
+          </p>
+        </div>
+
+        <div class="problem-card">
+          <div class="problem-number">03</div>
+          <h3>Parents Paying Twice While Students Lose 4–5 Critical Years</h3>
+          <p>
+            Many parents spend their hard-earned savings on college fees, hoping it leads to a job. However, since the degree often focuses only on theory, they are forced to pay a second time for private institutes or "job-guarantee" courses after graduation. This wastes both money and 4–5 years of the student's life, as they have to start learning real-world skills from scratch after college.
+          </p>
+        </div>
+
       </div>
-
-      <app-cta-block 
-        title="Ready to See It in Action?" 
-        value="Discover how our pillars transform campuses."
-        primaryText="Explore Ecosystem"
-        primaryLink="/ecosystem"
-        variant="dark"
-      ></app-cta-block>
     </div>
+  </section>
 
-    <!-- SECTION 3: OUR METHOD -->
-    <div *ngIf="activeTabId === 'method'" class="tab-view">
-      <app-hero-block 
-        title="The AMLA Model" 
-        subtitle="The conceptual framework that drives our impact."
-        align="center"
-        background="light"
-      ></app-hero-block>
+  <!-- ===== SECTION 3: VISION, MISSION & PROMISE ===== -->
+  <section class="section vision-section">
+    <div class="container">
+      <h2 class="section-title vision-title">Vision, Mission &amp; Promise</h2>
+      <div class="vision-grid">
 
-      <div class="container py-3">
-        <app-amla-flow></app-amla-flow>
+        <div class="vision-card">
+          <div class="vision-icon">🔭</div>
+          <h3>Vision</h3>
+          <p>
+            To transform Bharat into a global Product Nation by 2047, powered by a Bharat-centric economic model and 1 million rural entrepreneurs from Tier-3 and rural colleges.
+          </p>
+        </div>
+
+        <div class="vision-card">
+          <div class="vision-icon">🎯</div>
+          <h3>Mission</h3>
+          <p>
+            We transform rural colleges into startup hubs where students learn to invent and build their own products. When students become entrepreneurs in their own towns, they create opportunities, generate jobs, and drive India's growth from the grassroots.
+          </p>
+        </div>
+
+      </div>
+      <div class="tagline-strip">
+        <span class="tagline-word">Right Direction.</span>
+        <span class="tagline-sep">·</span>
+        <span class="tagline-word">Right Mentorship.</span>
+        <span class="tagline-sep">·</span>
+        <span class="tagline-word">Real Exposure.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 4: WHAT WE DO – 4 PILLARS ===== -->
+  <section class="section pillars-section">
+    <div class="container">
+      <h2 class="section-title">What We Do</h2>
+      <p class="section-subtitle">Four pillars that turn a regular college into a launchpad for student founders.</p>
+      <app-card-grid [cards]="pillarCards" [columns]="2" cardStyle="default"></app-card-grid>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 5: WHO BENEFITS ===== -->
+  <section class="section benefits-section">
+    <div class="container">
+      <h2 class="section-title">Who Benefits</h2>
+      <p class="section-subtitle">The impact of Innovat Bharat ripples outward — from individual students all the way to the nation.</p>
+      <div class="benefits-grid">
+
+        <div class="benefit-card">
+          <div class="benefit-icon">👨‍🎓</div>
+          <h3>Students &amp; Families</h3>
+          <p>
+            For students, the journey with Innovat Bharat means achieving financial independence long before they throw their graduation caps. By earning their first income during college years, they alleviate financial pressure on their households. Alongside their degree, they build a robust portfolio of real-world ventures — equipping them with skills and confidence no textbook can provide.
+          </p>
+          <p>
+            For parents, there is a profound sense of pride and relief in seeing their children contribute meaningfully to society and build successful lives right from home, without being forced to migrate to crowded, expensive cities.
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">🏛️</div>
+          <h3>Colleges</h3>
+          <p>
+            Institutions under this movement break away from the traditional, narrow focus on "highest packages" to define a new axis of excellence. Colleges become prestigious hubs known for the number of successful startups they incubate and the caliber of entrepreneurs they produce.
+          </p>
+          <p>
+            This shift transforms campus culture and attracts ambitious, high-potential talent — creating a virtuous cycle where alumni donate back and prioritize hiring from the same classrooms where they started.
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">🏭</div>
+          <h3>Industry</h3>
+          <p>
+            Industry benefits from a new generation of practitioners who aren't just degree-holders, but genuine problem-solvers who deeply understand the nuances of Bharat — individuals with the technical grit and the intent to make the nation a global leader through indigenous products.
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">🇮🇳</div>
+          <h3>Society &amp; Nation</h3>
+          <p>
+            The rise of local businesses creates high-quality employment directly within Tier-3 towns, ensuring wealth stays in the community. This effectively reverses brain drain from rural India to metros, preserving local talent and transforming villages into economic powerhouses that drive the country toward its Product Nation goal.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 6: FOUNDER SNAPSHOT ===== -->
+  <section class="section founder-section">
+    <div class="container">
+      <h2 class="section-title">Founder Snapshot</h2>
+      <div class="founder-spotlight">
+        <div class="founder-avatar">MC</div>
+        <div class="founder-details">
+          <h3 class="founder-name">Mahesh Chillakuru</h3>
+          <p class="founder-role">Founder – Innovat Bharat</p>
+          <p class="founder-bio">
+            Mahesh is an aspiring entrepreneur with a background spanning SaaS and industrial sales. He is the founder of Mana Dukaan and a proud Jagriti Yatra Fellow — an experience that shaped his conviction that rural India's next generation of entrepreneurs just needs the right ecosystem to thrive.
+          </p>
+          <div class="founder-tags">
+            <span>SaaS &amp; Industrial Sales</span>
+            <span>Founder – Mana Dukaan</span>
+            <span>Jagriti Yatra Fellow</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 7: FINAL CTA ===== -->
+  <section class="final-cta-section">
+    <div class="container">
+      <div class="cta-header">
+        <h2>Lead the Transformation of Rural Bharat</h2>
       </div>
 
-      <div class="container text-center mb-4">
-        <div class="tagline highlight-container">
-          <span class="highlight">Direction.</span>
-          <span class="highlight">Mentorship.</span>
-          <span class="highlight">Exposure.</span>
+      <div class="cta-two-col">
+        <div class="cta-col">
+          <h4>The Challenge</h4>
+          <p>
+            The world is moving toward a Product Economy, yet many Tier-3 and rural colleges are still stuck in a "Placement Only" cycle. Your students have the grit and the talent — they just need the ecosystem.
+          </p>
+        </div>
+        <div class="cta-col">
+          <h4>The Invitation</h4>
+          <p>
+            We invite forward-thinking college leaders to partner with Innovat Bharat. Let's move beyond the "Highest Package" race and start building the architects of a Viksit Bharat.
+          </p>
         </div>
       </div>
 
-      <app-cta-block 
-        title="Get a Strategy Demo" 
-        value="Learn how the AMLA model applies to your institution."
-        primaryText="Book Demo Call"
-        variant="emphasized"
-      ></app-cta-block>
-    </div>
+      <div class="cta-session-block">
+        <h3>By scheduling an introduction session, you will learn how to:</h3>
+        <ul class="cta-list">
+          <li>
+            <strong>Establish a Venture Culture:</strong> Transition your campus from a degree factory to a startup incubator.
+          </li>
+          <li>
+            <strong>Empower Student Founders:</strong> Give your students the tools to build real products and earn before they graduate.
+          </li>
+          <li>
+            <strong>Secure Your Legacy:</strong> Build a brand known for innovation, self-reliance, and a village-driven economic impact.
+          </li>
+        </ul>
+        <a routerLink="/contact" class="btn btn-cta btn-large">Schedule an Introduction Session</a>
+        <p class="cta-target">Targeting: Principals, Directors, and TPO Heads</p>
+      </div>
 
-    <!-- SECTION 4: STRATEGY & DATA -->
-    <div *ngIf="activeTabId === 'strategy'" class="tab-view">
-      <app-hero-block 
-        title="Three Pillars of Data" 
-        subtitle="Sustainable startups, government schemes, and society-linked problems."
-        align="left"
-      ></app-hero-block>
-
-      <div class="container py-3">
-        <app-vertical-pillars 
-          leftTitle="Strategy & Framework"
-          leftDescription="We prioritize successful 'Made in India' models."
-          rightContentTitle="Educational Strategy"
-          rightContentDescription="Trait-based learning through real-world stories."
-        >
-          <div leftSide>
-            <app-card-grid [cards]="dataPillars" [columns]="1" cardStyle="outline"></app-card-grid>
-          </div>
-          <div rightSide class="strategy-vibe">
-            <div class="story-badges">
-              <span>Ambani</span>
-              <span>Steve Jobs</span>
-              <span>Blinkit</span>
+      <div class="cta-session-details">
+        <h3>What Happens in the Session?</h3>
+        <div class="session-items">
+          <div class="session-item">
+            <span class="session-icon">🗺️</span>
+            <div>
+              <strong>The 2047 Roadmap</strong>
+              <p>We share how your college fits into the mission of 1 million entrepreneurs.</p>
             </div>
-            <p class="mt-3 text-muted italic small">"Bits and pieces of stories that inspire real action."</p>
           </div>
-        </app-vertical-pillars>
+          <div class="session-item">
+            <span class="session-icon">🏗️</span>
+            <div>
+              <strong>The Ecosystem Blueprint</strong>
+              <p>A look at our 4-year model (Mindset → Exposure → Culture → Community).</p>
+            </div>
+          </div>
+          <div class="session-item">
+            <span class="session-icon">📍</span>
+            <div>
+              <strong>Local Impact Strategy</strong>
+              <p>How we specifically tailor the model to your region's core strengths (Mechanical, EEE, Agriculture, etc.).</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <!-- SECTION 5: WHO IT’S FOR -->
-    <div *ngIf="activeTabId === 'who-for'" class="tab-view">
-      <app-hero-block 
-        title="Impact at Every Level" 
-        subtitle="From students to society, our mission builds a stronger nation."
-        align="center"
-      ></app-hero-block>
-
-      <div class="container py-3">
-        <app-card-grid [cards]="personaCards" [columns]="3" cardStyle="default"></app-card-grid>
+      <div class="cta-why-now">
+        <p class="why-now-text">
+          The future of India isn't in its metros; it's in its villages. Don't let your students be part of the brain drain. Help them lead the resurgence.
+        </p>
+        <blockquote class="cta-quote">
+          "Be the college that didn't just place students, but built the nation."
+        </blockquote>
+        <a routerLink="/contact" class="btn btn-cta btn-large">Schedule an Introduction Session</a>
       </div>
 
-      <app-cta-block 
-        title="Ready to Build the Nation?" 
-        value="Connect with us to start your journey."
-        primaryText="Book Call"
-        primaryLink="/contact"
-        variant="emphasized"
-      ></app-cta-block>
     </div>
+  </section>
 
-  </div>
-
-  <!-- Sticky Bottom CTA for Mobile -->
-  <div class="mobile-sticky-cta d-md-none">
-    <a routerLink="/contact" class="btn btn-primary w-100">Get Strategy Call</a>
-  </div>
 </div>
