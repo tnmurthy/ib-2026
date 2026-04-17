@@ -35,10 +35,8 @@
   font-weight: 800;
   line-height: 1.2;
   color: white;
-  margin-bottom: 1.25rem;
   max-width: 820px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 1.25rem;
 }
 
 .hero-subheadline {
@@ -46,9 +44,7 @@
   line-height: 1.6;
   color: #e2e8f0;
   max-width: 760px;
-  margin-bottom: 1.5rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 1.5rem;
 }
 
 .hero-problem-statement {
@@ -56,9 +52,7 @@
   line-height: 1.7;
   color: #cbd5e0;
   max-width: 760px;
-  margin-bottom: 1.25rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 1.25rem;
 }
 
 .hero-description {
@@ -66,9 +60,7 @@
   line-height: 1.7;
   color: #a0aec0;
   max-width: 760px;
-  margin-bottom: 2rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 2rem;
 }
 
 .hero-pillars {
@@ -76,9 +68,7 @@
   flex-direction: column;
   gap: 1.25rem;
   max-width: 760px;
-  margin-bottom: 2.5rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 2.5rem;
 }
 
 .hero-pillar {
