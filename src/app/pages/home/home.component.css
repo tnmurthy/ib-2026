@@ -42,6 +42,14 @@
   margin-bottom: 1.5rem;
 }
 
+.hero-problem-statement {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #cbd5e0;
+  max-width: 760px;
+  margin-bottom: 1.25rem;
+}
+
 .hero-description {
   font-size: 1rem;
   line-height: 1.7;
@@ -542,6 +550,10 @@
   .session-items {
     grid-template-columns: 1fr;
   }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {
@@ -554,7 +566,6 @@
   }
 
   .vision-grid,
-  .benefits-grid,
   .cta-two-col {
     grid-template-columns: 1fr;
   }
