@@ -21,23 +21,35 @@ export class HomeComponent {
   pillarCards: CardItem[] = [
     {
       icon: '🧠',
-      title: 'Mindset & Foundation',
-      description: 'We start early to shift student thinking from "finding a job" to "solving a problem." By building a strong mental foundation in the first year, students learn to see opportunities in their surroundings. This clarity helps them develop the resilience and creative thinking needed to build a lifelong entrepreneurial path.'
+      title: 'Mindset & Foundation (Building Strong Roots)',
+      description: `• Early Start: We shift student thinking from "finding a job" to "solving a problem" right from the first year.
+• Self-Awareness: Students learn to see opportunities in their own communities and surroundings.
+• Emotional Strength: Building the resilience and mental toughness needed for the entrepreneurial journey.
+• Creative Thinking: Developing a creative and problem-solving mindset that lasts a lifetime.`
     },
     {
       icon: '🏢',
-      title: 'Industry & Career Exposure',
-      description: 'Students bridge the gap between books and reality through hands-on projects and internships. We bring in active professionals and practitioners to share real-world knowledge. This exposure ensures learners understand how modern industries work, allowing them to apply technical skills to actual challenges rather than just chasing academic certificates or grades.'
+      title: 'Industry & Career Exposure (Learning by Doing)',
+      description: `• Real Projects: Students bridge the gap between books and the real world through internships and hands-on work.
+• Learn from Experts: We bring in active professionals and practitioners to share real-world knowledge.
+• Practical Skills: The focus is on solving actual industry challenges, not just getting a certificate.
+• Beyond Grades: We ensure students understand how modern industries actually function.`
     },
     {
       icon: '🚀',
-      title: 'Startup & Innovation Culture',
-      description: 'We turn campuses into active labs where student teams build real products. By providing local incubation and support, we create a safe space for experimentation. This culture encourages students to take risks, prototype their ideas, and work together, transforming a simple college project into a potential high-growth startup venture.'
+      title: 'Startup & Innovation Culture (Turning Campus into a Lab)',
+      description: `• Live Labs: We transform regular college campuses into active spaces where teams build real products.
+• Safe to Experiment: We provide local incubation so students can take risks and try out their ideas.
+• Teamwork: Students learn to work together and prototype their solutions.
+• Real Growth: We help turn simple college projects into high-growth startup ventures.`
     },
     {
       icon: '🤝',
-      title: 'Community & Mentorship',
-      description: 'We connect students with a powerful network of successful alumni and local business leaders. By blending modern startup strategies with traditional business wisdom, students receive balanced guidance. This community ensures that no founder walks alone, providing the mentorship and connections necessary to scale their business and keep wealth local.'
+      title: 'Community & Mentorship (Guidance from Leaders)',
+      description: `• Strong Network: We connect students with successful alumni and local business leaders.
+• Best of Both Worlds: We blend modern startup strategies with traditional Indian business wisdom.
+• No One Walks Alone: Every founder gets the mentorship and connections they need to scale.
+• Keeping Wealth Local: Our community focus ensures that businesses grow and create jobs within their own towns.`
     }
   ];
 }

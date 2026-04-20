@@ -15,61 +15,212 @@
       <div class="container py-3">
         <!-- Featured Founder -->
         <div class="founder-card">
-          <div class="founder-avatar">MC</div>
+          <img src="assets/team/mahesh-chillakuru.jpg" alt="Mahesh Chillakuru" class="founder-photo-card">
           <div class="founder-info">
             <h3>Mahesh Chillakuru</h3>
-            <p class="role">Founder & Chief Architect</p>
+            <p class="role">Founder</p>
             <p class="bio">
-              8+ years in SaaS sales, marketing & industrial business development. Founded Mana Dukaan
-              (IIT Mandi incubated), Jagriti Yatra Fellow. MBA in Sales & Marketing.
+              I hold an MBA in Sales and Marketing and a BTech in Computer Science. My journey across entrepreneurship, professional experience, and grassroots exposure has shaped my vision to build Innovat Bharat, where I aim to empower students in Tier 3 and rural India to become job creators and build meaningful solutions from their own communities.
             </p>
             <div class="tags">
-              <span class="tag">Startup Founder</span>
+              <span class="tag">MBA – Sales & Marketing</span>
+              <span class="tag">BTech – Computer Science</span>
+              <span class="tag">Founder – Mana Dukaan</span>
               <span class="tag">Jagriti Yatra Fellow</span>
-              <span class="tag">IIT Mandi Network</span>
             </div>
           </div>
         </div>
 
+        <h3 class="cofounders-heading">Co-Founders</h3>
+
         <div class="team-grid-compact">
-          <div class="member-card">
-            <h4>Kiran Kadadasu</h4>
-            <p class="role">Operations Advisor</p>
+          <!-- Narayana Murthy - has photo -->
+          <div class="member-card member-card-featured">
+            <img src="assets/team/narayana-murthy.jpg" alt="Narayana Murthy" class="member-photo">
+            <h4>Narayana Murthy</h4>
+            <p class="role">Co-Founder</p>
+            <p class="member-bio">With two decades of experience, he excels in driving business growth by formulating and managing data-driven projects. As a lead data strategist, he collaborates with engineering teams and customers to identify and integrate new datasets, analyze trends and patterns, and develop data products. He has partnered with prominent clients such as Microsoft, Amazon, and Uber across various domains including IT, retail, and logistics.</p>
           </div>
+
+          <!-- Suma Rowthula - placeholder -->
           <div class="member-card">
-            <h4>Uday Kumar T</h4>
-            <p class="role">Community Lead</p>
+            <div class="member-avatar">SR</div>
+            <h4>Suma Rowthula</h4>
+            <p class="role">Co-Founder</p>
+            <p class="member-bio-placeholder">Photo coming soon</p>
           </div>
+
+          <!-- Uday Kumar Tinnaluru - placeholder -->
           <div class="member-card">
-            <h4>Hareesh V</h4>
-            <p class="role">Partnerships Lead</p>
+            <div class="member-avatar">UT</div>
+            <h4>Uday Kumar Tinnaluru</h4>
+            <p class="role">Co-Founder</p>
+            <p class="member-bio-placeholder">Photo coming soon</p>
           </div>
+
+          <!-- Vishal Nagapal - placeholder -->
           <div class="member-card">
-            <h4>Deepak Gupta</h4>
-            <p class="role">Program Advisor</p>
+            <div class="member-avatar">VN</div>
+            <h4>Vishal Nagapal</h4>
+            <p class="role">Co-Founder</p>
+            <p class="member-bio-placeholder">Photo coming soon</p>
           </div>
+
+          <!-- Amit Gupta - placeholder -->
           <div class="member-card">
-            <h4>Narayanamurthy T</h4>
-            <p class="role">Strategic Advisor</p>
+            <div class="member-avatar">AG</div>
+            <h4>Amit Gupta</h4>
+            <p class="role">Co-Founder</p>
+            <p class="member-bio-placeholder">Photo coming soon</p>
+          </div>
+
+          <!-- Hareesh - placeholder -->
+          <div class="member-card">
+            <div class="member-avatar">H</div>
+            <h4>Hareesh</h4>
+            <p class="role">Co-Founder</p>
+            <p class="member-bio-placeholder">Photo coming soon</p>
+          </div>
+
+          <!-- Kiran - placeholder -->
+          <div class="member-card">
+            <div class="member-avatar">K</div>
+            <h4>Kiran</h4>
+            <p class="role">Co-Founder</p>
+            <p class="member-bio-placeholder">Photo coming soon</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- TAB 2: MENTOR NETWORKS -->
-    <div *ngIf="activeTabId === 'networks'" class="tab-view">
+    <!-- TAB 2: COLLABORATE -->
+    <div *ngIf="activeTabId === 'collaborate'" class="tab-view">
       <app-hero-block 
-        title="World-Class Mentor Networks" 
-        subtitle="Bridging the gap between tier 1 and tier 3 education through collective wisdom."
+        title="How We Work Together" 
+        subtitle="Mentorship & Guidance — share your wisdom with the next generation of creators."
         align="center"
       ></app-hero-block>
 
       <div class="container py-3">
-        <app-card-grid [cards]="networkCards" [columns]="4" cardStyle="accent"></app-card-grid>
+        <p class="collab-intro">Innovat Bharat invites experienced professionals and industry leaders to share their wisdom with the next generation of creators. We don't just want your time; we want your experience to help students avoid common mistakes and dream bigger.</p>
+        
+        <div class="collab-grid">
+          <div class="collab-card">
+            <div class="collab-icon">🎓</div>
+            <h4>Expert Masterclasses</h4>
+            <p>Share your knowledge through guest lectures or workshops (online or in person).</p>
+          </div>
+          <div class="collab-card">
+            <div class="collab-icon">🧭</div>
+            <h4>Direct Mentorship</h4>
+            <p>Guide student startup teams as they build their first products and business models.</p>
+          </div>
+          <div class="collab-card">
+            <div class="collab-icon">📝</div>
+            <h4>Project Reviews</h4>
+            <p>Provide honest, professional feedback on student projects to make them "industry-ready."</p>
+          </div>
+          <div class="collab-card">
+            <div class="collab-icon">🏛️</div>
+            <h4>Sharing "Traditional Wisdom"</h4>
+            <p>Help students blend modern technology with the solid business values that have built our nation.</p>
+          </div>
+        </div>
+
+        <h3 class="section-subheading">Why Mentor With Innovat Bharat?</h3>
+        <div class="mentor-benefits-grid">
+          <div class="mentor-benefit">
+            <strong>Build a Legacy:</strong> Use your years of hard-earned experience to shape the future leaders of "Bharat."
+          </div>
+          <div class="mentor-benefit">
+            <strong>Fresh Energy:</strong> Stay connected with the raw energy and "out of the box" thinking of young, ambitious students.
+          </div>
+          <div class="mentor-benefit">
+            <strong>Give Back to the Roots:</strong> Help students in Tier-3 towns get the same quality of guidance that is usually only available in big cities.
+          </div>
+          <div class="mentor-benefit">
+            <strong>Shape the "Product Nation":</strong> Be a key part of the movement that turns India into a global hub for indigenous products.
+          </div>
+          <div class="mentor-benefit">
+            <strong>Personal Growth:</strong> There is no greater joy than seeing a student you mentored turn a simple idea into a real-world business.
+          </div>
+          <div class="mentor-benefit">
+            <strong>No One Walks Alone:</strong> Your guidance ensures that a young founder from a small town doesn't have to struggle alone.
+          </div>
+        </div>
+
+        <div class="registration-links">
+          <a href="https://forms.gle/xXMzuv7gXTks5MvU7" target="_blank" class="btn btn-primary btn-large">Register as an Institute</a>
+        </div>
       </div>
     </div>
 
-    <!-- TAB 3: JOIN THE MISSION -->
+    <!-- TAB 3: VOLUNTEER -->
+    <div *ngIf="activeTabId === 'volunteer'" class="tab-view">
+      <app-hero-block 
+        title="Join the Movement" 
+        subtitle="You don't need to be a billionaire to help. If you have the heart to see Bharat grow, you can contribute."
+        background="light"
+      ></app-hero-block>
+
+      <div class="container py-3">
+        <h3 class="section-subheading">How You Can Volunteer</h3>
+        <div class="volunteer-grid">
+          <div class="volunteer-card">
+            <div class="volunteer-icon">💻</div>
+            <h4>Share Your Skills</h4>
+            <p>Spend a few hours a month teaching students practical skills like coding, digital marketing, or basic accounting.</p>
+          </div>
+          <div class="volunteer-card">
+            <div class="volunteer-icon">🤝</div>
+            <h4>Be a Student Buddy</h4>
+            <p>Guide a small team of students as they work on their first project. Sometimes, they just need someone to talk to and share their ideas with.</p>
+          </div>
+          <div class="volunteer-card">
+            <div class="volunteer-icon">📢</div>
+            <h4>Spread the Story</h4>
+            <p>Help us reach more people by sharing the success stories of our student-founders on social media or in your local community.</p>
+          </div>
+          <div class="volunteer-card">
+            <div class="volunteer-icon">📍</div>
+            <h4>Help on the Ground</h4>
+            <p>If you live near one of our partner colleges, you can help us organize events, workshops, or "startup days" on campus.</p>
+          </div>
+          <div class="volunteer-card">
+            <div class="volunteer-icon">🌐</div>
+            <h4>Open Your Network</h4>
+            <p>Introduce us to people who can provide projects, mentorship, or resources to our students.</p>
+          </div>
+          <div class="volunteer-card">
+            <div class="volunteer-icon">📸</div>
+            <h4>Document the Journey</h4>
+            <p>If you are good at photography, writing, or making videos, help us capture the transformation happening in these colleges.</p>
+          </div>
+        </div>
+
+        <h3 class="section-subheading">Why Volunteer With Us?</h3>
+        <div class="why-volunteer-grid">
+          <div class="why-volunteer-item">
+            <strong>Be a Change-Maker:</strong> Directly help a student from a small town build a better future.
+          </div>
+          <div class="why-volunteer-item">
+            <strong>Learn and Grow:</strong> Work with a high-energy team and stay connected with fresh, new ideas.
+          </div>
+          <div class="why-volunteer-item">
+            <strong>Build Bharat:</strong> Contribute to the national goal of making India a "Product Nation" from the grassroots level.
+          </div>
+          <div class="why-volunteer-item">
+            <strong>Real Impact:</strong> See the immediate results of your help when a student earns their first income or builds their first product.
+          </div>
+        </div>
+
+        <div class="registration-links">
+          <a href="https://forms.gle/pz8AJcjpdNHc6vGf9" target="_blank" class="btn btn-primary btn-large">Register as a Volunteer</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 4: JOIN THE MISSION -->
     <div *ngIf="activeTabId === 'join'" class="tab-view">
       <app-hero-block 
         title="Become a Partner" 

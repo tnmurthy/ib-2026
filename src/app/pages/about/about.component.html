@@ -16,17 +16,20 @@
       <div *ngIf="activeTabId === 'story'" class="tab-view">
         <div class="about-grid">
           <div class="about-main">
-            <h2>Our Story</h2>
-            <p class="lead-text">Innovat Bharat was born from a simple observation: thousands of talented students in tier-3 colleges graduate with degrees but without the skills, confidence, or direction needed for today's world.</p>
-            <div class="story-details">
-              <p>While premier institutions provide ecosystems of learning and mentorship from day one, ordinary colleges often focus solely on academic syllabi. Students realize too late that degrees alone aren't enough.</p>
-              <p>We don't replace formal education—we enhance it by building premier institute-like ecosystems *inside* existing colleges from the first year itself.</p>
-            </div>
+            <h2>Why Innovat Bharat</h2>
+            <ul class="why-ib-list">
+              <li><strong>To Empower the "Missing Middle":</strong> We focus on the millions of talented students in Tier-3 and regional colleges who have the potential but lack the right opportunities.</li>
+              <li><strong>To Bridge the Skill Gap:</strong> We fix the mismatch between what is taught in textbooks and what the modern industry actually needs.</li>
+              <li><strong>To Stop Double Spending:</strong> We aim to end the cycle where parents have to pay twice — once for a degree and again for private job-readiness courses.</li>
+              <li><strong>To Start Early:</strong> We believe real-world exposure should begin from the first year, not the last. Waiting until the final year wastes the most valuable years of a student's life.</li>
+              <li><strong>To Build Local Economies:</strong> We want to keep talent in their own towns — creating jobs, startups, and growth right where communities need it most.</li>
+              <li><strong>To Build a Product Nation:</strong> Our long-term goal is to make India a global leader in indigenous products by nurturing 1 million rural entrepreneurs by 2047.</li>
+            </ul>
           </div>
           <div class="about-sidebar">
             <div class="stat-card">
-              <div class="stat-num">2026</div>
-              <div class="stat-label">Vision Era</div>
+              <div class="stat-num">2047</div>
+              <div class="stat-label">Product Nation Vision</div>
             </div>
           </div>
         </div>
@@ -38,12 +41,12 @@
           <div class="dashboard-card">
             <div class="card-icon">🎯</div>
             <h3>Vision</h3>
-            <p>To ensure every student has access to world-class mentorship and industry exposure, regardless of their college's location or reputation.</p>
+            <p>To transform Bharat into a global Product Nation by 2047, powered by a Bharat-centric economic model and 1 million rural entrepreneurs from Tier-3 and rural colleges.</p>
           </div>
           <div class="dashboard-card">
             <div class="card-icon">🚀</div>
             <h3>Mission</h3>
-            <p>To deliver structured learning journeys that transform students into entrepreneurial individuals ready for nation-building.</p>
+            <p>We transform rural colleges into startup hubs where students learn to invent and build their own products. When students become entrepreneurs in their own towns, they create opportunities, generate jobs, and drive India's growth from the grassroots.</p>
           </div>
         </div>
       </div>
@@ -51,15 +54,14 @@
       <!-- VALUES & CHARTER -->
       <div *ngIf="activeTabId === 'values'" class="tab-view">
         <div class="values-grid-overlay">
-          <div class="value-item" *ngFor="let val of [
-            {t:'Lifelong Learning', d:'Cultivating curiosity beyond the degree.', i:'📚'},
-            {t:'Start Now', d:'Action beats perfection. Begin today.', i:'💡'},
-            {t:'Respect for Work', d:'Honoring all professions and contributions.', i:'🤝'},
-            {t:'National Mindset', d:'Success that contributes to India.', i:'🇮🇳'}
-          ]">
-            <div class="val-icon">{{val.i}}</div>
-            <h4>{{val.t}}</h4>
-            <p>{{val.d}}</p>
+          <div class="value-item" *ngFor="let val of coreValues">
+            <div class="val-icon">{{val.icon}}</div>
+            <div>
+              <h4>{{val.title}}</h4>
+              <ul class="value-sub-list">
+                <li *ngFor="let point of val.points">{{point}}</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -67,15 +69,20 @@
       <!-- FOUNDER -->
       <div *ngIf="activeTabId === 'founder'" class="tab-view">
         <div class="founder-compact">
-          <div class="founder-text">
-            <h2>Mahesh Chillakuru</h2>
-            <p class="subtitle">Founder & Chief Architect</p>
-            <div class="founder-bio">
-              <p>MBA (Sales & Marketing), B.Tech (CSE). Jagriti Yatra Fellow and Founder of Mana Dukaan (IIT Mandi incubated).</p>
-              <p>Mahesh is dedicated to bridging the gap between tier-3 education and industry reality, fueled by his deep understanding of rural challenges.</p>
+          <div class="founder-content">
+            <img src="assets/team/mahesh-chillakuru.jpg" alt="Mahesh Chillakuru" class="founder-photo-about">
+            <div class="founder-text">
+              <h2>Mahesh Chillakuru</h2>
+              <p class="subtitle">Founder & Chief Architect</p>
+              <div class="founder-bio">
+                <p>I hold an MBA in Sales and Marketing and a BTech in Computer Science. My journey across entrepreneurship, professional experience, and grassroots exposure has shaped my vision to build Innovat Bharat, where I aim to empower students in Tier 3 and rural India to become job creators and build meaningful solutions from their own communities.</p>
+                <p>Founded Mana Dukaan (IIT Mandi incubated) and is a Jagriti Yatra Fellow. Mahesh is dedicated to bridging the gap between tier-3 education and industry reality, fueled by his deep understanding of rural challenges.</p>
+              </div>
             </div>
           </div>
           <div class="founder-awards">
+            <div class="award-pill">MBA – Sales & Marketing</div>
+            <div class="award-pill">BTech – Computer Science</div>
             <div class="award-pill">IIT Mandi Incubated</div>
             <div class="award-pill">Jagriti Yatra Fellow</div>
           </div>
