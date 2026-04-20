@@ -28,7 +28,16 @@
   background-position: center 30%;
   background-repeat: no-repeat;
   z-index: 0;
-  transform: scale(1.05); /* Slight scale for subtle movement effect if needed */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.5s ease-in-out, visibility 1.5s ease-in-out, transform 10s ease-out;
+  transform: scale(1.02); 
+}
+
+.hero-banner-bg.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.05); /* Slow zoom effect while active */
 }
 
 .hero-overlay-dark {

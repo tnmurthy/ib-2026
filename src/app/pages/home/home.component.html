@@ -1,63 +1,122 @@
 <div class="home-page">
 
-  <!-- ===== SECTION 1: HERO ===== -->
+  <!-- ===== SECTION 1: HERO BANNER (ROTATING) ===== -->
   <section class="hero-section">
-    <div class="container">
+    
+    <!-- Auto Rotating Background Banners -->
+    <div *ngFor="let bg of bannerImages; let i = index" 
+         class="hero-banner-bg" 
+         [class.active]="i === activeBannerIndex"
+         [style.background-image]="'url(' + bg + ')'">
+    </div>
+    
+    <div class="hero-overlay-dark"></div>
+    
+    <div class="container hero-container text-center">
       <div class="hero-content">
-        <p class="hero-eyebrow">India's Campus Transformation Initiative</p>
-        <h1 class="hero-headline">Degrees Without Real-World Readiness</h1>
-        <p class="hero-problem-statement">Millions of students in Tier 3 &amp; rural colleges graduate with knowledge —
-          but without the skills, exposure, or network to build careers. It's costing families their savings and
-          students their most critical years.</p>
-        <p class="hero-subheadline">
-          Innovat Bharat is a campus ecosystem built inside normal colleges — embedding industry exposure,
-          entrepreneurship, and innovation directly within Tier 3 and rural campuses.
+        <div class="hero-hashtags">
+          <span>#InnovatBharat</span>
+          <span>#BuildingBharat</span>
+        </div>
+        
+        <p class="hero-eyebrow">
+          India's Campus Transformation Initiative
         </p>
+        <h1 class="hero-headline">
+          Turning Small-Town Colleges Into <br/>
+          <span class="text-highlight">Startup Powerhouses</span>
+        </h1>
+        <p class="hero-subheadline mx-auto">
+          We build premier institute-like ecosystems inside Tier 3 &amp; rural colleges — giving students the direction, mentorship, and real exposure they deserve.
+        </p>
+        <div class="hero-buttons justify-center">
+          <a routerLink="/contact" class="btn btn-hero-primary btn-large">
+            <span>Invite Us To Your College</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="what-is-ib">
-          <h3 class="what-is-title">What is Innovat Bharat?</h3>
-          <ul class="what-is-list">
-            <li><strong>Helping Small-Town Colleges:</strong> We bring big opportunities to students in Tier-3 and
-              regional colleges.</li>
-            <li><strong>Bringing the Industry to Campus:</strong> We build a "startup culture" inside regular, everyday
-              college walls.</li>
-            <li><strong>Focusing on the "Missing Middle":</strong> While big institutes like IITs have all the
-              resources, we focus on the millions of talented students who are often ignored.</li>
-            <li><strong>Closing the Gap:</strong> We help students move from just having a degree to being ready for the
-              global industry.</li>
-            <li><strong>Giving Real Exposure:</strong> We provide the right environment and mentorship to students who
-              have the talent but lack the right path.</li>
+  <!-- Impact Counter Strip -->
+  <div class="impact-strip">
+    <div class="container">
+      <div class="impact-grid">
+        <div class="impact-item">
+          <span class="impact-number" data-target="2047">2047</span>
+          <span class="impact-label">Product Nation Vision</span>
+        </div>
+        <div class="impact-divider"></div>
+        <div class="impact-item">
+          <span class="impact-number">1M+</span>
+          <span class="impact-label">Rural Entrepreneurs Goal</span>
+        </div>
+        <div class="impact-divider"></div>
+        <div class="impact-item">
+          <span class="impact-number">Tier 3</span>
+          <span class="impact-label">College Focus</span>
+        </div>
+        <div class="impact-divider"></div>
+        <div class="impact-item">
+          <span class="impact-number">4 Year</span>
+          <span class="impact-label">Structured Journey</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== WHAT IS INNOVAT BHARAT ===== -->
+  <section class="section what-is-section">
+    <div class="container">
+      <div class="what-is-layout">
+        <div class="what-is-text">
+          <p class="section-eyebrow">Who We Are</p>
+          <h2 class="section-title-left">What is <span class="text-accent">Innovat Bharat</span>?</h2>
+          <ul class="what-is-list-v2">
+            <li>
+              <div class="list-icon">🎯</div>
+              <div>
+                <strong>Helping Small-Town Colleges</strong>
+                <p>We bring big opportunities to students in Tier-3 and regional colleges.</p>
+              </div>
+            </li>
+            <li>
+              <div class="list-icon">🏗️</div>
+              <div>
+                <strong>Bringing the Industry to Campus</strong>
+                <p>We build a "startup culture" inside regular, everyday college walls.</p>
+              </div>
+            </li>
+            <li>
+              <div class="list-icon">🔍</div>
+              <div>
+                <strong>Focusing on the "Missing Middle"</strong>
+                <p>While big institutes like IITs have all the resources, we focus on the millions of talented students who are often ignored.</p>
+              </div>
+            </li>
+            <li>
+              <div class="list-icon">🌉</div>
+              <div>
+                <strong>Closing the Gap</strong>
+                <p>We help students move from just having a degree to being ready for the global industry.</p>
+              </div>
+            </li>
+            <li>
+              <div class="list-icon">🚀</div>
+              <div>
+                <strong>Giving Real Exposure</strong>
+                <p>We provide the right environment and mentorship to students who have the talent but lack the right path.</p>
+              </div>
+            </li>
           </ul>
         </div>
-
-        <div class="hero-pillars">
-          <div class="hero-pillar">
-            <span class="pillar-icon">🏭</span>
-            <div>
-              <strong>Industry-Integrated Micro-Hubs</strong>
-              <p>Co-working spaces and maker-labs where students work on live industry projects — moving pedagogy from
-                "theory-first" to "build-first."</p>
-            </div>
+        <div class="what-is-visual">
+          <img src="https://images.unsplash.com/photo-1593538312308-d4c29d8dc7f1?q=80&w=800&auto=format&fit=crop" alt="Students from tier 3 colleges" class="what-is-image">
+          <div class="what-is-image-badge">
+            <span class="badge-number">4</span>
+            <span class="badge-text">Pillars of Impact</span>
           </div>
-          <div class="hero-pillar">
-            <span class="pillar-icon">🌐</span>
-            <div>
-              <strong>Mentorship Democratization</strong>
-              <p>Connects students with a digital network of global mentors and AI-driven career agents.</p>
-            </div>
-          </div>
-          <div class="hero-pillar">
-            <span class="pillar-icon">💡</span>
-            <div>
-              <strong>The Venture Studio Model</strong>
-              <p>Treats the campus as an incubator — providing structured training in IP filing, R&amp;D, and startup
-                fundamentals.</p>
-            </div>
-          </div>
-        </div>
-        <div class="hero-buttons">
-          <a routerLink="/contact" class="btn btn-primary btn-large">Invite Us To Your College</a>
-          <a routerLink="/ecosystem" class="btn btn-secondary-dark btn-large">Explore Ecosystem</a>
         </div>
       </div>
     </div>
@@ -66,6 +125,7 @@
   <!-- ===== SECTION 2: PROBLEM & REALITY ===== -->
   <section class="section problem-section">
     <div class="container">
+      <p class="section-eyebrow text-center">The Ground Reality</p>
       <h2 class="section-title">Problem &amp; Reality</h2>
       <p class="section-subtitle">Three hard truths that millions of Indian families face every year.</p>
       <div class="problem-grid">
@@ -74,14 +134,10 @@
           <div class="problem-number">01</div>
           <h3>Mismatch Between Industry Needs and Formal Degrees</h3>
           <ul class="problem-details">
-            <li><strong>Theory vs. Execution:</strong> There is a big gap between the deep theory taught in a 4-year
-              degree and the fast, "action-heavy" needs of the modern Tech and Pharma industries.</li>
-            <li><strong>Rapid Tool Changes:</strong> In global companies, the tools and technologies change every 6
-              months, while college degrees remain the same for 4 years.</li>
-            <li><strong>The "Re-learning" Problem:</strong> Students graduate with good bookish knowledge but don't know
-              how to handle live production or real-world lab rules.</li>
-            <li><strong>Not Ready for Work:</strong> Even after graduating, students often have to start learning from
-              scratch to meet actual industry standards and compliance.</li>
+            <li><strong>Theory vs. Execution:</strong> There is a big gap between the deep theory taught in a 4-year degree and the fast, "action-heavy" needs of the modern Tech and Pharma industries.</li>
+            <li><strong>Rapid Tool Changes:</strong> In global companies, the tools and technologies change every 6 months, while college degrees remain the same for 4 years.</li>
+            <li><strong>The "Re-learning" Problem:</strong> Students graduate with good bookish knowledge but don't know how to handle live production or real-world lab rules.</li>
+            <li><strong>Not Ready for Work:</strong> Even after graduating, students often have to start learning from scratch to meet actual industry standards and compliance.</li>
           </ul>
         </div>
 
@@ -89,14 +145,10 @@
           <div class="problem-number">02</div>
           <h3>Training Starts Only in Pre-Final or Final Years</h3>
           <ul class="problem-details">
-            <li><strong>Focus on Exams, Not Skills:</strong> In most colleges, students spend their first three years
-              only studying books and preparing for exams.</li>
-            <li><strong>Starting Too Late:</strong> Important job skills like Communication Skills and Training for
-              Interviews only start in the final or pre-final year.</li>
-            <li><strong>The Big Gap:</strong> Because training starts so late, students don't get enough time to become
-              experts before they graduate.</li>
-            <li><strong>Missed Opportunities:</strong> By the time students start learning real-world skills, they have
-              already lost three very important years.</li>
+            <li><strong>Focus on Exams, Not Skills:</strong> In most colleges, students spend their first three years only studying books and preparing for exams.</li>
+            <li><strong>Starting Too Late:</strong> Important job skills like Communication Skills and Training for Interviews only start in the final or pre-final year.</li>
+            <li><strong>The Big Gap:</strong> Because training starts so late, students don't get enough time to become experts before they graduate.</li>
+            <li><strong>Missed Opportunities:</strong> By the time students start learning real-world skills, they have already lost three very important years.</li>
           </ul>
         </div>
 
@@ -104,16 +156,11 @@
           <div class="problem-number">03</div>
           <h3>Parents Paying Twice While Students Lose 4–5 Critical Years</h3>
           <ul class="problem-details">
-            <li><strong>Hard-Earned Savings:</strong> Parents spend their life savings on college fees with the simple
-              hope that it will lead to a good job.</li>
-            <li><strong>Paying Twice:</strong> Because degrees focus only on theory, parents are forced to pay a second
-              time for private "job-guarantee" courses after graduation.</li>
-            <li><strong>Wasted Years:</strong> Students spend 4-5 critical years in college but still don't feel ready
-              for the real world.</li>
-            <li><strong>Starting from Zero:</strong> Instead of starting their career after college, students have to
-              start learning basic job skills from scratch.</li>
-            <li><strong>Financial Stress:</strong> This system puts a huge financial load on families while delaying the
-              student's ability to earn.</li>
+            <li><strong>Hard-Earned Savings:</strong> Parents spend their life savings on college fees with the simple hope that it will lead to a good job.</li>
+            <li><strong>Paying Twice:</strong> Because degrees focus only on theory, parents are forced to pay a second time for private "job-guarantee" courses after graduation.</li>
+            <li><strong>Wasted Years:</strong> Students spend 4-5 critical years in college but still don't feel ready for the real world.</li>
+            <li><strong>Starting from Zero:</strong> Instead of starting their career after college, students have to start learning basic job skills from scratch.</li>
+            <li><strong>Financial Stress:</strong> This system puts a huge financial load on families while delaying the student's ability to earn.</li>
           </ul>
         </div>
 
@@ -131,8 +178,7 @@
           <div class="vision-icon">🔭</div>
           <h3>Vision</h3>
           <p>
-            To transform Bharat into a global Product Nation by 2047, powered by a Bharat-centric economic model and 1
-            million rural entrepreneurs from Tier-3 and rural colleges.
+            To transform Bharat into a global Product Nation by 2047, powered by a Bharat-centric economic model and 1 million rural entrepreneurs from Tier-3 and rural colleges.
           </p>
         </div>
 
@@ -140,9 +186,7 @@
           <div class="vision-icon">🎯</div>
           <h3>Mission</h3>
           <p>
-            We transform rural colleges into startup hubs where students learn to invent and build their own products.
-            When students become entrepreneurs in their own towns, they create opportunities, generate jobs, and drive
-            India's growth from the grassroots.
+            We transform rural colleges into startup hubs where students learn to invent and build their own products. When students become entrepreneurs in their own towns, they create opportunities, generate jobs, and drive India's growth from the grassroots.
           </p>
         </div>
 
@@ -160,6 +204,7 @@
   <!-- ===== SECTION 4: WHAT WE DO – 4 PILLARS ===== -->
   <section class="section pillars-section">
     <div class="container">
+      <p class="section-eyebrow text-center">Our Approach</p>
       <h2 class="section-title">What We Do</h2>
       <p class="section-subtitle">Four pillars that turn a regular college into a launchpad for student founders.</p>
       <app-card-grid [cards]="pillarCards" [columns]="2" cardStyle="default"></app-card-grid>
@@ -169,25 +214,20 @@
   <!-- ===== SECTION 5: WHO BENEFITS ===== -->
   <section class="section benefits-section">
     <div class="container">
+      <p class="section-eyebrow text-center">Impact</p>
       <h2 class="section-title">Who Benefits</h2>
-      <p class="section-subtitle">The impact of Innovat Bharat ripples outward — from individual students all the way to
-        the nation.</p>
+      <p class="section-subtitle">The impact of Innovat Bharat ripples outward — from individual students all the way to the nation.</p>
       <div class="benefits-grid">
 
         <div class="benefit-card">
           <div class="benefit-icon">👨‍🎓</div>
           <h3>Students</h3>
           <ul class="benefit-list">
-            <li><strong>Earn While You Learn:</strong> Students can start earning their first income while still in
-              college.</li>
-            <li><strong>Financial Independence:</strong> They can stand on their own feet long before they graduate.
-            </li>
-            <li><strong>Helping the Family:</strong> By earning early, students reduce the money pressure on their
-              parents.</li>
-            <li><strong>Real Work Profile:</strong> Along with a degree, students build a strong portfolio of real-world
-              projects and ventures.</li>
-            <li><strong>Beyond Books:</strong> They gain the kind of skills and confidence that no textbook can ever
-              teach.</li>
+            <li><strong>Earn While You Learn:</strong> Students can start earning their first income while still in college.</li>
+            <li><strong>Financial Independence:</strong> They can stand on their own feet long before they graduate.</li>
+            <li><strong>Helping the Family:</strong> By earning early, students reduce the money pressure on their parents.</li>
+            <li><strong>Real Work Profile:</strong> Along with a degree, students build a strong portfolio of real-world projects and ventures.</li>
+            <li><strong>Beyond Books:</strong> They gain the kind of skills and confidence that no textbook can ever teach.</li>
           </ul>
         </div>
 
@@ -195,16 +235,11 @@
           <div class="benefit-icon">👨‍👩‍👧</div>
           <h3>Parents</h3>
           <ul class="benefit-list">
-            <li><strong>A Sense of Pride:</strong> Parents feel proud to see their children becoming successful and
-              helping society so early.</li>
-            <li><strong>Huge Relief:</strong> There is a great sense of relief knowing their children are building a
-              secure future.</li>
-            <li><strong>No Need to Move Away:</strong> Students can build successful lives right from their hometowns.
-            </li>
-            <li><strong>Saving on City Costs:</strong> Families don't have to worry about the high cost and struggle of
-              moving to crowded, expensive cities for jobs.</li>
-            <li><strong>Success at Home:</strong> Children can stay close to their roots while doing world-class work.
-            </li>
+            <li><strong>A Sense of Pride:</strong> Parents feel proud to see their children becoming successful and helping society so early.</li>
+            <li><strong>Huge Relief:</strong> There is a great sense of relief knowing their children are building a secure future.</li>
+            <li><strong>No Need to Move Away:</strong> Students can build successful lives right from their hometowns.</li>
+            <li><strong>Saving on City Costs:</strong> Families don't have to worry about the high cost and struggle of moving to crowded, expensive cities for jobs.</li>
+            <li><strong>Success at Home:</strong> Children can stay close to their roots while doing world-class work.</li>
           </ul>
         </div>
 
@@ -227,14 +262,10 @@
           <div class="benefit-icon">🏭</div>
           <h3>Industry</h3>
           <ul class="benefit-list">
-            <li><strong>Real Problem-Solvers:</strong> Companies get a new generation of workers who aren't just
-              degree-holders, but people who know how to solve real problems.</li>
-            <li><strong>Understanding "Bharat":</strong> These graduates deeply understand the needs and heart of the
-              real India.</li>
-            <li><strong>Technical Grit:</strong> They have the hard work and technical skills needed to build
-              world-class Indian products.</li>
-            <li><strong>Global Leadership:</strong> By creating indigenous (Made in India) products, they help make our
-              nation a global leader again.</li>
+            <li><strong>Real Problem-Solvers:</strong> Companies get a new generation of workers who aren't just degree-holders, but people who know how to solve real problems.</li>
+            <li><strong>Understanding "Bharat":</strong> These graduates deeply understand the needs and heart of the real India.</li>
+            <li><strong>Technical Grit:</strong> They have the hard work and technical skills needed to build world-class Indian products.</li>
+            <li><strong>Global Leadership:</strong> By creating indigenous (Made in India) products, they help make our nation a global leader again.</li>
           </ul>
         </div>
 
@@ -242,16 +273,11 @@
           <div class="benefit-icon">🇮🇳</div>
           <h3>Society &amp; Nation</h3>
           <ul class="benefit-list">
-            <li><strong>Jobs in Small Towns:</strong> Local businesses create high-quality jobs directly in Tier-3 towns
-              and villages.</li>
-            <li><strong>Keeping Wealth Local:</strong> When businesses grow locally, the money stays within the
-              community, making it stronger.</li>
-            <li><strong>Stopping "Brain Drain":</strong> Talented students no longer have to move to crowded, expensive
-              metros; they can build their dreams right at home.</li>
-            <li><strong>Economic Powerhouses:</strong> This movement transforms small towns and villages into centers of
-              growth and wealth.</li>
-            <li><strong>The "Product Nation" Goal:</strong> This is the key step to making India a country that builds
-              and sells products to the whole world.</li>
+            <li><strong>Jobs in Small Towns:</strong> Local businesses create high-quality jobs directly in Tier-3 towns and villages.</li>
+            <li><strong>Keeping Wealth Local:</strong> When businesses grow locally, the money stays within the community, making it stronger.</li>
+            <li><strong>Stopping "Brain Drain":</strong> Talented students no longer have to move to crowded, expensive metros; they can build their dreams right at home.</li>
+            <li><strong>Economic Powerhouses:</strong> This movement transforms small towns and villages into centers of growth and wealth.</li>
+            <li><strong>The "Product Nation" Goal:</strong> This is the key step to making India a country that builds and sells products to the whole world.</li>
           </ul>
         </div>
 
@@ -269,15 +295,7 @@
           <h3 class="founder-name">Mahesh Chillakuru</h3>
           <p class="founder-role">Founder – Innovat Bharat</p>
           <p class="founder-bio">
-            I hold an MBA in Sales and Marketing and a BTech in Computer Science. My journey across entrepreneurship,
-            professional experience, and grassroots exposure has shaped my vision to build Innovat Bharat, where I aim
-            to empower students in Tier 3 and rural India to become job creators and build meaningful solutions from
-            their own communities.
-          </p>
-          <p class="founder-bio">
-            Mahesh is an aspiring entrepreneur with a background spanning SaaS and industrial sales. He is the founder
-            of Mana Dukaan and a proud Jagriti Yatra Fellow — an experience that shaped his conviction that rural
-            India's next generation of entrepreneurs just needs the right ecosystem to thrive.
+            I hold an MBA in Sales and Marketing and a BTech in Computer Science. My journey across entrepreneurship, professional experience, and grassroots exposure has shaped my vision to build Innovat Bharat, where I aim to empower students in Tier 3 and rural India to become job creators and build meaningful solutions from their own communities.
           </p>
           <div class="founder-tags">
             <span>MBA – Sales &amp; Marketing</span>
@@ -301,15 +319,13 @@
         <div class="cta-col">
           <h4>The Challenge</h4>
           <p>
-            The world is moving toward a Product Economy, yet many Tier-3 and rural colleges are still stuck in a
-            "Placement Only" cycle. Your students have the grit and the talent — they just need the ecosystem.
+            The world is moving toward a Product Economy, yet many Tier-3 and rural colleges are still stuck in a "Placement Only" cycle. Your students have the grit and the talent — they just need the ecosystem.
           </p>
         </div>
         <div class="cta-col">
           <h4>The Invitation</h4>
           <p>
-            We invite forward-thinking college leaders to partner with Innovat Bharat. Let's move beyond the "Highest
-            Package" race and start building the architects of a Viksit Bharat.
+            We invite forward-thinking college leaders to partner with Innovat Bharat. Let's move beyond the "Highest Package" race and start building the architects of a Viksit Bharat.
           </p>
         </div>
       </div>
@@ -318,16 +334,13 @@
         <h3>By scheduling an introduction session, you will learn how to:</h3>
         <ul class="cta-list">
           <li>
-            <strong>Establish a Venture Culture:</strong> Transition your campus from a degree factory to a startup
-            incubator.
+            <strong>Establish a Venture Culture:</strong> Transition your campus from a degree factory to a startup incubator.
           </li>
           <li>
-            <strong>Empower Student Founders:</strong> Give your students the tools to build real products and earn
-            before they graduate.
+            <strong>Empower Student Founders:</strong> Give your students the tools to build real products and earn before they graduate.
           </li>
           <li>
-            <strong>Secure Your Legacy:</strong> Build a brand known for innovation, self-reliance, and a village-driven
-            economic impact.
+            <strong>Secure Your Legacy:</strong> Build a brand known for innovation, self-reliance, and a village-driven economic impact.
           </li>
         </ul>
         <a routerLink="/contact" class="btn btn-cta btn-large">Schedule an Introduction Session</a>
@@ -355,8 +368,7 @@
             <span class="session-icon">📍</span>
             <div>
               <strong>Local Impact Strategy</strong>
-              <p>How we specifically tailor the model to your region's core strengths (Mechanical, EEE, Agriculture,
-                etc.).</p>
+              <p>How we specifically tailor the model to your region's core strengths (Mechanical, EEE, Agriculture, etc.).</p>
             </div>
           </div>
         </div>
@@ -364,8 +376,7 @@
 
       <div class="cta-why-now">
         <p class="why-now-text">
-          The future of India isn't in its metros; it's in its villages. Don't let your students be part of the brain
-          drain. Help them lead the resurgence.
+          The future of India isn't in its metros; it's in its villages. Don't let your students be part of the brain drain. Help them lead the resurgence.
         </p>
         <blockquote class="cta-quote">
           "Be the college that didn't just place students, but built the nation."
