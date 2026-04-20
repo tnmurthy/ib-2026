@@ -19,11 +19,11 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   // Auto-rotating Banner Logic
   bannerImages: string[] = [
-    'https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2000&auto=format&fit=crop', // Tech collaboration
-    'https://images.unsplash.com/photo-1588072432836-e10032774350?q=80&w=2000&auto=format&fit=crop', // Classroom context
-    'https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=2000&auto=format&fit=crop', // Grassroots learning
-    'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2000&auto=format&fit=crop', // Maker/Workshop lab
-    'https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=2000&auto=format&fit=crop'  // Mentorship/Guidance
+    'https://images.unsplash.com/photo-1584347710329-8472f85bd8ff?q=80&w=2000&auto=format&fit=crop', // Indian village entrepreneur/maker context
+    'https://images.unsplash.com/photo-1627556592933-ffe99c1c9cd8?q=80&w=2000&auto=format&fit=crop', // Indian village students learning
+    'https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=2000&auto=format&fit=crop', // Grassroots rural children/students
+    'https://images.unsplash.com/photo-1517594422361-5e18d418c6d1?q=80&w=2000&auto=format&fit=crop', // Indian village enterprise/shop
+    'https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=2000&auto=format&fit=crop'  // Deep rural India context
   ];
   
   activeBannerIndex: number = 0;
