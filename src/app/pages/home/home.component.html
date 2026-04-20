@@ -4,11 +4,12 @@
   <section class="hero-section">
     
     <!-- Auto Rotating Background Banners -->
-    <div *ngFor="let bg of bannerImages; let i = index" 
-         class="hero-banner-bg" 
-         [class.active]="i === activeBannerIndex"
-         [style.background-image]="'url(' + bg + ')'">
-    </div>
+    @for (bg of bannerImages; track $index) {
+      <div class="hero-banner-bg" 
+           [class.active]="$index === activeBannerIndex"
+           [ngStyle]="{'background-image': 'url(' + bg + ')'}">
+      </div>
+    }
     
     <div class="hero-overlay-dark"></div>
     
