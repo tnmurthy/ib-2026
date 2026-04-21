@@ -1,54 +1,69 @@
 <div class="home-page">
 
-  <!-- ===== SECTION 1: HERO BANNER (ROTATING) ===== -->
-  <section class="hero-section">
+  <!-- ===== HERO BANNER CAROUSEL ===== -->
+  <section class="hero-section" (mouseenter)="pauseAutoPlay()" (mouseleave)="resumeAutoPlay()">
     
-    <!-- Auto Rotating Background Banners -->
-    @for (bg of bannerImages; track $index) {
+    @for (slide of bannerSlides; track $index) {
       <div class="hero-banner-bg" 
            [class.active]="$index === activeBannerIndex"
-           [ngStyle]="{'background-image': 'url(' + bg + ')'}">
+           [ngStyle]="{'background-image': 'url(' + slide.image + ')'}">
       </div>
     }
     
     <div class="hero-overlay-dark"></div>
     
+    <button class="hero-arrow hero-arrow-prev" (click)="prevSlide()" aria-label="Previous slide">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <button class="hero-arrow hero-arrow-next" (click)="nextSlide()" aria-label="Next slide">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+    
     <div class="container hero-container text-center">
       <div class="hero-content">
         <div class="hero-hashtags">
           <span>#InnovatBharat</span>
-          <span>#BuildingBharat</span>
           <span>#ProductNation2047</span>
           <span>#CampusToStartup</span>
-          <span>#RuralToGlobal</span>
         </div>
         
-        <p class="hero-eyebrow">
-          India's Campus Transformation Initiative
-        </p>
-        <h1 class="hero-headline">
-          Turning Small-Town Colleges Into <br/>
-          <span class="text-highlight">Startup Powerhouses</span>
-        </h1>
-        <p class="hero-subheadline mx-auto">
-          We build premier institute-like ecosystems inside Tier 3 &amp; rural colleges — giving students the direction, mentorship, and real exposure they deserve.
-        </p>
-        <div class="hero-buttons justify-center">
-          <a routerLink="/contact" class="btn btn-hero-primary btn-large">
-            <span>Invite Us To Your College</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </div>
+        @for (slide of bannerSlides; track $index) {
+          <div class="hero-slide-content" [class.active]="$index === activeBannerIndex">
+            <p class="hero-eyebrow">{{ slide.eyebrow }}</p>
+            <h1 class="hero-headline">
+              {{ slide.headline }} <br/>
+              <span class="text-highlight">{{ slide.highlightText }}</span>
+            </h1>
+            <p class="hero-subheadline mx-auto">{{ slide.subtitle }}</p>
+            <div class="hero-buttons justify-center">
+              <a [routerLink]="slide.ctaLink" class="btn btn-hero-primary btn-large">
+                <span>{{ slide.ctaText }}</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        }
       </div>
+    </div>
+
+    <div class="hero-nav-dots">
+      @for (slide of bannerSlides; track $index) {
+        <button class="hero-dot" 
+                [class.active]="$index === activeBannerIndex" 
+                (click)="goToSlide($index)"
+                [attr.aria-label]="'Go to slide ' + ($index + 1)">
+          <span class="hero-dot-progress" [class.active]="$index === activeBannerIndex"></span>
+        </button>
+      }
     </div>
   </section>
 
-  <!-- Impact Counter Strip -->
+  <!-- ===== IMPACT COUNTER STRIP ===== -->
   <div class="impact-strip">
     <div class="container">
       <div class="impact-grid">
         <div class="impact-item">
-          <span class="impact-number" data-target="2047">2047</span>
+          <span class="impact-number">2047</span>
           <span class="impact-label">Product Nation Vision</span>
         </div>
         <div class="impact-divider"></div>
@@ -70,148 +85,62 @@
     </div>
   </div>
 
-  <!-- ===== WHAT IS INNOVAT BHARAT ===== -->
+  <!-- ===== WHAT IS INNOVAT BHARAT (Concise) ===== -->
   <section class="section what-is-section">
     <div class="container">
-      <div class="what-is-layout">
-        <div class="what-is-text">
-          <p class="section-eyebrow">Who We Are</p>
-          <h2 class="section-title-left">What is <span class="text-accent">Innovat Bharat</span>?</h2>
-          <ul class="what-is-list-v2">
-            <li>
-              <div class="list-icon">🎯</div>
-              <div>
-                <strong>Helping Small-Town Colleges</strong>
-                <p>We bring big opportunities to students in Tier-3 and regional colleges.</p>
-              </div>
-            </li>
-            <li>
-              <div class="list-icon">🏗️</div>
-              <div>
-                <strong>Bringing the Industry to Campus</strong>
-                <p>We build a "startup culture" inside regular, everyday college walls.</p>
-              </div>
-            </li>
-            <li>
-              <div class="list-icon">🔍</div>
-              <div>
-                <strong>Focusing on the "Missing Middle"</strong>
-                <p>While big institutes like IITs have all the resources, we focus on the millions of talented students who are often ignored.</p>
-              </div>
-            </li>
-            <li>
-              <div class="list-icon">🌉</div>
-              <div>
-                <strong>Closing the Gap</strong>
-                <p>We help students move from just having a degree to being ready for the global industry.</p>
-              </div>
-            </li>
-            <li>
-              <div class="list-icon">🚀</div>
-              <div>
-                <strong>Giving Real Exposure</strong>
-                <p>We provide the right environment and mentorship to students who have the talent but lack the right path.</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="what-is-visual">
-          <img src="https://images.unsplash.com/photo-1593538312308-d4c29d8dc7f1?q=80&w=800&auto=format&fit=crop" alt="Students from tier 3 colleges" class="what-is-image">
-          <div class="what-is-image-badge">
-            <span class="badge-number">4</span>
-            <span class="badge-text">Pillars of Impact</span>
-          </div>
+      <div class="what-is-compact">
+        <p class="section-eyebrow text-center">Who We Are</p>
+        <h2 class="section-title">What is <span class="text-accent">Innovat Bharat</span>?</h2>
+        <p class="section-subtitle">We build premier institute-like ecosystems inside Tier-3 & rural colleges — giving students the direction, mentorship, and real exposure they deserve. While IITs have all the resources, we focus on the millions of talented students in small-town colleges who are often overlooked.</p>
+        <div class="what-is-cta">
+          <a routerLink="/about" class="btn-learn-more">
+            Learn More About Us
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== SECTION 2: WHAT WE DO – 4 PILLARS ===== -->
-  <section class="section pillars-section" style="background-color: #f7fafc;">
+  <!-- ===== 4 PILLARS (Compact Inline) ===== -->
+  <section class="section pillars-section">
     <div class="container">
       <p class="section-eyebrow text-center">Our Approach</p>
       <h2 class="section-title">The 4 Pillars of Transformation</h2>
       <p class="section-subtitle">A proven model that turns a regular college into a launchpad for student founders.</p>
-      <app-card-grid [cards]="pillarCards" [columns]="2" cardStyle="default"></app-card-grid>
+      <div class="pillars-grid">
+        @for (pillar of pillars; track $index) {
+          <div class="pillar-card">
+            <span class="pillar-icon">{{ pillar.icon }}</span>
+            <h3>{{ pillar.title }}</h3>
+            <p>{{ pillar.desc }}</p>
+          </div>
+        }
+      </div>
+      <div class="pillars-cta">
+        <a routerLink="/ecosystem" class="btn-learn-more">
+          Explore Our Ecosystem
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- ===== SECTION 3: FINAL CTA ===== -->
+  <!-- ===== COMPACT CTA ===== -->
   <section class="final-cta-section">
     <div class="container">
-      <div class="cta-header">
-        <h2>Lead the Transformation of Rural Bharat</h2>
-      </div>
-
-      <div class="cta-two-col">
-        <div class="cta-col">
-          <h4>The Challenge</h4>
-          <p>
-            The world is moving toward a Product Economy, yet many Tier-3 and rural colleges are still stuck in a "Placement Only" cycle. Your students have the grit and the talent — they just need the ecosystem.
-          </p>
-        </div>
-        <div class="cta-col">
-          <h4>The Invitation</h4>
-          <p>
-            We invite forward-thinking college leaders to partner with Innovat Bharat. Let's move beyond the "Highest Package" race and start building the architects of a Viksit Bharat.
-          </p>
-        </div>
-      </div>
-
-      <div class="cta-session-block">
-        <h3>By scheduling an introduction session, you will learn how to:</h3>
-        <ul class="cta-list">
-          <li>
-            <strong>Establish a Venture Culture:</strong> Transition your campus from a degree factory to a startup incubator.
-          </li>
-          <li>
-            <strong>Empower Student Founders:</strong> Give your students the tools to build real products and earn before they graduate.
-          </li>
-          <li>
-            <strong>Secure Your Legacy:</strong> Build a brand known for innovation, self-reliance, and a village-driven economic impact.
-          </li>
-        </ul>
-        <a routerLink="/contact" class="btn btn-cta btn-large">Schedule an Introduction Session</a>
-        <p class="cta-target">Targeting: Principals, Directors, and TPO Heads</p>
-      </div>
-
-      <div class="cta-session-details">
-        <h3>What Happens in the Session?</h3>
-        <div class="session-items">
-          <div class="session-item">
-            <span class="session-icon">🗺️</span>
-            <div>
-              <strong>The 2047 Roadmap</strong>
-              <p>We share how your college fits into the mission of 1 million entrepreneurs.</p>
-            </div>
-          </div>
-          <div class="session-item">
-            <span class="session-icon">🏗️</span>
-            <div>
-              <strong>The Ecosystem Blueprint</strong>
-              <p>A look at our 4-year model (Mindset → Exposure → Culture → Community).</p>
-            </div>
-          </div>
-          <div class="session-item">
-            <span class="session-icon">📍</span>
-            <div>
-              <strong>Local Impact Strategy</strong>
-              <p>How we specifically tailor the model to your region's core strengths (Mechanical, EEE, Agriculture, etc.).</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="cta-why-now">
-        <p class="why-now-text">
-          The future of India isn't in its metros; it's in its villages. Don't let your students be part of the brain drain. Help them lead the resurgence.
-        </p>
+      <div class="cta-compact">
+        <h2>Ready to Transform Your Campus?</h2>
+        <p>We invite forward-thinking college leaders to partner with Innovat Bharat. Let's move beyond the "Highest Package" race and start building the architects of a Viksit Bharat.</p>
         <blockquote class="cta-quote">
           "Be the college that didn't just place students, but built the nation."
         </blockquote>
-        <a routerLink="/contact" class="btn btn-cta btn-large">Schedule an Introduction Session</a>
+        <div class="cta-actions">
+          <a routerLink="/contact" class="btn btn-cta btn-large">Schedule an Introduction Session</a>
+          <a routerLink="/for-colleges" class="btn btn-cta-outline btn-large">Why Partner With Us</a>
+        </div>
+        <p class="cta-target">Targeting: Principals, Directors, and TPO Heads</p>
       </div>
-
     </div>
   </section>
 

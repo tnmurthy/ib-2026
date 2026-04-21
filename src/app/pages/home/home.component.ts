@@ -2,79 +2,130 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
-import { CardGridComponent, CardItem } from '../../components/shared/card-grid/card-grid.component';
+export interface BannerSlide {
+  image: string;
+  eyebrow: string;
+  headline: string;
+  highlightText: string;
+  subtitle: string;
+  ctaText: string;
+  ctaLink: string;
+}
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
     CommonModule,
-    RouterLink,
-    CardGridComponent
+    RouterLink
   ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit, OnDestroy {
 
-  // Auto-rotating Banner Logic
-  bannerImages: string[] = [
-    'https://images.unsplash.com/photo-1584347710329-8472f85bd8ff?q=80&w=2000&auto=format&fit=crop', // Indian village entrepreneur/maker context
-    'https://images.unsplash.com/photo-1627556592933-ffe99c1c9cd8?q=80&w=2000&auto=format&fit=crop', // Indian village students learning
-    'https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=2000&auto=format&fit=crop', // Grassroots rural children/students
-    'https://images.unsplash.com/photo-1517594422361-5e18d418c6d1?q=80&w=2000&auto=format&fit=crop', // Indian village enterprise/shop
-    'https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=2000&auto=format&fit=crop'  // Deep rural India context
+  // Banner Slides — Tier-3 Indian town students & small enterprise imagery
+  bannerSlides: BannerSlide[] = [
+    {
+      image: 'assets/banners/tier3-students.png',
+      eyebrow: "India's Campus Transformation Initiative",
+      headline: 'Turning Small-Town Colleges Into',
+      highlightText: 'Startup Powerhouses',
+      subtitle: 'We build premier ecosystems inside Tier-3 & rural colleges — giving students the direction, mentorship, and real exposure they deserve.',
+      ctaText: 'Invite Us To Your College',
+      ctaLink: '/contact'
+    },
+    {
+      image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2000&auto=format&fit=crop',
+      eyebrow: 'Bridging Rural Roots & Digital Innovation',
+      headline: 'From Village Dreams To',
+      highlightText: 'Global Impact',
+      subtitle: 'Empowering rural youth with the tools, skills, and mindset to build world-class products — right from their hometowns.',
+      ctaText: 'Learn About Our Mission',
+      ctaLink: '/about'
+    },
+    {
+      image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2000&auto=format&fit=crop',
+      eyebrow: 'Learn From Industry Leaders',
+      headline: 'Mentorship That Builds',
+      highlightText: 'Future Founders',
+      subtitle: 'Connect with experienced professionals and business leaders who guide students from idea to execution.',
+      ctaText: 'Become a Mentor',
+      ctaLink: '/partners-mentors'
+    },
+    {
+      image: 'https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=2000&auto=format&fit=crop',
+      eyebrow: 'A Movement Across Campuses',
+      headline: 'Building a Culture of',
+      highlightText: 'Innovation & Self-Reliance',
+      subtitle: 'Transforming everyday college campuses into vibrant ecosystems where students think, build, and launch their ventures.',
+      ctaText: 'Partner Your College',
+      ctaLink: '/for-colleges'
+    },
+    {
+      image: 'https://images.unsplash.com/photo-1559223607-a43c990c692c?q=80&w=2000&auto=format&fit=crop',
+      eyebrow: 'Product Nation 2047',
+      headline: 'Creating 1 Million',
+      highlightText: 'Rural Entrepreneurs',
+      subtitle: "From college project to startup — we help students prototype, pitch, and build real businesses that drive India's future.",
+      ctaText: 'Join the Movement',
+      ctaLink: '/contact'
+    }
   ];
-  
+
   activeBannerIndex: number = 0;
   private bannerInterval: any;
+  private autoplayPaused: boolean = false;
 
   ngOnInit(): void {
-    // Rotate banner every 5 seconds
-    this.bannerInterval = setInterval(() => {
-      this.activeBannerIndex = (this.activeBannerIndex + 1) % this.bannerImages.length;
-    }, 5000);
+    this.startAutoPlay();
   }
 
   ngOnDestroy(): void {
+    this.stopAutoPlay();
+  }
+
+  startAutoPlay(): void {
+    this.bannerInterval = setInterval(() => {
+      if (!this.autoplayPaused) {
+        this.activeBannerIndex = (this.activeBannerIndex + 1) % this.bannerSlides.length;
+      }
+    }, 6000);
+  }
+
+  stopAutoPlay(): void {
     if (this.bannerInterval) {
       clearInterval(this.bannerInterval);
     }
   }
 
-  // Section: What We Do – 4 Pillars
-  pillarCards: CardItem[] = [
-    {
-      icon: '🧠',
-      title: 'Mindset & Foundation (Building Strong Roots)',
-      description: `• Early Start: We shift student thinking from "finding a job" to "solving a problem" right from the first year.
-• Self-Awareness: Students learn to see opportunities in their own communities and surroundings.
-• Emotional Strength: Building the resilience and mental toughness needed for the entrepreneurial journey.
-• Creative Thinking: Developing a creative and problem-solving mindset that lasts a lifetime.`
-    },
-    {
-      icon: '🏢',
-      title: 'Industry & Career Exposure (Learning by Doing)',
-      description: `• Real Projects: Students bridge the gap between books and the real world through internships and hands-on work.
-• Learn from Experts: We bring in active professionals and practitioners to share real-world knowledge.
-• Practical Skills: The focus is on solving actual industry challenges, not just getting a certificate.
-• Beyond Grades: We ensure students understand how modern industries actually function.`
-    },
-    {
-      icon: '🚀',
-      title: 'Startup & Innovation Culture (Turning Campus into a Lab)',
-      description: `• Live Labs: We transform regular college campuses into active spaces where teams build real products.
-• Safe to Experiment: We provide local incubation so students can take risks and try out their ideas.
-• Teamwork: Students learn to work together and prototype their solutions.
-• Real Growth: We help turn simple college projects into high-growth startup ventures.`
-    },
-    {
-      icon: '🤝',
-      title: 'Community & Mentorship (Guidance from Leaders)',
-      description: `• Strong Network: We connect students with successful alumni and local business leaders.
-• Best of Both Worlds: We blend modern startup strategies with traditional Indian business wisdom.
-• No One Walks Alone: Every founder gets the mentorship and connections they need to scale.
-• Keeping Wealth Local: Our community focus ensures that businesses grow and create jobs within their own towns.`
-    }
+  goToSlide(index: number): void {
+    this.activeBannerIndex = index;
+    this.stopAutoPlay();
+    this.startAutoPlay();
+  }
+
+  nextSlide(): void {
+    this.goToSlide((this.activeBannerIndex + 1) % this.bannerSlides.length);
+  }
+
+  prevSlide(): void {
+    this.goToSlide((this.activeBannerIndex - 1 + this.bannerSlides.length) % this.bannerSlides.length);
+  }
+
+  pauseAutoPlay(): void {
+    this.autoplayPaused = true;
+  }
+
+  resumeAutoPlay(): void {
+    this.autoplayPaused = false;
+  }
+
+  // Compact 4 Pillars for homepage
+  pillars = [
+    { icon: '🧠', title: 'Mindset & Foundation', desc: 'Shifting student thinking from "finding a job" to "solving a problem" from year one.' },
+    { icon: '🏢', title: 'Industry Exposure', desc: 'Real internships, live projects, and hands-on learning from active professionals.' },
+    { icon: '🚀', title: 'Startup Culture', desc: 'Transforming campuses into active labs where teams build real products.' },
+    { icon: '🤝', title: 'Community & Mentorship', desc: 'Connecting students with alumni, leaders, and traditional business wisdom.' }
   ];
 }
