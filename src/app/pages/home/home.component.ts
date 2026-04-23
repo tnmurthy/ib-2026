@@ -1,6 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
 
 export interface BannerSlide {
   image: string;
@@ -16,8 +15,7 @@ export interface BannerSlide {
   selector: 'app-home',
   standalone: true,
   imports: [
-    CommonModule,
-    RouterLink
+    CommonModule
   ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']

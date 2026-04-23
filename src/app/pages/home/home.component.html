@@ -19,32 +19,6 @@
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
     </button>
     
-    <div class="container hero-container text-center">
-      <div class="hero-content">
-        <div class="hero-hashtags">
-          <span>#InnovatBharat</span>
-          <span>#ProductNation2047</span>
-          <span>#CampusToStartup</span>
-        </div>
-        
-         @for (slide of bannerSlides; track $index) {
-           <div class="hero-slide-content" [class.active]="$index === activeBannerIndex">
-             <h1 class="hero-headline">
-               {{ slide.headline }} <br/>
-               <span class="text-highlight">{{ slide.highlightText }}</span>
-            </h1>
-            <p class="hero-subheadline mx-auto">{{ slide.subtitle }}</p>
-            <div class="hero-buttons justify-center">
-              <a [routerLink]="slide.ctaLink" class="btn btn-hero-primary btn-large">
-                <span>{{ slide.ctaText }}</span>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
-            </div>
-          </div>
-        }
-      </div>
-    </div>
-
     <div class="hero-nav-dots">
       @for (slide of bannerSlides; track $index) {
         <button class="hero-dot" 
