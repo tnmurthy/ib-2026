@@ -25,32 +25,17 @@
   position: absolute;
   inset: 0;
   background-size: cover;
-  background-position: center 30%;
+  background-position: center center;
   background-repeat: no-repeat;
   z-index: 0;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 1.8s ease-in-out, visibility 1.8s ease-in-out, transform 12s ease-out;
-  transform: scale(1.02);
+  transition: opacity 1.2s ease-in-out, visibility 1.2s ease-in-out;
 }
 
 .hero-banner-bg.active {
   opacity: 1;
   visibility: visible;
-  transform: scale(1.08);
-}
-
-.hero-overlay-dark {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(10, 18, 36, 0.75) 0%,
-    rgba(10, 18, 36, 0.45) 40%,
-    rgba(10, 18, 36, 0.55) 70%,
-    rgba(10, 18, 36, 0.85) 100%
-  );
-  z-index: 1;
 }
 
 /* Navigation Arrows */
