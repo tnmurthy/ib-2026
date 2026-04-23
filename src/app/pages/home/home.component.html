@@ -27,12 +27,11 @@
           <span>#CampusToStartup</span>
         </div>
         
-        @for (slide of bannerSlides; track $index) {
-          <div class="hero-slide-content" [class.active]="$index === activeBannerIndex">
-            <p class="hero-eyebrow">{{ slide.eyebrow }}</p>
-            <h1 class="hero-headline">
-              {{ slide.headline }} <br/>
-              <span class="text-highlight">{{ slide.highlightText }}</span>
+         @for (slide of bannerSlides; track $index) {
+           <div class="hero-slide-content" [class.active]="$index === activeBannerIndex">
+             <h1 class="hero-headline">
+               {{ slide.headline }} <br/>
+               <span class="text-highlight">{{ slide.highlightText }}</span>
             </h1>
             <p class="hero-subheadline mx-auto">{{ slide.subtitle }}</p>
             <div class="hero-buttons justify-center">
