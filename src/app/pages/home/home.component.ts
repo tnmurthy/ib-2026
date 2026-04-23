@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   // Banner Slides — Tier-3 Indian town students & small enterprise imagery
   bannerSlides: BannerSlide[] = [
     {
-      image: '/assets/banners/tier3-students.png',
+      image: '/assets/banners/campus-innovation.png',
       eyebrow: "India's Campus Transformation Initiative",
       headline: 'Turning Small-Town Colleges Into',
       highlightText: 'Startup Powerhouses',
@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       ctaLink: '/contact'
     },
     {
-      image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2000&auto=format&fit=crop',
+      image: '/assets/banners/campus-life.png',
       eyebrow: 'Bridging Rural Roots & Digital Innovation',
       headline: 'From Village Dreams To',
       highlightText: 'Global Impact',
@@ -45,7 +45,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       ctaLink: '/about'
     },
     {
-      image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2000&auto=format&fit=crop',
+      image: '/assets/banners/startup-culture.png',
       eyebrow: 'Learn From Industry Leaders',
       headline: 'Mentorship That Builds',
       highlightText: 'Future Founders',
@@ -54,7 +54,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       ctaLink: '/partners-mentors'
     },
     {
-      image: 'https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=2000&auto=format&fit=crop',
+      image: '/assets/banners/tier3-students.png',
       eyebrow: 'A Movement Across Campuses',
       headline: 'Building a Culture of',
       highlightText: 'Innovation & Self-Reliance',
@@ -63,7 +63,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       ctaLink: '/for-colleges'
     },
     {
-      image: 'https://images.unsplash.com/photo-1559223607-a43c990c692c?q=80&w=2000&auto=format&fit=crop',
+      image: '/assets/banners/rural-empowerment.png',
       eyebrow: 'Product Nation 2047',
       headline: 'Creating 1 Million',
       highlightText: 'Rural Entrepreneurs',
