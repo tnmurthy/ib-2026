@@ -3,12 +3,6 @@ import { CommonModule } from '@angular/common';
 
 export interface BannerSlide {
   image: string;
-  eyebrow: string;
-  headline: string;
-  highlightText: string;
-  subtitle: string;
-  ctaText: string;
-  ctaLink: string;
 }
 
 @Component({
@@ -25,49 +19,19 @@ export class HomeComponent implements OnInit, OnDestroy {
   // Banner Slides — Tier-3 Indian town students & small enterprise imagery
   bannerSlides: BannerSlide[] = [
     {
-      image: '/assets/banners/campus-innovation.png',
-      eyebrow: "India's Campus Transformation Initiative",
-      headline: 'Turning Small-Town Colleges Into',
-      highlightText: 'Startup Powerhouses',
-      subtitle: 'We build premier ecosystems inside Tier-3 & rural colleges — giving students the direction, mentorship, and real exposure they deserve.',
-      ctaText: 'Invite Us To Your College',
-      ctaLink: '/contact'
+      image: '/assets/banners/campus-innovation.png'
     },
     {
-      image: '/assets/banners/campus-life.png',
-      eyebrow: 'Bridging Rural Roots & Digital Innovation',
-      headline: 'From Village Dreams To',
-      highlightText: 'Global Impact',
-      subtitle: 'Empowering rural youth with the tools, skills, and mindset to build world-class products — right from their hometowns.',
-      ctaText: 'Learn About Our Mission',
-      ctaLink: '/about'
+      image: '/assets/banners/campus-life.png'
     },
     {
-      image: '/assets/banners/startup-culture.png',
-      eyebrow: 'Learn From Industry Leaders',
-      headline: 'Mentorship That Builds',
-      highlightText: 'Future Founders',
-      subtitle: 'Connect with experienced professionals and business leaders who guide students from idea to execution.',
-      ctaText: 'Become a Mentor',
-      ctaLink: '/partners-mentors'
+      image: '/assets/banners/startup-culture.png'
     },
     {
-      image: '/assets/banners/tier3-students.png',
-      eyebrow: 'A Movement Across Campuses',
-      headline: 'Building a Culture of',
-      highlightText: 'Innovation & Self-Reliance',
-      subtitle: 'Transforming everyday college campuses into vibrant ecosystems where students think, build, and launch their ventures.',
-      ctaText: 'Partner Your College',
-      ctaLink: '/for-colleges'
+      image: '/assets/banners/tier3-students.png'
     },
     {
-      image: '/assets/banners/rural-empowerment.png',
-      eyebrow: 'Product Nation 2047',
-      headline: 'Creating 1 Million',
-      highlightText: 'Rural Entrepreneurs',
-      subtitle: "From college project to startup — we help students prototype, pitch, and build real businesses that drive India's future.",
-      ctaText: 'Join the Movement',
-      ctaLink: '/contact'
+      image: '/assets/banners/rural-empowerment.png'
     }
   ];
 
