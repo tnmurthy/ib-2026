@@ -48,7 +48,7 @@ export class EcosystemComponent {
   // Journey Data
   learningJourney: StepItem[] = [
     { icon: '🌱', title: 'Year 1: Mindset', description: 'Career clarity, soft skills, and introduction to entrepreneurial thinking.' },
-    { icon: '💼', title: 'Year 2+: Internships', description: 'Paid internships (₹10k/mo) requiring 3 hours daily on real projects.' },
+    { icon: '💼', title: 'Year 2+: Internships', description: 'Internships support 3 hours daily on real projects.' },
     { icon: '🤝', title: 'Ongoing: Mentorship', description: 'Peer learning, alumni networks, and startup team formation support.' }
   ];
 

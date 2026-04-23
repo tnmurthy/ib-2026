@@ -1,43 +1,131 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
-import { CardGridComponent, CardItem } from '../../components/shared/card-grid/card-grid.component';
+export interface BannerSlide {
+  image: string;
+  eyebrow: string;
+  headline: string;
+  highlightText: string;
+  subtitle: string;
+  ctaText: string;
+  ctaLink: string;
+}
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
     CommonModule,
-    RouterLink,
-    CardGridComponent
+    RouterLink
   ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit, OnDestroy {
 
-  // Section: What We Do – 4 Pillars
-  pillarCards: CardItem[] = [
+  // Banner Slides — Tier-3 Indian town students & small enterprise imagery
+  bannerSlides: BannerSlide[] = [
     {
-      icon: '🧠',
-      title: 'Mindset & Foundation',
-      description: 'We start early to shift student thinking from "finding a job" to "solving a problem." By building a strong mental foundation in the first year, students learn to see opportunities in their surroundings. This clarity helps them develop the resilience and creative thinking needed to build a lifelong entrepreneurial path.'
+      image: '/assets/banners/campus-innovation.png',
+      eyebrow: "India's Campus Transformation Initiative",
+      headline: 'Turning Small-Town Colleges Into',
+      highlightText: 'Startup Powerhouses',
+      subtitle: 'We build premier ecosystems inside Tier-3 & rural colleges — giving students the direction, mentorship, and real exposure they deserve.',
+      ctaText: 'Invite Us To Your College',
+      ctaLink: '/contact'
     },
     {
-      icon: '🏢',
-      title: 'Industry & Career Exposure',
-      description: 'Students bridge the gap between books and reality through hands-on projects and internships. We bring in active professionals and practitioners to share real-world knowledge. This exposure ensures learners understand how modern industries work, allowing them to apply technical skills to actual challenges rather than just chasing academic certificates or grades.'
+      image: '/assets/banners/campus-life.png',
+      eyebrow: 'Bridging Rural Roots & Digital Innovation',
+      headline: 'From Village Dreams To',
+      highlightText: 'Global Impact',
+      subtitle: 'Empowering rural youth with the tools, skills, and mindset to build world-class products — right from their hometowns.',
+      ctaText: 'Learn About Our Mission',
+      ctaLink: '/about'
     },
     {
-      icon: '🚀',
-      title: 'Startup & Innovation Culture',
-      description: 'We turn campuses into active labs where student teams build real products. By providing local incubation and support, we create a safe space for experimentation. This culture encourages students to take risks, prototype their ideas, and work together, transforming a simple college project into a potential high-growth startup venture.'
+      image: '/assets/banners/startup-culture.png',
+      eyebrow: 'Learn From Industry Leaders',
+      headline: 'Mentorship That Builds',
+      highlightText: 'Future Founders',
+      subtitle: 'Connect with experienced professionals and business leaders who guide students from idea to execution.',
+      ctaText: 'Become a Mentor',
+      ctaLink: '/partners-mentors'
     },
     {
-      icon: '🤝',
-      title: 'Community & Mentorship',
-      description: 'We connect students with a powerful network of successful alumni and local business leaders. By blending modern startup strategies with traditional business wisdom, students receive balanced guidance. This community ensures that no founder walks alone, providing the mentorship and connections necessary to scale their business and keep wealth local.'
+      image: '/assets/banners/tier3-students.png',
+      eyebrow: 'A Movement Across Campuses',
+      headline: 'Building a Culture of',
+      highlightText: 'Innovation & Self-Reliance',
+      subtitle: 'Transforming everyday college campuses into vibrant ecosystems where students think, build, and launch their ventures.',
+      ctaText: 'Partner Your College',
+      ctaLink: '/for-colleges'
+    },
+    {
+      image: '/assets/banners/rural-empowerment.png',
+      eyebrow: 'Product Nation 2047',
+      headline: 'Creating 1 Million',
+      highlightText: 'Rural Entrepreneurs',
+      subtitle: "From college project to startup — we help students prototype, pitch, and build real businesses that drive India's future.",
+      ctaText: 'Join the Movement',
+      ctaLink: '/contact'
     }
+  ];
+
+  activeBannerIndex: number = 0;
+  private bannerInterval: any;
+  private autoplayPaused: boolean = false;
+
+  ngOnInit(): void {
+    this.startAutoPlay();
+  }
+
+  ngOnDestroy(): void {
+    this.stopAutoPlay();
+  }
+
+  startAutoPlay(): void {
+    this.bannerInterval = setInterval(() => {
+      if (!this.autoplayPaused) {
+        this.activeBannerIndex = (this.activeBannerIndex + 1) % this.bannerSlides.length;
+      }
+    }, 6000);
+  }
+
+  stopAutoPlay(): void {
+    if (this.bannerInterval) {
+      clearInterval(this.bannerInterval);
+    }
+  }
+
+  goToSlide(index: number): void {
+    this.activeBannerIndex = index;
+    this.stopAutoPlay();
+    this.startAutoPlay();
+  }
+
+  nextSlide(): void {
+    this.goToSlide((this.activeBannerIndex + 1) % this.bannerSlides.length);
+  }
+
+  prevSlide(): void {
+    this.goToSlide((this.activeBannerIndex - 1 + this.bannerSlides.length) % this.bannerSlides.length);
+  }
+
+  pauseAutoPlay(): void {
+    this.autoplayPaused = true;
+  }
+
+  resumeAutoPlay(): void {
+    this.autoplayPaused = false;
+  }
+
+  // Compact 4 Pillars for homepage
+  pillars = [
+    { icon: '🧠', title: 'Mindset & Foundation', desc: 'Shifting student thinking from "finding a job" to "solving a problem" from year one.' },
+    { icon: '🏢', title: 'Industry Exposure', desc: 'Real internships, live projects, and hands-on learning from active professionals.' },
+    { icon: '🚀', title: 'Startup Culture', desc: 'Transforming campuses into active labs where teams build real products.' },
+    { icon: '🤝', title: 'Community & Mentorship', desc: 'Connecting students with alumni, leaders, and traditional business wisdom.' }
   ];
 }
