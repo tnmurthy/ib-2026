@@ -1,7 +1,7 @@
 Website Skelton
 
-You are building a responsive, production-ready marketing website for an initiative called Innovat Bharat at the domain innovatbharat.org.
-The goal is to clearly communicate our mission of bridging the gap between education and industry in rural and tier3 colleges in India, and to generate leads from colleges, students, parents, and partners.
+You are building a responsive, production-ready marketing website for an initiative calledï¿½Innovat Bharatï¿½at the domainï¿½innovatbharat.org.
+The goal is to clearly communicate our mission of bridging the gap betweenï¿½education and industryï¿½inï¿½rural and tier3 colleges in India, and to generate leads from colleges, students, parents, and partners.
 Tech & Structure
 ? Stack: Modern HTML + CSS + minimal JS or a simple React/Next.js SPA (no backend required right now).
 ? Design: Clean, modern, mobilefirst, with Indian education + nationbuilding feel (use warm yet professional colors, lots of whitespace, easy to read).
@@ -16,24 +16,24 @@ Tech & Structure
 8. Resources (/resources)
 9. Contact / Invite Us (/contact)
 Global Layout
-? Header: logo text “Innovat Bharat”, main navigation links to all pages above, and a prominent button “Invite Us To Your College” linking to /contact.
+? Header: logo text ï¿½Innovat Bharatï¿½, main navigation links to all pages above, and a prominent button ï¿½Invite Us To Your Collegeï¿½ linking toï¿½/contact.
 ? Footer: brief tagline, copyright, basic links, and space for social icons (placeholders).
 PagebyPage Content Requirements
 1) Home
 Sections in order:
 1. Hero
 ? Headline that highlights the problem: gap between degrees and real world readiness in rural and tier3 colleges.
-? Subheadline explaining Innovat Bharat as a campus ecosystem built inside normal colleges.
-? Two buttons: “Invite Us To Your College” (link /contact) and “Explore Ecosystem” (link /ecosystem).
+? Subheadline explaining Innovat Bharat as a campus ecosystem builtï¿½insideï¿½normal colleges.
+? Two buttons: ï¿½Invite Us To Your Collegeï¿½ (linkï¿½/contact) and ï¿½Explore Ecosystemï¿½ (linkï¿½/ecosystem).
 2. Problem & Reality
-? 2–3 short text blocks about:
+? 2ï¿½3 short text blocks about:
 ? Mismatch between industry needs and formal degrees.
 ? Training starting only in final years.
-? Parents paying twice (degree + extra courses) while students lose 4–5 critical years.
+? Parents paying twice (degree + extra courses) while students lose 4ï¿½5 critical years.
 3. Vision & Promise
 ? Short section describing the vision: create a premier institute like ecosystem in rural and semiurban colleges.
-? Tagline emphasizing “Right direction. Right mentorship. Real exposure.”
-4. What We Do – 4 Pillars
+? Tagline emphasizing ï¿½Right direction. Right mentorship. Real exposure.ï¿½
+4. What We Do ï¿½ 4 Pillars
 ? Four cards:
 ? Mindset & Foundation (early year clarity, entrepreneurial thinking)
 ? Industry & Career Exposure (internships, projects, practitioners)
@@ -46,38 +46,38 @@ Sections in order:
 ? Industry
 ? Society & Nation
 6. Founder Snapshot
-? Short profile for Mahesh Chillakuru (aspiring entrepreneur, Founder – Innovat Bharat, SaaS & industrial sales background, founded Mana Dukaan, Jagriti Yatra Fellow).
+? Short profile forï¿½Mahesh Chillakuruï¿½(aspiring entrepreneur, Founder ï¿½ Innovat Bharat, SaaS & industrial sales background, founded Mana Dukaan, Jagriti Yatra Fellow).
 7. Final CTA strip
 ? Strong invitation for colleges to schedule an introduction session.
 2) About
 Sections:
-? Story of Innovat Bharat – narrative about bridging classroom and real world in rural & tier3 colleges.
-? Vision, Mission, Charter – bulletstyle explanation (vision of ecosystem inside colleges, mission of structured journeys from 1st year, charter points like lifelong learning, internal vs external charter, respect for work, national development mindset).
-? Founder Profile – more detailed bio for Mahesh (MBA in Sales & Marketing, B.Tech in CSE, SaaS/industry sales, Mana Dukaan, Jagriti Yatra).
-? Core Values – list: joyful continuous learning, vision & consistency, respect everyone/respect work, don’t postpone – start now.
+? Story of Innovat Bharatï¿½ï¿½ narrative about bridging classroom and real world in rural & tier3 colleges.
+? Vision, Mission, Charterï¿½ï¿½ bulletstyle explanation (vision of ecosystem inside colleges, mission of structured journeys from 1st year, charter points like lifelong learning, internal vs external charter, respect for work, national development mindset).
+? Founder Profileï¿½ï¿½ more detailed bio for Mahesh (MBA in Sales & Marketing, B.Tech in CSE, SaaS/industry sales, Mana Dukaan, Jagriti Yatra).
+? Core Valuesï¿½ï¿½ list: joyful continuous learning, vision & consistency, respect everyone/respect work, donï¿½t postpone ï¿½ start now.
 3) Ecosystem
 Sections:
-? The Problem in Detail – longer explanation of gap between formal degrees and what startups/industry value (skills, mindset, exposure).
-? The New Campus Ecosystem – visual/text explanation of a “premier institute–like” ecosystem inside ordinary colleges.
-? Structured Learning Journey – simple timeline:
+? The Problem in Detailï¿½ï¿½ longer explanation of gap between formal degrees and what startups/industry value (skills, mindset, exposure).
+? The New Campus Ecosystemï¿½ï¿½ visual/text explanation of a ï¿½premier instituteï¿½likeï¿½ ecosystem inside ordinary colleges.
+? Structured Learning Journeyï¿½ï¿½ simple timeline:
 ? 1st Year: foundation & mindset training.
-? 2nd Year onwards: paid internships (~3 hours/day, ~?10,000 stipends where feasible), project based learning.
-? What Students Learn – entrepreneurship, sales & marketing, technology and core domains (Mechanical, Electrical, Civil, Commerce, Agriculture, Sciences), real world problem solving, R&D awareness.
-? How Students Learn – field visits, domain expert sessions, startup teams, gamified learning, earn while you learn.
-? Community & FutureReady Thinking – learning from traditional business communities, alumni like support, future of jobs, impact of AI/automation.
+? 2nd Year onwards: internships support (~3 hours/day, project based learning).
+? What Students Learnï¿½ï¿½ entrepreneurship, sales & marketing, technology and core domains (Mechanical, Electrical, Civil, Commerce, Agriculture, Sciences), real world problem solving, R&D awareness.
+? How Students Learnï¿½ï¿½ field visits, domain expert sessions, startup teams, gamified learning, earn while you learn.
+? Community & FutureReady Thinkingï¿½ï¿½ learning from traditional business communities, alumni like support, future of jobs, impact of AI/automation.
 4) For Colleges
-? Clear “Why partner with Innovat Bharat” section.
+? Clear ï¿½Why partner with Innovat Bharatï¿½ section.
 ? Benefits: reputation beyond placements, stronger ecosystem, better student outcomes.
 ? Overview of engagement models: awareness sessions, department level pilots, full ecosystem rollout.
 ? Outcomes and example metrics (internships, startups born, jobs created, patents etc.).
-? CTA block with a button to /contact.
+? CTA block with a button toï¿½/contact.
 5) For Students & Parents
 ? Narrative of a typical student journey from confusion to clarity, skills, and income.
 ? Benefits for students (clarity, exposure, internships, EQ skills).
 ? Benefits for parents (employability, reduced extra course costs).
-? FAQ section with 5–7 common questions (start year, fees, whether it replaces classes, internships, eligibility).
+? FAQ section with 5ï¿½7 common questions (start year, fees, whether it replaces classes, internships, eligibility).
 6) Programs
-? List and describe 3–5 flagship programs:
+? List and describe 3ï¿½5 flagship programs:
 ? Campus Ecosystem Program.
 ? Foundation & Mindset Series.
 ? EarnWhileYouLearn Internship Pathways.
@@ -86,16 +86,16 @@ Sections:
 7) Partners & Mentors
 ? Section for core team: simple profile cards (name placeholder, role, short description).
 ? Section for mentors/advisors: space for Jagriti Yatra, IIT/IIM, industry mentors.
-? CTA + form (or at least clearly designed CTA) for “Become a Mentor / Partner”.
+? CTA + form (or at least clearly designed CTA) for ï¿½Become a Mentor / Partnerï¿½.
 8) Resources
-? “Knowledge Hub” section: placeholder cards for blogs, case studies, PDFs, videos.
-? Section for “Templates & Downloads” – e.g., student questionnaires, college one pagers (placeholders but styled nicely).
+? ï¿½Knowledge Hubï¿½ section: placeholder cards for blogs, case studies, PDFs, videos.
+? Section for ï¿½Templates & Downloadsï¿½ ï¿½ e.g., student questionnaires, college one pagers (placeholders but styled nicely).
 9) Contact / Invite Us
-? Page should be form centric.
+? Page should beï¿½form centric.
 ? Include:
-? Contact/Invite form for Colleges – fields: name, designation, college name, location, email, phone, preferred date/time, message.
-? Simple contact options – email, WhatsApp placeholder, social links.
-? Separate section inviting students & partners to reach out or join community (even if it’s just links for now).
+? Contact/Invite form for Collegesï¿½ï¿½ fields: name, designation, college name, location, email, phone, preferred date/time, message.
+? Simple contact optionsï¿½ï¿½ email, WhatsApp placeholder, social links.
+? Separate section inviting students & partners to reach out or join community (even if itï¿½s just links for now).
 Design & UX Requirements
 ? Make all pages responsive and mobile friendly.
 ? Use consistent typography and spacing.
@@ -114,16 +114,16 @@ Home
 ? Vision Mission & Promise
 
 ? Vision:To transform Bharat into a global Product Nation by 2047, powered by a Bharat-centric economic model and 1 million rural entrepreneurs from Tier-3 and rural colleges.
-? Mission: We transform rural colleges into startup hubs where students learn to invent and build their own products. When students become entrepreneurs in their own towns, they create opportunities, generate jobs, and drive India’s growth from the grassroots
-? Tagline emphasizing “Right direction. Right mentorship. Real exposure.”
+? Mission: We transform rural colleges into startup hubs where students learn to invent and build their own products. When students become entrepreneurs in their own towns, they create opportunities, generate jobs, and drive Indiaï¿½s growth from the grassroots
+? Tagline emphasizing ï¿½Right direction. Right mentorship. Real exposure.ï¿½
        The ecosystem functions through three core pillars:
 1. Industry-Integrated Micro-Hubs: Instead of traditional, static computer labs, it establishes co-working spaces and "maker-labs" where students work on live industry projects, moving pedagogy from "theory-first" to "build-first."
 2. Mentorship Democratization: It connects students with a digital network of global mentors and AI-driven career agents
 3. The "Venture Studio" Model: It treats the campus as an incubator, providing structured training in IP filing, R&D, and startup fundamentals.
 
-? Two buttons: “Invite Us To Your College” (link /contact) and “Explore Ecosystem” (link /ecosystem).
+? Two buttons: ï¿½Invite Us To Your Collegeï¿½ (linkï¿½/contact) and ï¿½Explore Ecosystemï¿½ (linkï¿½/ecosystem).
 
-? What We Do – 4 Pillars
+? What We Do ï¿½ 4 Pillars
 Mindset & Foundation (Thinking Like a Creator)
 ? Start Early: We shift the student's mind from "finding a job" to "solving a problem" right from the first year.
 ? Spot Opportunities: We teach students to find business ideas in their own surroundings.
@@ -155,16 +155,16 @@ Rapid Tool Changes: In global companies, the tools and technologies change every
 The "Re-learning" Problem: Students graduate with good bookish knowledge but don't know how to handle live production or real-world lab rules.
 Not Ready for Work: Even after graduating, students often have to start learning from scratch to meet actual industry standards and compliance.
 
-• Training starts only in pre-final or final years.
+ï¿½ Training starts only in pre-final or final years.
 Focus on Exams, Not Skills: In most colleges, students spend their first three years only studying books and preparing for exams.
 Starting Too Late: Important job skills like  Communication Skills, and Training for Interviews only start in the final or pre-final year.
-The Big Gap: Because training starts so late, students don’t get enough time to become experts before they graduate.
+The Big Gap: Because training starts so late, students donï¿½t get enough time to become experts before they graduate.
 Missed Opportunities: By the time students start learning real-world skills, they have already lost three very important years.
 
-• Parents pay twice (degree + extra courses) while students lose 4–5 critical years.
+ï¿½ Parents pay twice (degree + extra courses) while students lose 4ï¿½5 critical years.
 Hard-Earned Savings: Parents spend their life savings on college fees with the simple hope that it will lead to a good job.
 Paying Twice: Because degrees focus only on theory, parents are forced to pay a second time for private "job-guarantee" courses after graduation.
-Wasted Years: Students spend 4–5 critical years in college but still don't feel ready for the real world.
+Wasted Years: Students spend 4ï¿½5 critical years in college but still don't feel ready for the real world.
 Starting from Zero: Instead of starting their career after college, students have to start learning basic job skills from scratch.
 Financial Stress: This system puts a huge financial load on families while delaying the student's ability to earn.
 
@@ -191,7 +191,7 @@ Culture Shift: Build a campus culture focused on innovation and creation
 Proud Alumni Network: Student founders grow and give back to their college
 Hiring Loop: Alumni hire talent from their own campuses
 Self-Sustaining Ecosystem: Creates long-term growth without dependency
-Higher Recognition: Improves the college’s reputation at a national level
+Higher Recognition: Improves the collegeï¿½s reputation at a national level
 
 ? Industry 
 Real Problem-Solvers: Companies get a new generation of workers who aren't just degree-holders, but people who know how to solve real problems.
@@ -207,15 +207,15 @@ The "Product Nation" Goal: This is the key step to making India a country that b
 
 
 ? Founder Snapshot
-? Short profile for Mahesh Chillakuru (aspiring entrepreneur, Founder – Innovat Bharat, SaaS & industrial sales background, founded Mana Dukaan, Jagriti Yatra Fellow).
+? Short profile forï¿½Mahesh Chillakuruï¿½(aspiring entrepreneur, Founder ï¿½ Innovat Bharat, SaaS & industrial sales background, founded Mana Dukaan, Jagriti Yatra Fellow).
 ? Final CTA strip
 ? Strong invitation for colleges to schedule an introduction session.
 
 Lead the Transformation of Rural Bharat
 The Challenge
-The world is moving toward a Product Economy, yet many Tier-3 and rural colleges are still stuck in a "Placement Only" cycle. Your students have the grit and the talent—they just need the ecosystem.
+The world is moving toward a Product Economy, yet many Tier-3 and rural colleges are still stuck in a "Placement Only" cycle. Your students have the grit and the talentï¿½they just need the ecosystem.
 The Invitation
-We invite forward-thinking college leaders to partner with Innovat Bharat. Let’s move beyond the "Highest Package" race and start building the architects of a Viksit Bharat.
+We invite forward-thinking college leaders to partner with Innovat Bharat. Letï¿½s move beyond the "Highest Package" race and start building the architects of a Viksit Bharat.
 By scheduling an introduction session, you will learn how to:
 ? Establish a Venture Culture: Transition your campus from a degree factory to a startup incubator.
 ? Empower Student Founders: Give your students the tools to build real products and earn before they graduate.
@@ -227,10 +227,10 @@ Targeting: Principals, Directors, and TPO Heads
 What Happens in the Session?
 1. The 2047 Roadmap: We share how your college fits into the mission of 1 million entrepreneurs.
 2. The Ecosystem Blueprint: A look at our 4-year model (Mindset ? Exposure ? Culture ? Community).
-3. Local Impact Strategy: How we specifically tailor the model to your region’s core strengths (Mechanical, EEE, Agriculture, etc.).
+3. Local Impact Strategy: How we specifically tailor the model to your regionï¿½s core strengths (Mechanical, EEE, Agriculture, etc.).
 
 Why Now?
-The future of India isn't in its metros; it’s in its villages. Don't let your students be part of the brain drain. Help them lead the resurgence.
+The future of India isn't in its metros; itï¿½s in its villages. Don't let your students be part of the brain drain. Help them lead the resurgence.
 "Be the college that didn't just place students, but built the nation."
 
 About
@@ -275,8 +275,8 @@ Core Values
 ? Dignity for All: We treat every person - from a college peon to a CEO - with the same kindness and respect.
 ? Work is Worship: We believe in doing every task, big or small, with 100% dedication and care.
 ? Building Character: For us, building a great business starts with building a great human being.
-? Don’t Postpone – Start Now (Action Over Excuses)
-? Kill Procrastination: We don’t wait for "Monday" or the "perfect time" to begin a project.
+? Donï¿½t Postpone ï¿½ Start Now (Action Over Excuses)
+? Kill Procrastination: We donï¿½t wait for "Monday" or the "perfect time" to begin a project.
 ? Learn by Doing: The best way to understand a problem is to start solving it today.
 ? The Power of Now: Small steps taken right now are much better than big plans that stay only on paper.
 
@@ -310,7 +310,7 @@ Innovat Bharat helps colleges move beyond being just "degree centers" to becomin
 ? A Powerful Alumni Network: As your student-founders become successful, they remain deeply connected and give back to the college that supported them.
 ? The Hiring Loop: Successful alumni return to their own campus first to hire fresh talent, ensuring a bright future for every junior student.
 ? A Self-Growing Ecosystem: Build a sustainable system that grows on its own strength, creating long-term success without needing outside help.
-? National Recognition: Elevate your college’s standing to a national level, making it a role model for modern education in India.
+? National Recognition: Elevate your collegeï¿½s standing to a national level, making it a role model for modern education in India.
  Institutes Registration Google form Link
 
 https://forms.gle/xXMzuv7gXTks5MvU7
@@ -318,7 +318,7 @@ https://forms.gle/xXMzuv7gXTks5MvU7
 
 Volunteer
 Join the Movement: How You Can Volunteer
-You don’t need to be a billionaire to help. If you have the heart to see "Bharat" grow, you can contribute in many ways:
+You donï¿½t need to be a billionaire to help. If you have the heart to see "Bharat" grow, you can contribute in many ways:
 ? Share Your Skills: Spend a few hours a month teaching students practical skills like coding, digital marketing, or basic accounting.
 ? Be a Student Buddy: Guide a small team of students as they work on their first project. Sometimes, they just need someone to talk to and share their ideas with.
 ? Spread the Story: Help us reach more people by sharing the success stories of our student-founders on social media or in your local community.

@@ -44,7 +44,7 @@ export class ForStudentsParentsComponent {
   studentBenefits: CardItem[] = [
     { icon: '🎯', title: 'Clarity Day One', description: 'No more career confusion. Understand your options and strengths early.' },
     { icon: '💼', title: 'Industry Exposure', description: 'Internships and mentorship from practitioners—not just theory.' },
-    { icon: '💰', title: 'Earn & Learn', description: 'Paid internships from 2nd year, reducing the family financial burden.' }
+    { icon: '💰', title: 'Earn & Learn', description: 'Internships support from 2nd year, reducing the family financial burden.' }
   ];
 
   parentBenefits: CardItem[] = [

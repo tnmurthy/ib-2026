@@ -77,11 +77,10 @@ export class ProgramsComponent {
       title: 'Earn-While-You-Learn Pathways',
       subtitle: '2nd Year Onwards',
       icon: '💼',
-      description: 'Real work, real income. ~3 hours daily commitment with stipends of ₹10,000/mo. Not shadowing, but live project work that builds portfolios.',
+      description: 'Real work, project work that builds portfolios.',
       features: [
         'Matched placements (Stream-based)',
         'Compatible with college schedule',
-        'Stipends ₹5k–₹15k/month',
         'Industry lead mentorship'
       ],
       meta: ['📅 Ongoing cycles', '👥 2nd year onwards', '🎓 Tech, Commerce, Agri']
