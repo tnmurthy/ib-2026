@@ -28,18 +28,12 @@ export class PartnersMentorsComponent {
 
   tabs: TabItem[] = [
     { id: 'team', label: 'Our Team' },
-    { id: 'networks', label: 'Mentor Networks' },
+    { id: 'collaborate', label: 'Collaborate' },
+    { id: 'volunteer', label: 'Volunteer' },
     { id: 'join', label: 'Join the Mission' }
   ];
 
   activeTabId: string = 'team';
-
-  networkCards: CardItem[] = [
-    { icon: '🎒', title: 'Jagriti Yatra Network', description: 'Access to a nation-wide network of purpose-driven mentors and change agents from India\'s largest entrepreneurship journey.' },
-    { icon: '🏫', title: 'IIT / IIM Alumni', description: 'Mentors from premier technical and management institutions volunteering to bridge the gap between tier 1 and tier 3 education.' },
-    { icon: '🏭', title: 'Industry Practitioners', description: 'Working professionals and startup founders engaging students through expert sessions and live project mentorship.' },
-    { icon: '🌱', title: 'Local Business', description: 'Traditional business families bringing generational business wisdom and ground-level market understanding.' }
-  ];
 
   onTabChange(id: string) {
     this.activeTabId = id;

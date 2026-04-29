@@ -12,7 +12,6 @@ We don't replace formal education. We enhance it by building a parallel ecosyste
 
 - **Campus Ecosystem Program** — Year-round parallel ecosystem inside your college
 - **Foundation & Mindset Series** — For first-year students: clarity, direction, entrepreneurial thinking
-- **Earn-While-You-Learn Internship Pathways** — Paid internships (~₹10,000/month) from second year onwards
 - **Startup & Innovation Labs** — Student teams ideating and building ventures with mentorship
 - **Domain Expert & Industry Connect Series** — Monthly expert sessions, field visits, domain workshops
 

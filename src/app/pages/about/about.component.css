@@ -109,10 +109,83 @@
   white-space: nowrap;
 }
 
+/* Why IB List */
+.why-ib-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.why-ib-list li {
+  font-size: 1rem;
+  color: #4a5568;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.why-ib-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #e67e22;
+  font-weight: 700;
+}
+
+.why-ib-list li strong {
+  color: #1a365d;
+}
+
+/* Value Sub-List */
+.value-sub-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.25rem 0 0;
+}
+
+.value-sub-list li {
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 0.35rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.value-sub-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #e67e22;
+}
+
+/* Founder Photo About */
+.founder-photo-about {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 4px solid #e67e22;
+  box-shadow: 0 6px 20px rgba(230, 126, 34, 0.2);
+}
+
+.founder-content {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
 @media (max-width: 900px) {
   .about-grid, .vm-dashboard, .values-grid-overlay, .founder-compact {
     grid-template-columns: 1fr;
     flex-direction: column;
     gap: 2rem;
+  }
+  .founder-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 }

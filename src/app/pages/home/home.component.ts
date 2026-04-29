@@ -1,81 +1,93 @@
-import { Component, AfterViewInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
 
-// Reusable Components
-import { HeroBlockComponent } from '../../components/shared/hero-block/hero-block.component';
-import { StepFlowComponent, StepItem } from '../../components/shared/step-flow/step-flow.component';
-import { CardGridComponent, CardItem } from '../../components/shared/card-grid/card-grid.component';
-import { AmlaFlowComponent } from '../../components/shared/amla-flow/amla-flow.component';
-import { VerticalPillarsComponent } from '../../components/shared/vertical-pillars/vertical-pillars.component';
-import { CtaBlockComponent } from '../../components/shared/cta-block/cta-block.component';
-import { PillTabsComponent, TabItem } from '../../components/shared/pill-tabs/pill-tabs.component';
+export interface BannerSlide {
+  image: string;
+}
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
-    CommonModule, 
-    RouterLink, 
-    HeroBlockComponent, 
-    StepFlowComponent, 
-    CardGridComponent, 
-    AmlaFlowComponent, 
-    VerticalPillarsComponent, 
-    CtaBlockComponent,
-    PillTabsComponent
+    CommonModule
   ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
-  
-  // Navigation Tabs
-  tabs: TabItem[] = [
-    { id: 'how-it-works', label: 'How It Works' },
-    { id: 'solutions', label: 'Solutions' },
-    { id: 'method', label: 'Our Method' },
-    { id: 'strategy', label: 'Strategy & Data' },
-    { id: 'who-for', label: 'Who It’s For' }
-  ];
-  
-  activeTabId: string = 'how-it-works';
+export class HomeComponent implements OnInit, OnDestroy {
 
-  // Section 1: How It Works Data
-  howItWorksSteps: StepItem[] = [
-    { icon: '🔍', title: 'Audit & Strategy', description: 'We assess the college\'s current gap and map out a tailored ecosystem strategy.' },
-    { icon: '🏗️', title: 'Ecosystem Setup', description: 'Deploying mentors and establishing entrepreneurial thinking directly on campus.' },
-    { icon: '📈', title: 'Growth & Placement', description: 'Integrating students into real-world projects and driving final placements.' }
-  ];
-
-  // Section 2: Solutions Data
-  solutionCards: CardItem[] = [
-    { icon: '🧠', title: 'Mindset & Foundation', description: 'Early-year clarity sessions and foundational skills that set students on the right path.' },
-    { icon: '🏢', title: 'Industry Exposure', description: 'Real internships, live projects, and mentorship from industry practitioners.' },
-    { icon: '🚀', title: 'Startup Culture', description: 'Student startup teams, incubation support, and a culture of experimentation.' },
-    { icon: '🤝', title: 'Community', description: 'Alumni-like networks and traditional business wisdom from local entrepreneurs.' }
+  // Banner Slides — Tier-3 Indian town students & small enterprise imagery
+  bannerSlides: BannerSlide[] = [
+    {
+      image: '/assets/banners/campus-innovation.png'
+    },
+    {
+      image: '/assets/banners/campus-life.png'
+    },
+    {
+      image: '/assets/banners/startup-culture.png'
+    },
+    {
+      image: '/assets/banners/tier3-students.png'
+    },
+    {
+      image: '/assets/banners/rural-empowerment.png'
+    }
   ];
 
-  // Section 4: Strategy Data
-  dataPillars: CardItem[] = [
-    { icon: '📚', title: 'Case Studies', description: 'Learning from successful and failed "Made in India" startups like Amul.' },
-    { icon: '🏛️', title: 'Govt Schemes', description: 'Aggregating state and central schemes designed to support small startups.' },
-    { icon: '💡', title: 'Problem Statements', description: 'Identifying business opportunities in energy and import/export sectors.' }
-  ];
+  activeBannerIndex: number = 0;
+  private bannerInterval: any;
+  private autoplayPaused: boolean = false;
 
-  // Section 5: Who It's For Data
-  personaCards: CardItem[] = [
-    { icon: '👨‍🎓', title: 'Students & Families', description: 'Clear career direction and real skills that lead to high-quality employment.', list: ['Paid internships', 'Confidence build', 'Direct placements'] },
-    { icon: '🏛️', title: 'Colleges', description: 'Enhanced reputation and student outcomes through industry partnerships.', list: ['Competitive edge', 'Startup culture', 'Better admissions'] },
-    { icon: '🏢', title: 'Industry', description: 'Access to job-ready talent pool with practical project experience.', list: ['Low training cost', 'Talent pipeline', 'CSR Impact'] }
-  ];
-
-  onTabChange(id: string) {
-    this.activeTabId = id;
-    // Scroll to top of content wrapper to ensure user sees the start of new section
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+  ngOnInit(): void {
+    this.startAutoPlay();
   }
+
+  ngOnDestroy(): void {
+    this.stopAutoPlay();
+  }
+
+  startAutoPlay(): void {
+    this.bannerInterval = setInterval(() => {
+      if (!this.autoplayPaused) {
+        this.activeBannerIndex = (this.activeBannerIndex + 1) % this.bannerSlides.length;
+      }
+    }, 6000);
+  }
+
+  stopAutoPlay(): void {
+    if (this.bannerInterval) {
+      clearInterval(this.bannerInterval);
+    }
+  }
+
+  goToSlide(index: number): void {
+    this.activeBannerIndex = index;
+    this.stopAutoPlay();
+    this.startAutoPlay();
+  }
+
+  nextSlide(): void {
+    this.goToSlide((this.activeBannerIndex + 1) % this.bannerSlides.length);
+  }
+
+  prevSlide(): void {
+    this.goToSlide((this.activeBannerIndex - 1 + this.bannerSlides.length) % this.bannerSlides.length);
+  }
+
+  pauseAutoPlay(): void {
+    this.autoplayPaused = true;
+  }
+
+  resumeAutoPlay(): void {
+    this.autoplayPaused = false;
+  }
+
+  // Compact 4 Pillars for homepage
+  pillars = [
+    { icon: '🧠', title: 'Mindset & Foundation', desc: 'Shifting student thinking from "finding a job" to "solving a problem" from year one.' },
+    { icon: '🏢', title: 'Industry Exposure', desc: 'Real internships, live projects, and hands-on learning from active professionals.' },
+    { icon: '🚀', title: 'Startup Culture', desc: 'Transforming campuses into active labs where teams build real products.' },
+    { icon: '🤝', title: 'Community & Mentorship', desc: 'Connecting students with alumni, leaders, and traditional business wisdom.' }
+  ];
 }
