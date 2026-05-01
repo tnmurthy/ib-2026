@@ -54,7 +54,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   get quoteOfTheDay(): string {
     const dayOfYear = Math.floor(
-      (Date.now() - new Date(new Date().getFullYear(), 0, 0).getTime()) / 86400000
+      (Date.now() - new Date(new Date().getFullYear(), 0, 1).getTime()) / 86400000
     );
     return this.quotes[dayOfYear % this.quotes.length];
   }
