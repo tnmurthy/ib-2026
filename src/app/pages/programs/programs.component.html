@@ -1,17 +1,16 @@
 <div class="programs">
-  <!-- Page intro hero — appears above tabs so the page doesn't open cold on tabs -->
-  <app-hero-block 
-    title="Our Programs" 
-    subtitle="A structured, year-round model that transforms any college into a startup hub"
-    background="gradient"
-  ></app-hero-block>
-
   <!-- Tabs Navigation -->
   <app-pill-tabs [tabs]="tabs" [activeTabId]="activeTabId" (tabChange)="onTabChange($event)"></app-pill-tabs>
 
   <div class="content-wrapper transition-fade">
     
     <div *ngIf="currentProgram" class="tab-view">
+      <app-hero-block 
+        [title]="currentProgram.title" 
+        [subtitle]="currentProgram.subtitle"
+        background="gradient"
+      ></app-hero-block>
+
       <div class="container py-3">
         <div class="program-detail-layout">
           <div class="program-main">
