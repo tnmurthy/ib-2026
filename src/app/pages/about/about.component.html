@@ -1,16 +1,16 @@
 <div class="about">
-  <!-- Page intro hero — visible before tabs so the page doesn't open cold on tabs -->
-  <app-hero-block 
-    title="About Innovat Bharat" 
-    subtitle="Transforming Ordinary Colleges into Extraordinary Ecosystems"
-    background="gradient"
-  ></app-hero-block>
-
   <!-- Tabs Navigation -->
   <app-pill-tabs [tabs]="tabs" [activeTabId]="activeTabId" (tabChange)="onTabChange($event)"></app-pill-tabs>
 
   <div class="content-wrapper transition-fade">
     
+    <!-- Hero (Always Visible or Dynamic) -->
+    <app-hero-block 
+      title="About Innovat Bharat" 
+      subtitle="Transforming Ordinary Colleges into Extraordinary Ecosystems"
+      background="gradient"
+    ></app-hero-block>
+
     <div class="container py-3">
       <!-- WHY INNOVAT BHARAT -->
       <div *ngIf="activeTabId === 'story'" class="tab-view">
