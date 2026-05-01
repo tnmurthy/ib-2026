@@ -110,5 +110,12 @@ export class HomeComponent implements OnInit, OnDestroy {
     { icon: '🚀', title: 'Startup Culture', desc: 'Transforming campuses into active labs where teams build real products.' },
     { icon: '🤝', title: 'Community & Mentorship', desc: 'Connecting students with alumni, leaders, and traditional business wisdom.' }
   ];
+
+  // Tabbed Interface State
+  activeTab: string = 'overview';
+
+  setActiveTab(tabId: string): void {
+    this.activeTab = tabId;
+  }
 }
 

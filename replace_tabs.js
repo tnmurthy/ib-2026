@@ -1,35 +1,10 @@
-<div class="home-page">
+const fs = require('fs');
+const file = fs.readFileSync('src/app/pages/home/home.component.html', 'utf8');
 
-  <!-- ===== 1. BANNER ===== -->
-  <section class="hero-section" (mouseenter)="pauseAutoPlay()" (mouseleave)="resumeAutoPlay()">
-    
-    @for (slide of bannerSlides; track $index) {
-      <div class="hero-banner-bg" 
-           [class.active]="$index === activeBannerIndex"
-           [ngStyle]="{'background-image': 'url(' + slide.image + ')'}">
-      </div>
-    }
-    
-    <button class="hero-arrow hero-arrow-prev" (click)="prevSlide()" aria-label="Previous slide">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
-    </button>
-    <button class="hero-arrow hero-arrow-next" (click)="nextSlide()" aria-label="Next slide">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
-    </button>
-    
-    <div class="hero-nav-dots">
-      @for (slide of bannerSlides; track $index) {
-        <button class="hero-dot" 
-                [class.active]="$index === activeBannerIndex" 
-                (click)="goToSlide($index)"
-                [attr.aria-label]="'Go to slide ' + ($index + 1)">
-          <span class="hero-dot-progress" [class.active]="$index === activeBannerIndex"></span>
-        </button>
-      }
-    </div>
-  </section>
+const topPart = file.split('<!-- ===== 2. WHAT IS INNOVAT BHARAT ===== -->')[0];
+const bottomPart = '  <!-- ===== 9. CONTACT US ===== -->' + file.split('<!-- ===== 9. CONTACT US ===== -->')[1];
 
-    <!-- ===== DISCOVER INNOVAT BHARAT (TABBED) ===== -->
+const newSections = `  <!-- ===== DISCOVER INNOVAT BHARAT (TABBED) ===== -->
   <section class="section discover-section">
     <div class="container">
       <div class="section-header text-center" style="margin-bottom: 2rem;">
@@ -65,7 +40,7 @@
             </div>
 
             <div class="vision-section-inner">
-              <h3 class="text-center mb-4" style="color: #1a365d; font-size: 2rem; font-weight: 800;">Vision &amp; Mission</h3>
+              <h3 class="text-center mb-4" style="color: var(--primary-dark); font-size: 2rem; font-weight: 800;">Vision &amp; Mission</h3>
               <div class="vm-grid">
                 <div class="vm-card vm-card-vision">
                   <div class="vm-icon">🎯</div>
@@ -144,8 +119,8 @@
             <div class="audience-split-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
               <!-- Students -->
               <div class="audience-block" style="background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); text-align: center;">
-                <h3 class="audience-title" style="color: #1a365d; margin-bottom: 1rem; font-size: 1.5rem;">For Students</h3>
-                <p style="color: #4a5568; margin-bottom: 1.5rem; line-height: 1.6;">Are you a student in a Tier-3 or rural college? Discover how Innovat Bharat can help you build a real career, earn early, and create impact from your own hometown.</p>
+                <h3 class="audience-title" style="color: var(--primary-dark); margin-bottom: 1rem; font-size: 1.5rem;">For Students</h3>
+                <p style="color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.6;">Are you a student in a Tier-3 or rural college? Discover how Innovat Bharat can help you build a real career, earn early, and create impact from your own hometown.</p>
                 <div>
                   <a routerLink="/for-students-parents" class="btn btn-cta">Learn More for Students</a>
                 </div>
@@ -153,8 +128,8 @@
               
               <!-- Mentors -->
               <div class="audience-block" style="background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); text-align: center;">
-                <h3 class="audience-title" style="color: #1a365d; margin-bottom: 1rem; font-size: 1.5rem;">For Mentors</h3>
-                <p style="color: #4a5568; margin-bottom: 1.5rem; line-height: 1.6;">Are you an experienced professional who wants to make a real difference? Join our network of mentors and help shape the next generation of entrepreneurs from rural India.</p>
+                <h3 class="audience-title" style="color: var(--primary-dark); margin-bottom: 1rem; font-size: 1.5rem;">For Mentors</h3>
+                <p style="color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.6;">Are you an experienced professional who wants to make a real difference? Join our network of mentors and help shape the next generation of entrepreneurs from rural India.</p>
                 <div>
                   <a routerLink="/partners-mentors" class="btn btn-cta">Become a Mentor</a>
                 </div>
@@ -163,8 +138,8 @@
 
             <!-- Collaborate -->
             <div class="collaborate-block" style="background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
-              <h3 class="text-center mb-3" style="color: #1a365d; font-size: 1.75rem;">Collaborate With Us</h3>
-              <p class="text-center" style="color: #4a5568; max-width: 600px; margin: 0 auto 2.5rem;">Companies, NGOs, and Institutes — partner with Innovat Bharat to drive real change in rural education and entrepreneurship.</p>
+              <h3 class="text-center mb-3" style="color: var(--primary-dark); font-size: 1.75rem;">Collaborate With Us</h3>
+              <p class="text-center" style="color: var(--text-muted); max-width: 600px; margin: 0 auto 2.5rem;">Companies, NGOs, and Institutes — partner with Innovat Bharat to drive real change in rural education and entrepreneurship.</p>
               <div class="collaborate-cards">
                 <div class="collab-preview-card">
                   <div class="collab-preview-icon">🏢</div>
@@ -196,39 +171,8 @@
     </div>
   </section>
 
-  <!-- ===== 9. CONTACT US ===== -->
-  <section class="section contact-section">
-    <div class="container">
-      <div class="contact-compact">
-        <p class="section-eyebrow text-center">Reach Out</p>
-        <h2 class="section-title text-center">Contact Us</h2>
-        <p class="section-subtitle text-center">Ready to transform your campus or want to know more? Let's start a conversation.</p>
-        <div class="contact-details">
-          <div class="contact-detail-item">
-            <span class="contact-detail-icon">📧</span>
-            <a href="mailto:innovatbharat@zohomail.in">innovatbharat&#64;zohomail.in</a>
-          </div>
-          <div class="contact-detail-item">
-            <span class="contact-detail-icon">💬</span>
-            <a href="https://wa.me/918431609806" target="_blank">+91 8431 609 806 (WhatsApp)</a>
-          </div>
-        </div>
-        <div class="contact-action">
-          <a routerLink="/contact" class="btn btn-cta btn-large">Schedule an Introduction Session</a>
-        </div>
-      </div>
-    </div>
-  </section>
+`;
 
-  <!-- ===== 10. QUOTE OF THE DAY ===== -->
-  <section class="section quote-section">
-    <div class="container">
-      <p class="section-eyebrow text-center">Quote of the Day</p>
-      <blockquote class="quote-of-day">
-        {{ quoteOfTheDay }}
-      </blockquote>
-      <p class="quote-attribution">— Innovat Bharat</p>
-    </div>
-  </section>
-
-</div>
+const newFile = topPart + newSections + bottomPart;
+fs.writeFileSync('src/app/pages/home/home.component.html', newFile);
+console.log('HTML Replaced');
