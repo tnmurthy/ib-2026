@@ -13,13 +13,32 @@
       </button>
 
       <nav class="nav" [class.active]="isMenuOpen">
+        <!-- Home -->
         <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Home</a>
-        <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a>
-        <a routerLink="/ecosystem" routerLinkActive="active" (click)="closeMenu()">Ecosystem</a>
-        <a routerLink="/programs" routerLinkActive="active" (click)="closeMenu()">Programs</a>
+
+        <!-- About (with dropdown) -->
+        <div class="nav-dropdown" [class.open]="activeDropdown === 'about'">
+          <button class="nav-dropdown-toggle" (click)="toggleDropdown('about')" [class.active]="activeDropdown === 'about'">
+            About
+            <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="dropdown-menu">
+            <a routerLink="/about" [queryParams]="{tab: 'story'}" (click)="closeMenu()">Why Innovat Bharat</a>
+            <a routerLink="/about" [queryParams]="{tab: 'vision'}" (click)="closeMenu()">Our Mission and Our Vision</a>
+            <a routerLink="/about" [queryParams]="{tab: 'values'}" (click)="closeMenu()">Core Values</a>
+            <a routerLink="/about" [queryParams]="{tab: 'team'}" (click)="closeMenu()">Our Team</a>
+            <a routerLink="/partners-mentors" (click)="closeMenu()">Our Mentors &amp; Partners</a>
+          </div>
+        </div>
+
+        <!-- For Colleges -->
         <a routerLink="/for-colleges" routerLinkActive="active" (click)="closeMenu()">For Colleges</a>
-        <a routerLink="/partners-mentors" routerLinkActive="active" (click)="closeMenu()">Partners</a>
-        <a routerLink="/contact" class="btn-primary" (click)="closeMenu()">Invite Us</a>
+
+        <!-- Collaborate -->
+        <a routerLink="/collaborate" routerLinkActive="active" (click)="closeMenu()">Collaborate</a>
+
+        <!-- Contact Us CTA -->
+        <a routerLink="/contact" class="btn-primary" (click)="closeMenu()">Contact Us</a>
       </nav>
     </div>
   </div>

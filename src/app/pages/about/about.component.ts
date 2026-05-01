@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { RouterLink, ActivatedRoute } from '@angular/router';
 
 // Reusable Components
 import { HeroBlockComponent } from '../../components/shared/hero-block/hero-block.component';
@@ -20,15 +20,29 @@ import { CtaBlockComponent } from '../../components/shared/cta-block/cta-block.c
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css']
 })
-export class AboutComponent {
+export class AboutComponent implements OnInit {
   tabs: TabItem[] = [
     { id: 'story', label: 'Why Innovat Bharat' },
-    { id: 'vision', label: 'Vision & Mission' },
+    { id: 'vision', label: 'Our Mission and Our Vision' },
     { id: 'values', label: 'Core Values' },
-    { id: 'founder', label: 'Founder' }
+    { id: 'team', label: 'Our Team' },
+    { id: 'mentors', label: 'Our Mentors & Partners' }
   ];
 
   activeTabId: string = 'story';
+
+  constructor(private route: ActivatedRoute) {}
+
+  ngOnInit() {
+    this.route.queryParams.subscribe(params => {
+      if (params['tab']) {
+        const validIds = this.tabs.map(t => t.id);
+        if (validIds.includes(params['tab'])) {
+          this.activeTabId = params['tab'];
+        }
+      }
+    });
+  }
 
   coreValues = [
     {
@@ -74,3 +88,4 @@ export class AboutComponent {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
+

@@ -1,6 +1,6 @@
 <div class="home-page">
 
-  <!-- ===== HERO BANNER CAROUSEL ===== -->
+  <!-- ===== 1. BANNER ===== -->
   <section class="hero-section" (mouseenter)="pauseAutoPlay()" (mouseleave)="resumeAutoPlay()">
     
     @for (slide of bannerSlides; track $index) {
@@ -29,34 +29,7 @@
     </div>
   </section>
 
-  <!-- ===== IMPACT COUNTER STRIP ===== -->
-  <div class="impact-strip">
-    <div class="container">
-      <div class="impact-grid">
-        <div class="impact-item">
-          <span class="impact-number">2047</span>
-          <span class="impact-label">Product Nation Vision</span>
-        </div>
-        <div class="impact-divider"></div>
-        <div class="impact-item">
-          <span class="impact-number">1M+</span>
-          <span class="impact-label">Rural Entrepreneurs Goal</span>
-        </div>
-        <div class="impact-divider"></div>
-        <div class="impact-item">
-          <span class="impact-number">Tier 3</span>
-          <span class="impact-label">College Focus</span>
-        </div>
-        <div class="impact-divider"></div>
-        <div class="impact-item">
-          <span class="impact-number">4 Year</span>
-          <span class="impact-label">Structured Journey</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ===== WHAT IS INNOVAT BHARAT (Concise) ===== -->
+  <!-- ===== 2. WHAT IS INNOVAT BHARAT ===== -->
   <section class="section what-is-section">
     <div class="container">
       <div class="what-is-compact">
@@ -73,11 +46,32 @@
     </div>
   </section>
 
-  <!-- ===== 4 PILLARS (Compact Inline) ===== -->
+  <!-- ===== 3. VISION AND MISSION ===== -->
+  <section class="section vision-section">
+    <div class="container">
+      <p class="section-eyebrow text-center">Our Vision</p>
+      <h2 class="section-title">Vision &amp; Mission</h2>
+      <div class="vm-grid">
+        <div class="vm-card vm-card-vision">
+          <div class="vm-icon">🎯</div>
+          <h3>Vision</h3>
+          <p>To transform Bharat into a global Product Nation by 2047, powered by a Bharat-centric economic model and 1 million rural entrepreneurs from Tier-3 and rural colleges.</p>
+        </div>
+        <div class="vm-card vm-card-mission">
+          <div class="vm-icon">🚀</div>
+          <h3>Mission</h3>
+          <p>We transform rural colleges into startup hubs where students learn to invent and build their own products. When students become entrepreneurs in their own towns, they create opportunities, generate jobs, and drive India's growth from the grassroots.</p>
+        </div>
+      </div>
+      <p class="vision-tagline">"Right direction. Right mentorship. Real exposure."</p>
+    </div>
+  </section>
+
+  <!-- ===== 4. WHAT WE DO ===== -->
   <section class="section pillars-section">
     <div class="container">
       <p class="section-eyebrow text-center">Our Approach</p>
-      <h2 class="section-title">The 4 Pillars of Transformation</h2>
+      <h2 class="section-title">What We Do</h2>
       <p class="section-subtitle">A proven model that turns a regular college into a launchpad for student founders.</p>
       <div class="pillars-grid">
         @for (pillar of pillars; track $index) {
@@ -88,20 +82,14 @@
           </div>
         }
       </div>
-      <div class="pillars-cta">
-        <a routerLink="/ecosystem" class="btn-learn-more">
-          Explore Our Ecosystem
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-      </div>
     </div>
   </section>
 
-  <!-- ===== PROBLEM & REALITY ===== -->
+  <!-- ===== 5. PROBLEM & REALITY ===== -->
   <section class="section problem-section">
     <div class="container">
       <p class="section-eyebrow text-center">The Challenge</p>
-      <h2 class="section-title">The Problem We're Solving</h2>
+      <h2 class="section-title">Problem &amp; Reality</h2>
       <p class="section-subtitle">Three interconnected failures holding back millions of talented students in rural and Tier-3 colleges.</p>
       <div class="problem-grid">
         <div class="problem-card">
@@ -138,160 +126,100 @@
     </div>
   </section>
 
-  <!-- ===== VISION & PROMISE ===== -->
-  <section class="section vision-section">
+  <!-- ===== 6. STUDENTS ===== -->
+  <section class="section audience-section">
     <div class="container">
-      <p class="section-eyebrow text-center">Our Vision</p>
-      <h2 class="section-title">Vision, Mission & Promise</h2>
-      <div class="vm-grid">
-        <div class="vm-card vm-card-vision">
-          <div class="vm-icon">🎯</div>
-          <h3>Vision</h3>
-          <p>To transform Bharat into a global Product Nation by 2047, powered by a Bharat-centric economic model and 1 million rural entrepreneurs from Tier-3 and rural colleges.</p>
-        </div>
-        <div class="vm-card vm-card-mission">
-          <div class="vm-icon">🚀</div>
-          <h3>Mission</h3>
-          <p>We transform rural colleges into startup hubs where students learn to invent and build their own products. When students become entrepreneurs in their own towns, they create opportunities, generate jobs, and drive India's growth from the grassroots.</p>
-        </div>
-      </div>
-      <p class="vision-tagline">"Right direction. Right mentorship. Real exposure."</p>
-      <p class="section-eyebrow text-center" style="margin-top: 2.5rem;">The Ecosystem Functions Through Three Core Pillars</p>
-      <div class="ecosystem-pillars">
-        <div class="eco-pillar">
-          <div class="eco-pillar-num">01</div>
-          <h4>Industry-Integrated Micro-Hubs</h4>
-          <p>Instead of traditional, static computer labs, we establish co-working spaces and "maker-labs" where students work on live industry projects, moving pedagogy from "theory-first" to "build-first."</p>
-        </div>
-        <div class="eco-pillar">
-          <div class="eco-pillar-num">02</div>
-          <h4>Mentorship Democratization</h4>
-          <p>We connect students with a digital network of global mentors and AI-driven career agents, making the quality of guidance that was once reserved for IITs available to every college.</p>
-        </div>
-        <div class="eco-pillar">
-          <div class="eco-pillar-num">03</div>
-          <h4>The "Venture Studio" Model</h4>
-          <p>We treat the campus as an incubator, providing structured training in IP filing, R&D, and startup fundamentals — turning college projects into real ventures.</p>
-        </div>
+      <p class="section-eyebrow text-center">For Students</p>
+      <h2 class="section-title">Students</h2>
+      <p class="section-subtitle">Are you a student in a Tier-3 or rural college? Discover how Innovat Bharat can help you build a real career, earn early, and create impact from your own hometown.</p>
+      <div class="audience-cta">
+        <a routerLink="/for-students-parents" class="btn btn-cta btn-large">
+          Learn More for Students
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- ===== WHO BENEFITS ===== -->
-  <section class="section benefits-section">
+  <!-- ===== 7. MENTORS ===== -->
+  <section class="section audience-section audience-section--alt">
     <div class="container">
-      <p class="section-eyebrow text-center">Impact</p>
-      <h2 class="section-title">Who <span class="text-accent">Benefits</span></h2>
-      <p class="section-subtitle">Our ecosystem creates a ripple effect of value across students, families, institutions, and the nation.</p>
-      <div class="benefits-tabs">
-        <div class="benefit-group">
-          <div class="benefit-group-header">
-            <span class="benefit-icon">🎓</span>
-            <h3>Students</h3>
-          </div>
-          <ul>
-            <li><strong>Earn While You Learn:</strong> Students can start earning their first income while still in college.</li>
-            <li><strong>Financial Independence:</strong> They can stand on their own feet long before they graduate.</li>
-            <li><strong>Real Work Profile:</strong> Along with a degree, students build a strong portfolio of real-world projects and ventures.</li>
-            <li><strong>Beyond Books:</strong> They gain the kind of skills and confidence that no textbook can ever teach.</li>
-          </ul>
-        </div>
-        <div class="benefit-group">
-          <div class="benefit-group-header">
-            <span class="benefit-icon">👨‍👩‍👧</span>
-            <h3>Parents</h3>
-          </div>
-          <ul>
-            <li><strong>A Sense of Pride:</strong> Parents feel proud to see their children becoming successful so early.</li>
-            <li><strong>Huge Relief:</strong> Knowing their children are building a secure future gives families great peace of mind.</li>
-            <li><strong>No Need to Move Away:</strong> Students can build successful lives right from their hometowns.</li>
-            <li><strong>Saving on City Costs:</strong> Families don't have to worry about the high cost of moving to expensive cities.</li>
-          </ul>
-        </div>
-        <div class="benefit-group">
-          <div class="benefit-group-header">
-            <span class="benefit-icon">🏛️</span>
-            <h3>Institutes</h3>
-          </div>
-          <ul>
-            <li><strong>Beyond Placements:</strong> Institutes move from focusing only on highest salary packages.</li>
-            <li><strong>New Identity:</strong> Become known for startups created and entrepreneurs developed.</li>
-            <li><strong>Stronger Reputation:</strong> Attract ambitious and high-potential students.</li>
-            <li><strong>Proud Alumni Network:</strong> Student founders grow and give back to their college.</li>
-          </ul>
-        </div>
-        <div class="benefit-group">
-          <div class="benefit-group-header">
-            <span class="benefit-icon">🏭</span>
-            <h3>Industry</h3>
-          </div>
-          <ul>
-            <li><strong>Real Problem-Solvers:</strong> Companies get workers who know how to solve real problems.</li>
-            <li><strong>Understanding "Bharat":</strong> These graduates deeply understand the needs and heart of the real India.</li>
-            <li><strong>Technical Grit:</strong> They have the hard work and technical skills to build world-class Indian products.</li>
-            <li><strong>Global Leadership:</strong> By creating indigenous products, they help make our nation a global leader.</li>
-          </ul>
-        </div>
-        <div class="benefit-group">
-          <div class="benefit-group-header">
-            <span class="benefit-icon">🇮🇳</span>
-            <h3>Society & Nation</h3>
-          </div>
-          <ul>
-            <li><strong>Jobs in Small Towns:</strong> Local businesses create high-quality jobs directly in Tier-3 towns and villages.</li>
-            <li><strong>Keeping Wealth Local:</strong> When businesses grow locally, the money stays within the community.</li>
-            <li><strong>Stopping "Brain Drain":</strong> Talented students no longer have to move to crowded metros.</li>
-            <li><strong>The "Product Nation" Goal:</strong> The key step to making India a country that builds and sells products to the whole world.</li>
-          </ul>
-        </div>
+      <p class="section-eyebrow text-center">For Mentors</p>
+      <h2 class="section-title">Mentors</h2>
+      <p class="section-subtitle">Are you an experienced professional who wants to make a real difference? Join our network of mentors and help shape the next generation of entrepreneurs from rural India.</p>
+      <div class="audience-cta">
+        <a routerLink="/partners-mentors" class="btn btn-cta btn-large">
+          Become a Mentor
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- ===== FOUNDER SNAPSHOT ===== -->
-  <section class="section founder-snapshot-section">
+  <!-- ===== 8. COLLABORATE ===== -->
+  <section class="section collaborate-section">
     <div class="container">
-      <p class="section-eyebrow text-center">Leadership</p>
-      <h2 class="section-title">Founder Snapshot</h2>
-      <div class="founder-snapshot">
-        <div class="founder-snap-photo">
-          <img src="assets/team/mahesh-chillakuru.jpg" alt="Mahesh Chillakuru" class="snap-photo">
+      <p class="section-eyebrow text-center">Get Involved</p>
+      <h2 class="section-title">Collaborate</h2>
+      <p class="section-subtitle">Companies, NGOs, and Institutes — partner with Innovat Bharat to drive real change in rural education and entrepreneurship.</p>
+      <div class="collaborate-cards">
+        <div class="collab-preview-card">
+          <div class="collab-preview-icon">🏢</div>
+          <h3>Company</h3>
+          <p>Offer live projects, internships, and industry exposure to student founders.</p>
+          <a routerLink="/collaborate" class="btn btn-outline-sm">Learn More</a>
         </div>
-        <div class="founder-snap-content">
-          <h3>Mahesh Chillakuru</h3>
-          <p class="snap-role">Founder — Innovat Bharat</p>
-          <p class="snap-bio">I hold an MBA in Sales and Marketing and a BTech in Computer Science. My journey across entrepreneurship, professional experience, and grassroots exposure has shaped my vision to build Innovat Bharat, where I aim to empower students in Tier 3 and rural India to become job creators and build meaningful solutions from their own communities.</p>
-          <div class="snap-tags">
-            <span class="snap-tag">MBA – Sales & Marketing</span>
-            <span class="snap-tag">BTech – Computer Science</span>
-            <span class="snap-tag">Founder – Mana Dukaan (IIT Mandi)</span>
-            <span class="snap-tag">Jagriti Yatra Fellow</span>
-            <span class="snap-tag">8+ Years in SaaS & Industrial Sales</span>
-          </div>
-          <a routerLink="/about" class="btn-learn-more" style="margin-top: 1rem;">
-            Full Story
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
+        <div class="collab-preview-card">
+          <div class="collab-preview-icon">🏛️</div>
+          <h3>Institutes</h3>
+          <p>Co-create programs and share educational resources to uplift the ecosystem.</p>
+          <a routerLink="/for-colleges" class="btn btn-outline-sm">Learn More</a>
         </div>
+        <div class="collab-preview-card">
+          <div class="collab-preview-icon">🤲</div>
+          <h3>NGO</h3>
+          <p>Collaborate on grassroots social impact initiatives for rural communities.</p>
+          <a routerLink="/collaborate" class="btn btn-outline-sm">Learn More</a>
+        </div>
+      </div>
+      <div class="collaborate-main-cta">
+        <a routerLink="/collaborate" class="btn btn-cta btn-large">Register to Collaborate</a>
       </div>
     </div>
   </section>
 
-  <!-- ===== COMPACT CTA ===== -->
-  <section class="final-cta-section">
+  <!-- ===== 9. CONTACT US ===== -->
+  <section class="section contact-section">
     <div class="container">
-      <div class="cta-compact">
-        <h2>Ready to Transform Your Campus?</h2>
-        <p>We invite forward-thinking college leaders to partner with Innovat Bharat. Let's move beyond the "Highest Package" race and start building the architects of a Viksit Bharat.</p>
-        <blockquote class="cta-quote">
-          "Be the college that didn't just place students, but built the nation."
-        </blockquote>
-        <div class="cta-actions">
+      <div class="contact-compact">
+        <p class="section-eyebrow text-center">Reach Out</p>
+        <h2 class="section-title text-center">Contact Us</h2>
+        <p class="section-subtitle text-center">Ready to transform your campus or want to know more? Let's start a conversation.</p>
+        <div class="contact-details">
+          <div class="contact-detail-item">
+            <span class="contact-detail-icon">📧</span>
+            <a href="mailto:innovatbharat@zohomail.in">innovatbharat&#64;zohomail.in</a>
+          </div>
+          <div class="contact-detail-item">
+            <span class="contact-detail-icon">💬</span>
+            <a href="https://wa.me/918431609806" target="_blank">+91 8431 609 806 (WhatsApp)</a>
+          </div>
+        </div>
+        <div class="contact-action">
           <a routerLink="/contact" class="btn btn-cta btn-large">Schedule an Introduction Session</a>
-          <a routerLink="/for-colleges" class="btn btn-cta-outline btn-large">Why Partner With Us</a>
         </div>
-        <p class="cta-target">Targeting: Principals, Directors, and TPO Heads</p>
       </div>
+    </div>
+  </section>
+
+  <!-- ===== 10. QUOTE OF THE DAY ===== -->
+  <section class="section quote-section">
+    <div class="container">
+      <p class="section-eyebrow text-center">Quote of the Day</p>
+      <blockquote class="quote-of-day">
+        {{ quoteOfTheDay }}
+      </blockquote>
+      <p class="quote-attribution">— Innovat Bharat</p>
     </div>
   </section>
 
