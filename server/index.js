@@ -90,8 +90,8 @@ app.post('/api/contact', async (req, res) => {
           within <strong>48 hours</strong> to schedule the introduction session.
         </p>
         <p style="color:#2d3748;font-size:16px;line-height:1.7;">
-          In the meantime, explore our ecosystem at
-          <a href="https://innovatbharat.org/ecosystem" style="color:#e67e22;">innovatbharat.org/ecosystem</a>.
+          In the meantime, explore our programs at
+          <a href="https://innovatbharat.org/programs" style="color:#e67e22;">innovatbharat.org/programs</a>.
         </p>
         <div style="background:white;border-radius:8px;padding:20px;margin:24px 0;border:1px solid #e2e8f0;">
           <p style="margin:0;color:#4a5568;font-weight:600;">What happens next?</p>
@@ -224,7 +224,6 @@ app.post('/api/newsletter', async (req, res) => {
         <div style="background:white;border-radius:8px;padding:20px;margin:24px 0;border:1px solid #e2e8f0;">
           <p style="margin:0 0 12px;font-weight:600;color:#1a365d;">Explore while you wait:</p>
           <ul style="color:#4a5568;line-height:2.2;margin:0;padding-left:20px;">
-            <li><a href="https://innovatbharat.org/ecosystem" style="color:#e67e22;">The Innovat Bharat Ecosystem</a></li>
             <li><a href="https://innovatbharat.org/programs" style="color:#e67e22;">Our Programs</a></li>
             <li><a href="https://innovatbharat.org/contact" style="color:#e67e22;">Invite Us To Your College</a></li>
           </ul>

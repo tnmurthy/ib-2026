@@ -12,19 +12,24 @@
 
 .hero-section {
   position: relative;
-  min-height: 92vh;
+  /* Instead of a fixed 92vh which crops landscape images, use an aspect ratio or smaller height */
+  width: 100%;
+  aspect-ratio: 16/9;
+  max-height: 85vh; /* Ensure it doesn't get too tall on huge screens */
+  min-height: 50vh; /* Ensure it doesn't get too small on mobile */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  background-color: #faf8f5;
   color: white;
 }
 
 .hero-banner-bg {
   position: absolute;
   inset: 0;
-  background-size: cover;
+  background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
   z-index: 0;
@@ -71,17 +76,7 @@
 .hero-arrow-prev { left: 2rem; }
 .hero-arrow-next { right: 2rem; }
 
-/* Hero Container */
-.hero-container {
-  position: relative;
-  z-index: 2;
-  padding-top: 8rem;
-  padding-bottom: 6rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
+
 
 .text-center { text-align: center; }
 .mx-auto { margin-left: auto; margin-right: auto; }

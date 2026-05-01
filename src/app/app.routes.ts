@@ -9,10 +9,7 @@ export const routes: Routes = [
     path: 'about',
     loadComponent: () => import('./pages/about/about.component').then(m => m.AboutComponent)
   },
-  {
-    path: 'ecosystem',
-    loadComponent: () => import('./pages/ecosystem/ecosystem.component').then(m => m.EcosystemComponent)
-  },
+
   {
     path: 'for-colleges',
     loadComponent: () => import('./pages/for-colleges/for-colleges.component').then(m => m.ForCollegesComponent)
