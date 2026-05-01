@@ -39,33 +39,4 @@ export class PartnersMentorsComponent {
     this.activeTabId = id;
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
-
-  formData = {
-    name: '',
-    email: '',
-    phone: '',
-    type: '',
-    expertise: '',
-    message: ''
-  };
-
-  formSubmitted = false;
-  formLoading = false;
-  formError = '';
-
-  submitForm() {
-    this.formLoading = true;
-    this.formError = '';
-
-    this.formService.submitPartnerInterest(this.formData).subscribe({
-      next: () => {
-        this.formSubmitted = true;
-        this.formLoading = false;
-      },
-      error: (err: Error) => {
-        this.formError = err.message;
-        this.formLoading = false;
-      }
-    });
-  }
 }
