@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 export interface BannerSlide {
   image: string;
@@ -9,7 +10,8 @@ export interface BannerSlide {
   selector: 'app-home',
   standalone: true,
   imports: [
-    CommonModule
+    CommonModule,
+    RouterLink
   ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
@@ -38,6 +40,24 @@ export class HomeComponent implements OnInit, OnDestroy {
   activeBannerIndex: number = 0;
   private bannerInterval: any;
   private autoplayPaused: boolean = false;
+
+  // Quote of the Day — rotates daily
+  quotes: string[] = [
+    '"Be the college that didn\'t just place students, but built the nation."',
+    '"Right direction. Right mentorship. Real exposure."',
+    '"The best investment you can make is in the youth of Bharat."',
+    '"Small town roots, national impact — that is the Innovat Bharat story."',
+    '"Every great founder started somewhere. Let it start at your campus."',
+    '"Empowering one student changes a family. Empowering a college changes a nation."',
+    '"Dream big, start local, impact global."'
+  ];
+
+  get quoteOfTheDay(): string {
+    const dayOfYear = Math.floor(
+      (Date.now() - new Date(new Date().getFullYear(), 0, 1).getTime()) / 86400000
+    );
+    return this.quotes[dayOfYear % this.quotes.length];
+  }
 
   ngOnInit(): void {
     this.startAutoPlay();
@@ -83,7 +103,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.autoplayPaused = false;
   }
 
-  // Compact 4 Pillars for homepage
+  // What We Do — 4 Pillars
   pillars = [
     { icon: '🧠', title: 'Mindset & Foundation', desc: 'Shifting student thinking from "finding a job" to "solving a problem" from year one.' },
     { icon: '🏢', title: 'Industry Exposure', desc: 'Real internships, live projects, and hands-on learning from active professionals.' },
@@ -91,3 +111,4 @@ export class HomeComponent implements OnInit, OnDestroy {
     { icon: '🤝', title: 'Community & Mentorship', desc: 'Connecting students with alumni, leaders, and traditional business wisdom.' }
   ];
 }
+

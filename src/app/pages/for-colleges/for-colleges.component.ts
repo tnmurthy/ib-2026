@@ -1,23 +1,19 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
 
 // Reusable Components
 import { HeroBlockComponent } from '../../components/shared/hero-block/hero-block.component';
 import { CardGridComponent, CardItem } from '../../components/shared/card-grid/card-grid.component';
 import { StepFlowComponent, StepItem } from '../../components/shared/step-flow/step-flow.component';
-import { CtaBlockComponent } from '../../components/shared/cta-block/cta-block.component';
 
 @Component({
   selector: 'app-for-colleges',
   standalone: true,
   imports: [
     CommonModule, 
-    RouterLink, 
     HeroBlockComponent, 
     CardGridComponent, 
-    StepFlowComponent, 
-    CtaBlockComponent
+    StepFlowComponent
   ],
   templateUrl: './for-colleges.component.html',
   styleUrls: ['./for-colleges.component.css']
@@ -45,6 +41,6 @@ export class ForCollegesComponent {
     { title: 'Student Engagement', description: '80%+ participation in ecosystem programs and improved student motivation.' },
     { title: 'Skills & Employability', description: 'Real projects, internships, and measurable skill development.' },
     { title: 'Innovation', description: 'Student startup teams formed and new innovation projects initiated.' },
-    { title: 'Reputation', description: 'Competitive advantage in admissions and recognition as an innovative institution.' }
+    { title: 'Reputation', description: 'Competitive advantage in admissions and recognition as an innovative college.' }
   ];
 }

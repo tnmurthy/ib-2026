@@ -177,6 +177,90 @@
   align-items: flex-start;
 }
 
+/* Team Section */
+.team-section {
+  padding: 1rem 0;
+}
+
+.team-section h2 {
+  color: #1a365d;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.team-intro {
+  color: #4a5568;
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
+.founder-card-about {
+  background: #f8fafc;
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid #e8ecf0;
+  margin-bottom: 2rem;
+}
+
+.founder-card-about h3 {
+  color: #1a365d;
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.role-label {
+  color: #e67e22;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.tag {
+  background: #fff5eb;
+  color: #e67e22;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.see-full-team {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+/* Redirect Tab Content */
+.redirect-tab-content {
+  text-align: center;
+  padding: 3rem 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.redirect-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.redirect-tab-content h2 {
+  color: #1a365d;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.redirect-tab-content p {
+  color: #4a5568;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
 @media (max-width: 900px) {
   .about-grid, .vm-dashboard, .values-grid-overlay, .founder-compact {
     grid-template-columns: 1fr;

@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 })
 export class HeaderComponent {
   isMenuOpen = false;
+  activeDropdown: string | null = null;
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
@@ -18,5 +19,15 @@ export class HeaderComponent {
 
   closeMenu() {
     this.isMenuOpen = false;
+    this.activeDropdown = null;
+  }
+
+  toggleDropdown(menu: string) {
+    this.activeDropdown = this.activeDropdown === menu ? null : menu;
+  }
+
+  closeDropdown() {
+    this.activeDropdown = null;
   }
 }
+
