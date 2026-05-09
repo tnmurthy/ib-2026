@@ -29,12 +29,12 @@ export class HomeComponent implements OnInit, OnDestroy {
     {
       image: '/assets/banners/startup-culture.png'
     },
-    {
-      image: '/assets/banners/tier3-students.png'
-    },
-    {
-      image: '/assets/banners/rural-empowerment.png'
-    }
+    // {
+    //  image: '/assets/banners/tier3-students.png'
+    // },
+    // {
+    //  image: '/assets/banners/rural-empowerment.png'
+    // }
   ];
 
   activeBannerIndex: number = 0;
