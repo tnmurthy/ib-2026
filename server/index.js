@@ -343,6 +343,10 @@ function ackEmail(name, bodyHtml) {
 }
 
 // ── Start ─────────────────────────────────────────────────────────────────────
-app.listen(PORT, () => {
-  console.log(`Innovat Bharat API server running on port ${PORT}`);
-});
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Innovat Bharat API server running on port ${PORT}`);
+  });
+}
+
+module.exports = app;
