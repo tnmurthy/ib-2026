@@ -270,7 +270,13 @@ function getSheetsClient() {
 
 async function appendToSheet(sheetName, headers, rowData) {
   let sheetId = process.env.GOOGLE_SHEET_ID;
-  if (!sheetId || !process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL) return;
+  const serviceAccountEmail = process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL;
+  
+  // Gracefully skip if Google keys are not yet configured
+  if (!sheetId || !serviceAccountEmail || !process.env.GOOGLE_PRIVATE_KEY) {
+    console.warn(`[SHEETS] Skipping append to ${sheetName}: Missing environment variables.`);
+    return;
+  }
   if (sheetId.includes('/d/')) {
     const match = sheetId.match(/\/d\/([a-zA-Z0-9-_]+)/);
     if (match) sheetId = match[1];
