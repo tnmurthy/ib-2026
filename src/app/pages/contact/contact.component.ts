@@ -14,61 +14,62 @@ import { FormService } from '../../services/form.service';
 export class ContactComponent {
   constructor(private formService: FormService) {}
 
-  collegeForm = {
+  unifiedForm = {
     name: '',
-    designation: '',
-    collegeName: '',
-    location: '',
     email: '',
     phone: '',
-    preferredDateTime: '',
-    message: ''
-  };
-
-  communityForm = {
-    name: '',
-    email: '',
     role: '',
+    collegeName: '',
+    designation: '',
+    location: '',
     message: ''
   };
 
-  collegeFormSubmitted = false;
-  collegeFormLoading = false;
-  collegeFormError = '';
+  formSubmitted = false;
+  formLoading = false;
+  formError = '';
 
-  communityFormSubmitted = false;
-  communityFormLoading = false;
-  communityFormError = '';
+  submitUnifiedForm() {
+    this.formLoading = true;
+    this.formError = '';
 
-  submitCollegeForm() {
-    this.collegeFormLoading = true;
-    this.collegeFormError = '';
-
-    this.formService.submitCollegeInvite(this.collegeForm).subscribe({
-      next: () => {
-        this.collegeFormSubmitted = true;
-        this.collegeFormLoading = false;
-      },
-      error: (err: Error) => {
-        this.collegeFormError = err.message;
-        this.collegeFormLoading = false;
-      }
-    });
-  }
-
-  submitCommunityForm() {
-    this.communityFormLoading = true;
-    this.communityFormError = '';
-
-    this.formService.submitCommunityMessage(this.communityForm).subscribe({
-      next: () => {
-        this.communityFormSubmitted = true;
-        this.communityFormLoading = false;
-      },
-      error: (err: Error) => {
-        this.communityFormError = err.message;
-        this.communityFormLoading = false;
-      }
-    });
+    if (this.unifiedForm.role === 'college') {
+      const collegeData = {
+        name: this.unifiedForm.name,
+        email: this.unifiedForm.email,
+        phone: this.unifiedForm.phone,
+        collegeName: this.unifiedForm.collegeName,
+        designation: this.unifiedForm.designation,
+        location: this.unifiedForm.location,
+        message: this.unifiedForm.message
+      };
+      this.formService.submitCollegeInvite(collegeData).subscribe({
+        next: () => {
+          this.formSubmitted = true;
+          this.formLoading = false;
+        },
+        error: (err: Error) => {
+          this.formError = err.message;
+          this.formLoading = false;
+        }
+      });
+    } else {
+      const communityData = {
+        name: this.unifiedForm.name,
+        email: this.unifiedForm.email,
+        role: this.unifiedForm.role,
+        message: this.unifiedForm.message
+      };
+      this.formService.submitCommunityMessage(communityData).subscribe({
+        next: () => {
+          this.formSubmitted = true;
+          this.formLoading = false;
+        },
+        error: (err: Error) => {
+          this.formError = err.message;
+          this.formLoading = false;
+        }
+      });
+    }
   }
 }

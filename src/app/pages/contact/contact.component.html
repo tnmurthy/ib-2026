@@ -39,194 +39,107 @@
     </div>
   </section>
 
-  <!-- College Invite Form -->
-  <section class="section college-form-section">
+  <!-- Unified Contact Form Section -->
+  <section class="section form-section">
     <div class="container">
       <div class="form-section-grid">
         <div class="form-intro">
-          <h2>Schedule an Introduction Session</h2>
+          <h2>Get in Touch</h2>
           <p>
-            Fill in the form and we'll reach out to schedule a free 45-minute introduction session
-            for your college. We'll explain the ecosystem, answer questions from management and faculty,
-            and help you evaluate fit.
+            Whether you are a college representative looking to transform your institution, a student, parent, or potential partner, we would love to hear from you.
           </p>
-          <div class="process-steps">
-            <div class="process-step">
-              <div class="step-number">1</div>
-              <div>
-                <h4>Fill the Form</h4>
-                <p>Share your college details and preferred timing.</p>
-              </div>
+          <div class="contact-highlights" style="margin-top: 2rem;">
+            <div class="highlight-item" style="margin-bottom: 1.5rem;">
+              <h4 style="color: #1a365d; margin-bottom: 0.5rem;">For Colleges</h4>
+              <p>Schedule a free 45-minute introduction session for your college. We'll explain the ecosystem and help you evaluate fit.</p>
             </div>
-            <div class="process-step">
-              <div class="step-number">2</div>
-              <div>
-                <h4>We Reach Out</h4>
-                <p>Our team contacts you within 48 hours to confirm.</p>
-              </div>
+            <div class="highlight-item" style="margin-bottom: 1.5rem;">
+              <h4 style="color: #1a365d; margin-bottom: 0.5rem;">For Students & Parents</h4>
+              <p>Reach out with your questions and we'll be happy to explain what the ecosystem means for students and families.</p>
             </div>
-            <div class="process-step">
-              <div class="step-number">3</div>
-              <div>
-                <h4>Introduction Session</h4>
-                <p>45-min session with your team — no commitment needed.</p>
-              </div>
-            </div>
-            <div class="process-step">
-              <div class="step-number">4</div>
-              <div>
-                <h4>Decide Together</h4>
-                <p>Choose the right engagement model for your college.</p>
-              </div>
+            <div class="highlight-item">
+              <h4 style="color: #1a365d; margin-bottom: 0.5rem;">For Partners & Mentors</h4>
+              <p>Industry connections, mentor volunteers, or CSR partnerships — tell us what you have in mind.</p>
             </div>
           </div>
         </div>
 
         <div class="form-container">
-          <div *ngIf="!collegeFormSubmitted">
-            <h3>College Invitation Form</h3>
-            <form (ngSubmit)="submitCollegeForm()" #cForm="ngForm">
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="c-name">Your Name *</label>
-                  <input id="c-name" type="text" [(ngModel)]="collegeForm.name" name="name" required placeholder="Full name">
-                </div>
-                <div class="form-group">
-                  <label for="c-designation">Designation *</label>
-                  <input id="c-designation" type="text" [(ngModel)]="collegeForm.designation" name="designation" required placeholder="e.g. Principal, HOD, Director">
-                </div>
-              </div>
-
+          <div *ngIf="!formSubmitted">
+            <h3>Contact Us</h3>
+            <form (ngSubmit)="submitUnifiedForm()" #uForm="ngForm">
+              
               <div class="form-group">
-                <label for="c-college">College Name *</label>
-                <input id="c-college" type="text" [(ngModel)]="collegeForm.collegeName" name="collegeName" required placeholder="Full college name">
-              </div>
-
-              <div class="form-group">
-                <label for="c-location">Location *</label>
-                <input id="c-location" type="text" [(ngModel)]="collegeForm.location" name="location" required placeholder="City, State">
+                <label for="u-role">I am a *</label>
+                <select id="u-role" [(ngModel)]="unifiedForm.role" name="role" required>
+                  <option value="">Select your role…</option>
+                  <option value="college">College Representative</option>
+                  <option value="student">Student</option>
+                  <option value="parent">Parent</option>
+                  <option value="mentor">Potential Mentor</option>
+                  <option value="partner">Industry Partner</option>
+                  <option value="other">Other</option>
+                </select>
               </div>
 
               <div class="form-row">
                 <div class="form-group">
-                  <label for="c-email">Official Email *</label>
-                  <input id="c-email" type="email" [(ngModel)]="collegeForm.email" name="email" required placeholder="you@college.edu.in">
+                  <label for="u-name">Name *</label>
+                  <input id="u-name" type="text" [(ngModel)]="unifiedForm.name" name="name" required placeholder="Your full name">
                 </div>
                 <div class="form-group">
-                  <label for="c-phone">Phone *</label>
-                  <input id="c-phone" type="tel" [(ngModel)]="collegeForm.phone" name="phone" required placeholder="+91 xxxxxxxxxx">
+                  <label for="u-email">Email *</label>
+                  <input id="u-email" type="email" [(ngModel)]="unifiedForm.email" name="email" required placeholder="you@example.com">
                 </div>
               </div>
 
               <div class="form-group">
-                <label for="c-datetime">Preferred Date & Time for Session</label>
-                <input id="c-datetime" type="datetime-local" [(ngModel)]="collegeForm.preferredDateTime" name="preferredDateTime">
+                <label for="u-phone">Phone Number</label>
+                <input id="u-phone" type="tel" [(ngModel)]="unifiedForm.phone" name="phone" placeholder="+91 xxxxxxxxxx">
+              </div>
+
+              <!-- Extra fields for College Rep -->
+              <div *ngIf="unifiedForm.role === 'college'">
+                <div class="form-group">
+                  <label for="u-designation">Designation *</label>
+                  <input id="u-designation" type="text" [(ngModel)]="unifiedForm.designation" name="designation" [required]="unifiedForm.role === 'college'" placeholder="e.g. Principal, HOD, Director">
+                </div>
+
+                <div class="form-group">
+                  <label for="u-college">College Name *</label>
+                  <input id="u-college" type="text" [(ngModel)]="unifiedForm.collegeName" name="collegeName" [required]="unifiedForm.role === 'college'" placeholder="Full college name">
+                </div>
+
+                <div class="form-group">
+                  <label for="u-location">Location *</label>
+                  <input id="u-location" type="text" [(ngModel)]="unifiedForm.location" name="location" [required]="unifiedForm.role === 'college'" placeholder="City, State">
+                </div>
               </div>
 
               <div class="form-group">
-                <label for="c-message">Message / Questions (optional)</label>
-                <textarea id="c-message" [(ngModel)]="collegeForm.message" name="message" rows="4" placeholder="Any specific context, questions, or requests for the session…"></textarea>
+                <label for="u-message">Message *</label>
+                <textarea id="u-message" [(ngModel)]="unifiedForm.message" name="message" required rows="4" placeholder="How can we help you?"></textarea>
               </div>
 
-              <div *ngIf="collegeFormError" class="form-error">
-                {{ collegeFormError }}
+              <div *ngIf="formError" class="form-error">
+                {{ formError }}
               </div>
 
               <button type="submit" class="btn btn-primary btn-full btn-large"
-                [disabled]="!cForm.valid || collegeFormLoading">
-                <span *ngIf="!collegeFormLoading">Request Introduction Session</span>
-                <span *ngIf="collegeFormLoading">Sending…</span>
+                [disabled]="!uForm.valid || formLoading">
+                <span *ngIf="!formLoading">Send Message</span>
+                <span *ngIf="formLoading">Sending…</span>
               </button>
-              <p class="form-note">We'll respond within 48 hours. No commitment required.</p>
             </form>
           </div>
 
-          <div *ngIf="collegeFormSubmitted" class="form-success">
-            <div class="success-icon">🎓</div>
-            <h3>Request Received!</h3>
+          <div *ngIf="formSubmitted" class="form-success">
+            <div class="success-icon">✓</div>
+            <h3>Message Sent!</h3>
             <p>
-              Thank you for reaching out. Our team will contact you within 48 hours to confirm the introduction session.
-              A confirmation has been sent to your email.
+              Thank you for reaching out. Our team will contact you soon. A confirmation has been sent to your email.
             </p>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Students & Partners CTA -->
-  <section class="section community-section">
-    <div class="container">
-      <h2 class="section-title">Students & Partners</h2>
-      <p class="section-subtitle">Not a college decision-maker? Here's how you can connect with us</p>
-
-      <div class="community-grid">
-        <div class="community-card">
-          <div class="community-icon">🎓</div>
-          <h3>I'm a Student</h3>
-          <p>If your college is already part of our ecosystem, reach out to your campus coordinator. If not, encourage your college management to connect with us — or share this website with them.</p>
-          <a href="mailto:innovatbharat@zohomail.in" class="btn btn-outline">Email Us</a>
-        </div>
-
-        <div class="community-card">
-          <div class="community-icon">👨‍👩‍👧</div>
-          <h3>I'm a Parent</h3>
-          <p>Want to know more about how Innovat Bharat can benefit your child? Reach out with your questions and we'll be happy to explain what the ecosystem means for students and families.</p>
-          <a href="mailto:innovatbharat@zohomail.in" class="btn btn-outline">Ask a Question</a>
-        </div>
-
-        <div class="community-card">
-          <div class="community-icon">🤝</div>
-          <h3>I Want to Partner</h3>
-          <p>Industry connections, mentor volunteers, institutional collaborations, or CSR partnerships — we're open to conversations. Tell us what you have in mind.</p>
-          <a routerLink="/partners-mentors" class="btn btn-outline">Explore Partnership</a>
-        </div>
-      </div>
-
-      <div class="community-form-wrapper">
-        <h3>Send Us a Quick Message</h3>
-        <div *ngIf="!communityFormSubmitted">
-          <form class="community-form" (ngSubmit)="submitCommunityForm()" #comForm="ngForm">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="com-name">Name *</label>
-                <input id="com-name" type="text" [(ngModel)]="communityForm.name" name="name" required placeholder="Your name">
-              </div>
-              <div class="form-group">
-                <label for="com-email">Email *</label>
-                <input id="com-email" type="email" [(ngModel)]="communityForm.email" name="email" required placeholder="your@email.com">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="com-role">I am a *</label>
-              <select id="com-role" [(ngModel)]="communityForm.role" name="role" required>
-                <option value="">Select…</option>
-                <option value="student">Student</option>
-                <option value="parent">Parent</option>
-                <option value="mentor">Potential Mentor</option>
-                <option value="partner">Industry Partner</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="com-message">Message *</label>
-              <textarea id="com-message" [(ngModel)]="communityForm.message" name="message" required rows="4" placeholder="What would you like to know or share?"></textarea>
-            </div>
-
-            <div *ngIf="communityFormError" class="form-error">
-              {{ communityFormError }}
-            </div>
-
-            <button type="submit" class="btn btn-primary"
-              [disabled]="!comForm.valid || communityFormLoading">
-              <span *ngIf="!communityFormLoading">Send Message</span>
-              <span *ngIf="communityFormLoading">Sending…</span>
-            </button>
-          </form>
-        </div>
-        <div *ngIf="communityFormSubmitted" class="form-success small-success">
-          <span class="success-icon">✓</span>
-          <p>Message sent! A copy has been emailed to you.</p>
         </div>
       </div>
     </div>

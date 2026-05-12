@@ -49,7 +49,7 @@
         <form class="newsletter-form" (submit)="subscribeNewsletter($event)">
           <input type="email" name="email" [(ngModel)]="email" placeholder="Email address" required [disabled]="submitting">
           <button type="submit" [disabled]="submitting" class="btn-subscribe">
-            {{ submitting ? 'Wait...' : 'Subs' }}
+            {{ submitting ? 'Wait...' : 'Subscribe' }}
           </button>
         </form>
         <p *ngIf="successMessage" class="feedback success">{{ successMessage }}</p>

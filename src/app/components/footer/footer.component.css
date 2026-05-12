@@ -128,6 +128,7 @@
   transition: all 0.3s ease;
   font-family: inherit;
   font-size: 0.95rem;
+  white-space: nowrap;
 }
 
 .btn-subscribe:hover:not(:disabled) {
