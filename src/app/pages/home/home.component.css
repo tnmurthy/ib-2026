@@ -16,7 +16,7 @@
   width: 100%;
   aspect-ratio: 16/9;
   max-height: 85vh; /* Ensure it doesn't get too tall on huge screens */
-  min-height: 50vh; /* Ensure it doesn't get too small on mobile */
+  /* min-height removed so it can scale naturally to 16/9 without blank space */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,7 +29,7 @@
 .hero-banner-bg {
   position: absolute;
   inset: 0;
-  background-size: contain;
+  background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   z-index: 0;
@@ -1035,7 +1035,7 @@
     font-size: 2rem;
   }
   .hero-section {
-    min-height: 85vh;
+    /* Removed min-height: 85vh to maintain 16/9 aspect ratio */
   }
   .hero-container {
     padding-top: 3rem;
@@ -1158,6 +1158,12 @@
   padding-bottom: 1rem;
 }
 
+@media (max-width: 768px) {
+  .tabs-nav-wrapper {
+    justify-content: flex-start; /* Fixes left-side clipping when overflowing horizontally on mobile */
+  }
+}
+
 .tabs-nav {
   display: flex;
   background: white;
@@ -1214,9 +1220,58 @@
 
 .audience-split-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-bottom: 3rem;
+}
+
+/* Base styles replacing inline styles */
+.audience-block {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  text-align: center;
+}
+
+.audience-title {
+  color: #1a365d;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.audience-desc {
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.collaborate-block {
+  background: white;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.collaborate-title {
+  color: #1a365d;
+  font-size: 1.75rem;
+}
+
+.collaborate-desc {
+  color: #4a5568;
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .audience-split-grid {
+    grid-template-columns: 1fr;
+  }
+  .audience-block,
+  .collaborate-block {
+    padding: 1.5rem; /* Better padding for mobile */
+  }
 }
 
 /* Adjustments for nested grids inside tabs to avoid double padding */
