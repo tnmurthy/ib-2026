@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
-import { provideRouter, RouterOutlet } from '@angular/router';
+import { provideRouter, RouterOutlet, Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { provideHttpClient } from '@angular/common/http';
+import { filter, map, mergeMap } from 'rxjs/operators';
 import { routes } from './app/app.routes';
 import { HeaderComponent } from './app/components/header/header.component';
 import { FooterComponent } from './app/components/footer/footer.component';
+import { SeoService } from './app/services/seo.service';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +20,30 @@ import { FooterComponent } from './app/components/footer/footer.component';
     <app-footer></app-footer>
   `,
 })
-export class App {}
+export class App implements OnInit {
+  constructor(
+    private router: Router,
+    private activatedRoute: ActivatedRoute,
+    private seoService: SeoService
+  ) {}
+
+  ngOnInit() {
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd),
+      map(() => this.activatedRoute),
+      map(route => {
+        while (route.firstChild) route = route.firstChild;
+        return route;
+      }),
+      filter(route => route.outlet === 'primary'),
+      mergeMap(route => route.data)
+    ).subscribe(data => {
+      this.seoService.updateTitle(data['title']);
+      this.seoService.updateMeta(data['description'], data['keywords']);
+      this.seoService.updateCanonical('https://innovatbharat.org' + this.router.url);
+    });
+  }
+}
 
 bootstrapApplication(App, {
   providers: [

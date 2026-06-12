@@ -9,6 +9,30 @@
            [ngStyle]="{'background-image': 'url(' + slide.image + ')'}">
       </div>
     }
+
+    <div class="container hero-container">
+      <div class="hero-content text-center">
+        <div class="hero-hashtags">
+          <span>#InnovatBharat</span>
+          <span>#ProductNation2047</span>
+          <span>#RuralInnovation</span>
+        </div>
+
+        <div class="hero-slide-content active">
+          <p class="hero-eyebrow">Bridging the Education-Industry Gap</p>
+          <h1 class="hero-headline">Building India's <span class="text-highlight">Product Nation</span> from Rural Colleges</h1>
+          <p class="hero-subheadline mx-auto">We build premier startup ecosystems inside Tier-3 and rural colleges — giving students the direction, mentorship, and real exposure they deserve.</p>
+          
+          <div class="hero-buttons justify-center">
+            <a routerLink="/contact" class="btn btn-hero-primary btn-large">
+              Invite Us To Your College
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a routerLink="/ecosystem" class="btn btn-cta-outline btn-large">Explore Ecosystem</a>
+          </div>
+        </div>
+      </div>
+    </div>
     
     <button class="hero-arrow hero-arrow-prev" (click)="prevSlide()" aria-label="Previous slide">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
