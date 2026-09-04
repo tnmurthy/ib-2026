@@ -1,0 +1,122 @@
+<div class="about">
+  <!-- Tabs Navigation -->
+  <app-pill-tabs [tabs]="tabs" [activeTabId]="activeTabId" (tabChange)="onTabChange($event)"></app-pill-tabs>
+
+  <div class="content-wrapper transition-fade">
+    
+    <!-- Hero (Always Visible or Dynamic) -->
+    <app-hero-block 
+      title="About Innovat Bharat" 
+      subtitle="Transforming Ordinary Colleges into Extraordinary Ecosystems"
+      background="gradient"
+    ></app-hero-block>
+
+    <div class="container py-3">
+      <!-- WHY INNOVAT BHARAT -->
+      <div *ngIf="activeTabId === 'story'" class="tab-view">
+        <div class="about-grid">
+          <div class="about-main">
+            <h2>Why Innovat Bharat</h2>
+            <ul class="why-ib-list">
+              <li><strong>To Empower the "Missing Middle":</strong> We focus on the millions of talented students in Tier-3 and regional colleges who have the potential but lack the right opportunities.</li>
+              <li><strong>To Bridge the Skill Gap:</strong> We fix the mismatch between what is taught in textbooks and what the modern industry actually needs.</li>
+              <li><strong>To Create "Earn While You Learn" Opportunities:</strong> We help students achieve financial independence and build real-world experience before they even graduate.</li>
+              <li><strong>To Transform Colleges into Hubs:</strong> We help institutions move beyond just "job placements" and become prestigious centers for startups and innovation.</li>
+              <li><strong>To Stop the "Brain Drain":</strong> We create high-quality jobs and businesses in local towns so that talent doesn't have to leave their homes for big cities.</li>
+              <li><strong>To Build a "Product Nation":</strong> We aim to turn India into a global leader by teaching students how to build and sell indigenous products to the world.</li>
+              <li><strong>To Support Families:</strong> We reduce the financial burden on parents by ensuring their children are job-ready and earning early.</li>
+            </ul>
+          </div>
+          <div class="about-sidebar">
+            <div class="stat-card">
+              <div class="stat-num">2047</div>
+              <div class="stat-label">Product Nation Vision</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- OUR MISSION AND OUR VISION -->
+      <div *ngIf="activeTabId === 'vision'" class="tab-view">
+        <div class="vm-dashboard">
+          <div class="dashboard-card">
+            <div class="card-icon">🎯</div>
+            <h3>Vision</h3>
+            <p>To transform Bharat into a global Product Nation by 2047, powered by a Bharat-centric economic model and 1 million rural entrepreneurs from Tier-3 and rural colleges.</p>
+          </div>
+          <div class="dashboard-card">
+            <div class="card-icon">🚀</div>
+            <h3>Mission</h3>
+            <p>We transform rural colleges into startup hubs where students learn to invent and build their own products. When students become entrepreneurs in their own towns, they create opportunities, generate jobs, and drive India's growth from the grassroots.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CORE VALUES -->
+      <div *ngIf="activeTabId === 'values'" class="tab-view">
+        <div class="values-grid-overlay">
+          <div class="value-item" *ngFor="let val of coreValues">
+            <div class="val-icon">{{val.icon}}</div>
+            <div>
+              <h4>{{val.title}}</h4>
+              <ul class="value-sub-list">
+                <li *ngFor="let point of val.points">{{point}}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- OUR TEAM -->
+      <div *ngIf="activeTabId === 'team'" class="tab-view">
+        <div class="team-section">
+          <h2>Our Team</h2>
+          <p class="team-intro">Meet the passionate team driving the Innovat Bharat mission across India.</p>
+
+          <!-- Founder -->
+          <div class="founder-card-about">
+            <h3>Mahesh Chillakuru</h3>
+            <p class="role-label">Founder</p>
+            <p>I hold an MBA in Sales and Marketing and a BTech in Computer Science. My journey across entrepreneurship, professional experience, and grassroots exposure has shaped my vision to build Innovat Bharat, where I aim to empower students in Tier 3 and rural India to become job creators and build meaningful solutions from their own communities.</p>
+            <div class="tags-row">
+              <span class="tag">MBA – Sales &amp; Marketing</span>
+              <span class="tag">BTech – Computer Science</span>
+              <span class="tag">Founder – Mana Dukaan (IIT Mandi)</span>
+              <span class="tag">Jagriti Yatra Fellow</span>
+              <span class="tag">8+ Years in SaaS &amp; Industrial Sales</span>
+            </div>
+          </div>
+
+          <p class="see-full-team">
+            <a routerLink="/partners-mentors" class="btn-learn-more">
+              See Full Team &amp; Mentors
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <!-- OUR MENTORS & PARTNERS (redirect tab) -->
+      <div *ngIf="activeTabId === 'mentors'" class="tab-view">
+        <div class="redirect-tab-content">
+          <div class="redirect-icon">🤝</div>
+          <h2>Our Mentors &amp; Partners</h2>
+          <p>Discover the experienced professionals, industry leaders, and organisations who collaborate with Innovat Bharat to empower student founders across rural India.</p>
+          <a routerLink="/partners-mentors" class="btn btn-primary btn-large">
+            Visit Mentors &amp; Partners Page
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Global CTA -->
+    <app-cta-block 
+      title="Join Our Mission" 
+      value="Help us bring this ecosystem to every corner of India."
+      primaryText="Partner with Us"
+      primaryLink="/collaborate"
+      variant="emphasized"
+    ></app-cta-block>
+
+  </div>
+</div>

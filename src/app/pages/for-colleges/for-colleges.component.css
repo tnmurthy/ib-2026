@@ -1,0 +1,40 @@
+.section-title {
+  color: #1a365d;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.text-center { text-align: center; }
+.mb-5 { margin-bottom: 1.5rem; }
+.py-5 { padding: 1.5rem 0; }
+.bg-light { background: #f8fafc; }
+
+.college-list-placeholder {
+  background: #fff;
+  border: 2px dashed #cbd5e0;
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.placeholder-label {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #a0aec0;
+  margin-bottom: 0.5rem;
+}
+
+.placeholder-note {
+  color: #718096;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.75rem;
+  }
+}

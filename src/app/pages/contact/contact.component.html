@@ -1,0 +1,147 @@
+<div class="contact">
+  <section class="page-hero">
+    <div class="container">
+      <h1>Invite Us To Your College</h1>
+      <p>Let's start a conversation about transforming your institution</p>
+    </div>
+  </section>
+
+  <!-- Quick contact strip -->
+  <section class="section quick-contact">
+    <div class="container">
+      <div class="contact-strip">
+        <div class="contact-item">
+          <div class="contact-icon">📧</div>
+          <div>
+            <p class="contact-label">Email Us</p>
+            <a href="mailto:innovatbharat@zohomail.in">innovatbharat&#64;zohomail.in</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">💬</div>
+          <div>
+            <p class="contact-label">WhatsApp</p>
+            <a href="https://wa.me/918431609806" target="_blank">+91 8431 609 806 (WhatsApp only)</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🌐</div>
+          <div>
+            <p class="contact-label">Follow Us</p>
+            <div class="social-row">
+              <a href="https://www.linkedin.com/company/innovatbharat/" target="_blank" class="social-link">LinkedIn</a>
+              <a href="https://www.instagram.com/innovatbharat" target="_blank" class="social-link">Instagram</a>
+              <a href="https://www.youtube.com/channel/UCf-zolIdFukLk_vT0dpfEdA" target="_blank" class="social-link">YouTube</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Unified Contact Form Section -->
+  <section class="section form-section">
+    <div class="container">
+      <div class="form-section-grid">
+        <div class="form-intro">
+          <h2>Get in Touch</h2>
+          <p>
+            Whether you are a college representative looking to transform your institution, a student, parent, or potential partner, we would love to hear from you.
+          </p>
+          <div class="contact-highlights" style="margin-top: 2rem;">
+            <div class="highlight-item" style="margin-bottom: 1.5rem;">
+              <h4 style="color: #1a365d; margin-bottom: 0.5rem;">For Colleges</h4>
+              <p>Schedule a free 45-minute introduction session for your college. We'll explain the ecosystem and help you evaluate fit.</p>
+            </div>
+            <div class="highlight-item" style="margin-bottom: 1.5rem;">
+              <h4 style="color: #1a365d; margin-bottom: 0.5rem;">For Students & Parents</h4>
+              <p>Reach out with your questions and we'll be happy to explain what the ecosystem means for students and families.</p>
+            </div>
+            <div class="highlight-item">
+              <h4 style="color: #1a365d; margin-bottom: 0.5rem;">For Partners & Mentors</h4>
+              <p>Industry connections, mentor volunteers, or CSR partnerships — tell us what you have in mind.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-container">
+          <div *ngIf="!formSubmitted">
+            <h3>Contact Us</h3>
+            <form (ngSubmit)="submitUnifiedForm()" #uForm="ngForm">
+              
+              <div class="form-group">
+                <label for="u-role">I am a *</label>
+                <select id="u-role" [(ngModel)]="unifiedForm.role" name="role" required>
+                  <option value="">Select your role…</option>
+                  <option value="college">College Representative</option>
+                  <option value="student">Student</option>
+                  <option value="parent">Parent</option>
+                  <option value="mentor">Potential Mentor</option>
+                  <option value="partner">Industry Partner</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="u-name">Name *</label>
+                  <input id="u-name" type="text" [(ngModel)]="unifiedForm.name" name="name" required placeholder="Your full name">
+                </div>
+                <div class="form-group">
+                  <label for="u-email">Email *</label>
+                  <input id="u-email" type="email" [(ngModel)]="unifiedForm.email" name="email" required placeholder="you@example.com">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="u-phone">Phone Number</label>
+                <input id="u-phone" type="tel" [(ngModel)]="unifiedForm.phone" name="phone" placeholder="+91 xxxxxxxxxx">
+              </div>
+
+              <!-- Extra fields for College Rep -->
+              <div *ngIf="unifiedForm.role === 'college'">
+                <div class="form-group">
+                  <label for="u-designation">Designation *</label>
+                  <input id="u-designation" type="text" [(ngModel)]="unifiedForm.designation" name="designation" [required]="unifiedForm.role === 'college'" placeholder="e.g. Principal, HOD, Director">
+                </div>
+
+                <div class="form-group">
+                  <label for="u-college">College Name *</label>
+                  <input id="u-college" type="text" [(ngModel)]="unifiedForm.collegeName" name="collegeName" [required]="unifiedForm.role === 'college'" placeholder="Full college name">
+                </div>
+
+                <div class="form-group">
+                  <label for="u-location">Location *</label>
+                  <input id="u-location" type="text" [(ngModel)]="unifiedForm.location" name="location" [required]="unifiedForm.role === 'college'" placeholder="City, State">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="u-message">Message *</label>
+                <textarea id="u-message" [(ngModel)]="unifiedForm.message" name="message" required rows="4" placeholder="How can we help you?"></textarea>
+              </div>
+
+              <div *ngIf="formError" class="form-error">
+                {{ formError }}
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full btn-large"
+                [disabled]="!uForm.valid || formLoading">
+                <span *ngIf="!formLoading">Send Message</span>
+                <span *ngIf="formLoading">Sending…</span>
+              </button>
+            </form>
+          </div>
+
+          <div *ngIf="formSubmitted" class="form-success">
+            <div class="success-icon">✓</div>
+            <h3>Message Sent!</h3>
+            <p>
+              Thank you for reaching out. Our team will contact you soon. A confirmation has been sent to your email.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

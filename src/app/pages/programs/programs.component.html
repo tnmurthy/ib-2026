@@ -1,0 +1,51 @@
+<div class="programs">
+  <!-- Tabs Navigation -->
+  <app-pill-tabs [tabs]="tabs" [activeTabId]="activeTabId" (tabChange)="onTabChange($event)"></app-pill-tabs>
+
+  <div class="content-wrapper transition-fade">
+    
+    <div *ngIf="currentProgram" class="tab-view">
+      <app-hero-block 
+        [title]="currentProgram.title" 
+        [subtitle]="currentProgram.subtitle"
+        background="gradient"
+      ></app-hero-block>
+
+      <div class="container py-3">
+        <div class="program-detail-layout">
+          <div class="program-main">
+            <div class="program-icon-large">{{ currentProgram.icon }}</div>
+            <p class="description">{{ currentProgram.description }}</p>
+            
+            <div class="features-box">
+              <h3>Key Features</h3>
+              <ul class="feature-list">
+                <li *ngFor="let feature of currentProgram.features">
+                  <span class="bullet">✓</span> {{ feature }}
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="program-sidebar">
+            <div class="meta-card">
+              <h3>Program Stats</h3>
+              <div class="meta-item" *ngFor="let m of currentProgram.meta">
+                {{ m }}
+              </div>
+              <button routerLink="/contact" class="btn btn-primary btn-full mt-3">Inquire for Campus</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <app-cta-block 
+        title="Customized for Your Campus" 
+        value="We adapt programs based on regional industry and student needs."
+        primaryText="Talk to an Advisor"
+        variant="standard"
+      ></app-cta-block>
+    </div>
+
+  </div>
+</div>

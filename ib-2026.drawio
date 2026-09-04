@@ -1,0 +1,518 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="8PQyOWNW88hJwPCkiJih">
+    <mxGraphModel dx="2375" dy="1371" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="" mermaidData="{&#xa;  &quot;data&quot;: &quot;flowchart TD\n    A[Rural &amp; Tier‑3 Colleges] --&gt; B[Innovat Bharat Ecosystem]\n    B --&gt; C[Mentorship &amp; Guidance]\n    B --&gt; D[Startup‑Building Workflows]\n    B --&gt; E[Real Project Exposure]\n    B --&gt; F[Internship Pathways]\n    B --&gt; G[Product Execution Systems]\n    C --&gt; H[Entrepreneurial Mindset Development]\n    D --&gt; I[Idea → Prototype → Startup]\n    E --&gt; J[Industry Collaboration &amp; Validation]\n    F --&gt; K[Skill Development &amp; Career Readiness]\n    G --&gt; L[Local Ventures &amp; Opportunities]\n    L --&gt; M[Community Impact &amp; Employment Generation]\n&quot;,&#xa;  &quot;config&quot;: null&#xa;}" id="yVjJXgIILAg_Cf4bvZ7F-1">
+          <mxCell connectable="0" parent="1" style="group;transparentBounds=1;editIcon=1;lockedGroup=0;groupPadding=20;" vertex="1">
+            <mxGeometry as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Rural &amp; Tier‑3 Colleges" mermaidId="n:A" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Rural &amp; Tier‑3 Colleges" id="yVjJXgIILAg_Cf4bvZ7F-2">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-1" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="224" x="780" y="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Innovat Bharat Ecosystem" mermaidId="n:B" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Innovat Bharat Ecosystem" id="yVjJXgIILAg_Cf4bvZ7F-3">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-1" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="242" x="771" y="144" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Mentorship &amp; Guidance" mermaidId="n:C" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Mentorship &amp; Guidance" id="yVjJXgIILAg_Cf4bvZ7F-4">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-1" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="226" x="93" y="248" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Startup‑Building Workflows" mermaidId="n:D" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Startup‑Building Workflows" id="yVjJXgIILAg_Cf4bvZ7F-5">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-1" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="254" x="427" y="248" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Real Project Exposure" mermaidId="n:E" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Real Project Exposure" id="yVjJXgIILAg_Cf4bvZ7F-6">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-1" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="216" x="784" y="248" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Internship Pathways" mermaidId="n:F" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Internship Pathways" id="yVjJXgIILAg_Cf4bvZ7F-7">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-1" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="203" x="1162" y="248" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Product Execution Systems" mermaidId="n:G" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Product Execution Systems" id="yVjJXgIILAg_Cf4bvZ7F-8">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-1" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="252" x="1495" y="248" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Entrepreneurial Mindset Development" mermaidId="n:H" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Entrepreneurial Mindset Development" id="yVjJXgIILAg_Cf4bvZ7F-9">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-1" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="332" x="40" y="352" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Idea → Prototype → Startup" mermaidId="n:I" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Idea → Prototype → Startup" id="yVjJXgIILAg_Cf4bvZ7F-10">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-1" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="264" x="422" y="352" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Industry Collaboration &amp; Validation" mermaidId="n:J" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Industry Collaboration &amp; Validation" id="yVjJXgIILAg_Cf4bvZ7F-11">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-1" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="311" x="736" y="352" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Skill Development &amp; Career Readiness" mermaidId="n:K" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Skill Development &amp; Career Readiness" id="yVjJXgIILAg_Cf4bvZ7F-12">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-1" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="332" x="1097" y="352" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Local Ventures &amp; Opportunities" mermaidId="n:L" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Local Ventures &amp; Opportunities" id="yVjJXgIILAg_Cf4bvZ7F-13">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-1" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="284" x="1479" y="352" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Community Impact &amp; Employment Generation" mermaidId="n:M" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Community Impact &amp; Employment Generation" id="yVjJXgIILAg_Cf4bvZ7F-14">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-1" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="390" x="1426" y="456" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:A-&gt;B#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="yVjJXgIILAg_Cf4bvZ7F-15">
+          <mxCell edge="1" parent="yVjJXgIILAg_Cf4bvZ7F-1" source="yVjJXgIILAg_Cf4bvZ7F-2" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="yVjJXgIILAg_Cf4bvZ7F-3">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:B-&gt;C#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0;exitY=0.67;entryX=0.5;entryY=0;" mermaidBaseValue="" id="yVjJXgIILAg_Cf4bvZ7F-16">
+          <mxCell edge="1" parent="yVjJXgIILAg_Cf4bvZ7F-1" source="yVjJXgIILAg_Cf4bvZ7F-3" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0;exitY=0.67;entryX=0.5;entryY=0;rounded=0;" target="yVjJXgIILAg_Cf4bvZ7F-4">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="206" y="223" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:B-&gt;D#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0;exitY=0.85;entryX=0.5;entryY=0;" mermaidBaseValue="" id="yVjJXgIILAg_Cf4bvZ7F-17">
+          <mxCell edge="1" parent="yVjJXgIILAg_Cf4bvZ7F-1" source="yVjJXgIILAg_Cf4bvZ7F-3" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0;exitY=0.85;entryX=0.5;entryY=0;rounded=0;" target="yVjJXgIILAg_Cf4bvZ7F-5">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="554" y="223" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:B-&gt;E#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="yVjJXgIILAg_Cf4bvZ7F-18">
+          <mxCell edge="1" parent="yVjJXgIILAg_Cf4bvZ7F-1" source="yVjJXgIILAg_Cf4bvZ7F-3" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="yVjJXgIILAg_Cf4bvZ7F-6">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:B-&gt;F#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.81;entryX=0.5;entryY=0;" mermaidBaseValue="" id="yVjJXgIILAg_Cf4bvZ7F-19">
+          <mxCell edge="1" parent="yVjJXgIILAg_Cf4bvZ7F-1" source="yVjJXgIILAg_Cf4bvZ7F-3" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.81;entryX=0.5;entryY=0;rounded=0;" target="yVjJXgIILAg_Cf4bvZ7F-7">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1263" y="223" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:B-&gt;G#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.67;entryX=0.5;entryY=0;" mermaidBaseValue="" id="yVjJXgIILAg_Cf4bvZ7F-20">
+          <mxCell edge="1" parent="yVjJXgIILAg_Cf4bvZ7F-1" source="yVjJXgIILAg_Cf4bvZ7F-3" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.67;entryX=0.5;entryY=0;rounded=0;" target="yVjJXgIILAg_Cf4bvZ7F-8">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1621" y="223" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:C-&gt;H#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="yVjJXgIILAg_Cf4bvZ7F-21">
+          <mxCell edge="1" parent="yVjJXgIILAg_Cf4bvZ7F-1" source="yVjJXgIILAg_Cf4bvZ7F-4" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="yVjJXgIILAg_Cf4bvZ7F-9">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:D-&gt;I#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="yVjJXgIILAg_Cf4bvZ7F-22">
+          <mxCell edge="1" parent="yVjJXgIILAg_Cf4bvZ7F-1" source="yVjJXgIILAg_Cf4bvZ7F-5" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="yVjJXgIILAg_Cf4bvZ7F-10">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:E-&gt;J#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="yVjJXgIILAg_Cf4bvZ7F-23">
+          <mxCell edge="1" parent="yVjJXgIILAg_Cf4bvZ7F-1" source="yVjJXgIILAg_Cf4bvZ7F-6" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="yVjJXgIILAg_Cf4bvZ7F-11">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:F-&gt;K#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="yVjJXgIILAg_Cf4bvZ7F-24">
+          <mxCell edge="1" parent="yVjJXgIILAg_Cf4bvZ7F-1" source="yVjJXgIILAg_Cf4bvZ7F-7" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="yVjJXgIILAg_Cf4bvZ7F-12">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:G-&gt;L#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="yVjJXgIILAg_Cf4bvZ7F-25">
+          <mxCell edge="1" parent="yVjJXgIILAg_Cf4bvZ7F-1" source="yVjJXgIILAg_Cf4bvZ7F-8" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="yVjJXgIILAg_Cf4bvZ7F-13">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:L-&gt;M#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="yVjJXgIILAg_Cf4bvZ7F-26">
+          <mxCell edge="1" parent="yVjJXgIILAg_Cf4bvZ7F-1" source="yVjJXgIILAg_Cf4bvZ7F-13" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="yVjJXgIILAg_Cf4bvZ7F-14">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidData="{&#xa;  &quot;data&quot;: &quot;flowchart TD\n    A[Innovat Bharat Pilot Programs] --&gt; B[3 Colleges Engaged]\n    B --&gt; C[150+ Students Participating]\n    C --&gt; D[Startup Sprints &amp; Mentorship Cycles]\n    D --&gt; E[Prototypes &amp; Local Ventures Created]\n    E --&gt; F[Internships &amp; Skill Development]\n    F --&gt; G[Community Impact &amp; Employment Opportunities]\n    G --&gt; H[Scalable Model for Rural Innovation]\n&quot;,&#xa;  &quot;config&quot;: null&#xa;}" id="yVjJXgIILAg_Cf4bvZ7F-27">
+          <mxCell connectable="0" parent="1" style="group;transparentBounds=1;editIcon=1;lockedGroup=0;groupPadding=20;" vertex="1">
+            <mxGeometry as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Innovat Bharat Pilot Programs" mermaidId="n:A" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Innovat Bharat Pilot Programs" id="yVjJXgIILAg_Cf4bvZ7F-28">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-27" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="270" x="104" y="570" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="3 Colleges Engaged" mermaidId="n:B" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="3 Colleges Engaged" id="yVjJXgIILAg_Cf4bvZ7F-29">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-27" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="192" x="143" y="674" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="150+ Students Participating" mermaidId="n:C" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="150+ Students Participating" id="yVjJXgIILAg_Cf4bvZ7F-30">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-27" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="252" x="113" y="778" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Startup Sprints &amp; Mentorship Cycles" mermaidId="n:D" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Startup Sprints &amp; Mentorship Cycles" id="yVjJXgIILAg_Cf4bvZ7F-31">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-27" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="307" x="86" y="882" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Prototypes &amp; Local Ventures Created" mermaidId="n:E" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Prototypes &amp; Local Ventures Created" id="yVjJXgIILAg_Cf4bvZ7F-32">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-27" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="314" x="82" y="986" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Internships &amp; Skill Development" mermaidId="n:F" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Internships &amp; Skill Development" id="yVjJXgIILAg_Cf4bvZ7F-33">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-27" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="281" x="99" y="1090" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Community Impact &amp; Employment Opportunities" mermaidId="n:G" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Community Impact &amp; Employment Opportunities" id="yVjJXgIILAg_Cf4bvZ7F-34">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-27" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="398" x="40" y="1194" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Scalable Model for Rural Innovation" mermaidId="n:H" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Scalable Model for Rural Innovation" id="yVjJXgIILAg_Cf4bvZ7F-35">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-27" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="304" x="87" y="1298" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:A-&gt;B#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="yVjJXgIILAg_Cf4bvZ7F-36">
+          <mxCell edge="1" parent="yVjJXgIILAg_Cf4bvZ7F-27" source="yVjJXgIILAg_Cf4bvZ7F-28" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="yVjJXgIILAg_Cf4bvZ7F-29">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:B-&gt;C#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="yVjJXgIILAg_Cf4bvZ7F-37">
+          <mxCell edge="1" parent="yVjJXgIILAg_Cf4bvZ7F-27" source="yVjJXgIILAg_Cf4bvZ7F-29" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="yVjJXgIILAg_Cf4bvZ7F-30">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:C-&gt;D#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="yVjJXgIILAg_Cf4bvZ7F-38">
+          <mxCell edge="1" parent="yVjJXgIILAg_Cf4bvZ7F-27" source="yVjJXgIILAg_Cf4bvZ7F-30" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="yVjJXgIILAg_Cf4bvZ7F-31">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:D-&gt;E#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="yVjJXgIILAg_Cf4bvZ7F-39">
+          <mxCell edge="1" parent="yVjJXgIILAg_Cf4bvZ7F-27" source="yVjJXgIILAg_Cf4bvZ7F-31" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="yVjJXgIILAg_Cf4bvZ7F-32">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:E-&gt;F#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="yVjJXgIILAg_Cf4bvZ7F-40">
+          <mxCell edge="1" parent="yVjJXgIILAg_Cf4bvZ7F-27" source="yVjJXgIILAg_Cf4bvZ7F-32" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="yVjJXgIILAg_Cf4bvZ7F-33">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:F-&gt;G#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="yVjJXgIILAg_Cf4bvZ7F-41">
+          <mxCell edge="1" parent="yVjJXgIILAg_Cf4bvZ7F-27" source="yVjJXgIILAg_Cf4bvZ7F-33" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="yVjJXgIILAg_Cf4bvZ7F-34">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:G-&gt;H#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="yVjJXgIILAg_Cf4bvZ7F-42">
+          <mxCell edge="1" parent="yVjJXgIILAg_Cf4bvZ7F-27" source="yVjJXgIILAg_Cf4bvZ7F-34" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="yVjJXgIILAg_Cf4bvZ7F-35">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidData="{&#xa;  &quot;data&quot;: &quot;flowchart TD\n    A[Innovat Bharat Ecosystem] --&gt; B[Student Empowerment]\n    B --&gt; C[Skill Development &amp; Startup Creation]\n    C --&gt; D[Local Employment Generation]\n    D --&gt; E[Community Innovation &amp; Sustainability]\n    E --&gt; F[Regional Economic Growth]\n    F --&gt; G[National Impact — Aatmanirbhar Bharat]\n&quot;,&#xa;  &quot;config&quot;: null&#xa;}" id="yVjJXgIILAg_Cf4bvZ7F-43">
+          <mxCell connectable="0" parent="1" style="group;transparentBounds=1;editIcon=1;lockedGroup=0;groupPadding=20;" vertex="1">
+            <mxGeometry as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Innovat Bharat Ecosystem" mermaidId="n:A" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Innovat Bharat Ecosystem" id="yVjJXgIILAg_Cf4bvZ7F-44">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-43" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="242" x="640" y="610" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Student Empowerment" mermaidId="n:B" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Student Empowerment" id="yVjJXgIILAg_Cf4bvZ7F-45">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-43" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="224" x="649" y="714" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Skill Development &amp; Startup Creation" mermaidId="n:C" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Skill Development &amp; Startup Creation" id="yVjJXgIILAg_Cf4bvZ7F-46">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-43" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="329" x="597" y="818" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Local Employment Generation" mermaidId="n:D" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Local Employment Generation" id="yVjJXgIILAg_Cf4bvZ7F-47">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-43" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="276" x="623" y="922" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Community Innovation &amp; Sustainability" mermaidId="n:E" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Community Innovation &amp; Sustainability" id="yVjJXgIILAg_Cf4bvZ7F-48">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-43" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="338" x="592" y="1026" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Regional Economic Growth" mermaidId="n:F" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Regional Economic Growth" id="yVjJXgIILAg_Cf4bvZ7F-49">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-43" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="251" x="636" y="1130" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="National Impact — Aatmanirbhar Bharat" mermaidId="n:G" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="National Impact — Aatmanirbhar Bharat" id="yVjJXgIILAg_Cf4bvZ7F-50">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-43" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="342" x="590" y="1234" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:A-&gt;B#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="yVjJXgIILAg_Cf4bvZ7F-51">
+          <mxCell edge="1" parent="yVjJXgIILAg_Cf4bvZ7F-43" source="yVjJXgIILAg_Cf4bvZ7F-44" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="yVjJXgIILAg_Cf4bvZ7F-45">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:B-&gt;C#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="yVjJXgIILAg_Cf4bvZ7F-52">
+          <mxCell edge="1" parent="yVjJXgIILAg_Cf4bvZ7F-43" source="yVjJXgIILAg_Cf4bvZ7F-45" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="yVjJXgIILAg_Cf4bvZ7F-46">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:C-&gt;D#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="yVjJXgIILAg_Cf4bvZ7F-53">
+          <mxCell edge="1" parent="yVjJXgIILAg_Cf4bvZ7F-43" source="yVjJXgIILAg_Cf4bvZ7F-46" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="yVjJXgIILAg_Cf4bvZ7F-47">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:D-&gt;E#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="yVjJXgIILAg_Cf4bvZ7F-54">
+          <mxCell edge="1" parent="yVjJXgIILAg_Cf4bvZ7F-43" source="yVjJXgIILAg_Cf4bvZ7F-47" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="yVjJXgIILAg_Cf4bvZ7F-48">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:E-&gt;F#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="yVjJXgIILAg_Cf4bvZ7F-55">
+          <mxCell edge="1" parent="yVjJXgIILAg_Cf4bvZ7F-43" source="yVjJXgIILAg_Cf4bvZ7F-48" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="yVjJXgIILAg_Cf4bvZ7F-49">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:F-&gt;G#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="yVjJXgIILAg_Cf4bvZ7F-56">
+          <mxCell edge="1" parent="yVjJXgIILAg_Cf4bvZ7F-43" source="yVjJXgIILAg_Cf4bvZ7F-49" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="yVjJXgIILAg_Cf4bvZ7F-50">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidData="{&#xa;  &quot;data&quot;: &quot;timeline\n    title Innovat Bharat Roadmap (2026 – 2031)\n    section Pilot Phase (Year 1)\n      Launch in 6 colleges across Karnataka, Telangana &amp; Andhra Pradesh : Mentorship + Startup Sprint + Prototype Labs\n    section Expansion Phase (Years 2–3)\n      Establish regional innovation clusters in 10 Tier‑3 cities : Faculty training + Local incubation partnerships\n    section Scale Phase (Years 3–4)\n      Integrate digital marketplaces and funding channels : CSR tie‑ups + state innovation missions\n    section Impact Phase (Year 5)\n      1000+ student ventures launched : Community employment + regional economic growth\n&quot;,&#xa;  &quot;config&quot;: null&#xa;}" id="yVjJXgIILAg_Cf4bvZ7F-57">
+          <mxCell connectable="0" parent="1" style="group;transparentBounds=1;editIcon=1;lockedGroup=0;groupPadding=20;" vertex="1">
+            <mxGeometry as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="n:task:0" mermaidBaseStyle="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#8686ff;strokeColor=none;" mermaidBaseValue="" id="yVjJXgIILAg_Cf4bvZ7F-58">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-57" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#8686ff;strokeColor=none;" vertex="1">
+            <mxGeometry height="121" width="190" x="1065" y="1057" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="yVjJXgIILAg_Cf4bvZ7F-59" parent="yVjJXgIILAg_Cf4bvZ7F-57" style="rounded=0;fillColor=#ffffb9;strokeColor=none;html=1;" value="" vertex="1">
+          <mxGeometry height="3" width="190" x="1065" y="1178" as="geometry" />
+        </mxCell>
+        <mxCell id="yVjJXgIILAg_Cf4bvZ7F-60" parent="yVjJXgIILAg_Cf4bvZ7F-57" style="text;html=1;strokeColor=none;fillColor=none;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;fontColor=#ffffff;align=center;verticalAlign=top;whiteSpace=wrap;spacingLeft=20;spacingRight=20;spacingTop=10;" value="Launch in 6 colleges across Karnataka, Telangana &amp;amp; Andhra Pradesh" vertex="1">
+          <mxGeometry height="121" width="190" x="1065" y="1057" as="geometry" />
+        </mxCell>
+        <UserObject label="" mermaidId="n:task:1" mermaidBaseStyle="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffff78;strokeColor=none;" mermaidBaseValue="" id="yVjJXgIILAg_Cf4bvZ7F-61">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-57" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffff78;strokeColor=none;" vertex="1">
+            <mxGeometry height="121" width="190" x="1265" y="1057" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="yVjJXgIILAg_Cf4bvZ7F-62" parent="yVjJXgIILAg_Cf4bvZ7F-57" style="rounded=0;fillColor=#ababff;strokeColor=none;html=1;" value="" vertex="1">
+          <mxGeometry height="3" width="190" x="1265" y="1178" as="geometry" />
+        </mxCell>
+        <mxCell id="yVjJXgIILAg_Cf4bvZ7F-63" parent="yVjJXgIILAg_Cf4bvZ7F-57" style="text;html=1;strokeColor=none;fillColor=none;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;fontColor=#333333;align=center;verticalAlign=top;whiteSpace=wrap;spacingLeft=20;spacingRight=20;spacingTop=10;" value="Establish regional innovation clusters in 10 Tier‑3 cities" vertex="1">
+          <mxGeometry height="121" width="190" x="1265" y="1057" as="geometry" />
+        </mxCell>
+        <UserObject label="" mermaidId="n:task:2" mermaidBaseStyle="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d7ff86;strokeColor=none;" mermaidBaseValue="" id="yVjJXgIILAg_Cf4bvZ7F-64">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-57" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d7ff86;strokeColor=none;" vertex="1">
+            <mxGeometry height="121" width="190" x="1465" y="1057" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="yVjJXgIILAg_Cf4bvZ7F-65" parent="yVjJXgIILAg_Cf4bvZ7F-57" style="rounded=0;fillColor=#d0b9ff;strokeColor=none;html=1;" value="" vertex="1">
+          <mxGeometry height="3" width="190" x="1465" y="1178" as="geometry" />
+        </mxCell>
+        <mxCell id="yVjJXgIILAg_Cf4bvZ7F-66" parent="yVjJXgIILAg_Cf4bvZ7F-57" style="text;html=1;strokeColor=none;fillColor=none;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;fontColor=#333333;align=center;verticalAlign=top;whiteSpace=wrap;spacingLeft=20;spacingRight=20;spacingTop=10;" value="Integrate digital marketplaces and funding channels" vertex="1">
+          <mxGeometry height="121" width="190" x="1465" y="1057" as="geometry" />
+        </mxCell>
+        <UserObject label="" mermaidId="n:task:3" mermaidBaseStyle="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#c286ff;strokeColor=none;" mermaidBaseValue="" id="yVjJXgIILAg_Cf4bvZ7F-67">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-57" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#c286ff;strokeColor=none;" vertex="1">
+            <mxGeometry height="121" width="190" x="1665" y="1057" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="yVjJXgIILAg_Cf4bvZ7F-68" parent="yVjJXgIILAg_Cf4bvZ7F-57" style="rounded=0;fillColor=#dcffb9;strokeColor=none;html=1;" value="" vertex="1">
+          <mxGeometry height="3" width="190" x="1665" y="1178" as="geometry" />
+        </mxCell>
+        <mxCell id="yVjJXgIILAg_Cf4bvZ7F-69" parent="yVjJXgIILAg_Cf4bvZ7F-57" style="text;html=1;strokeColor=none;fillColor=none;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;fontColor=#ffffff;align=center;verticalAlign=top;whiteSpace=wrap;spacingLeft=20;spacingRight=20;spacingTop=10;" value="1000+ student ventures launched" vertex="1">
+          <mxGeometry height="121" width="190" x="1665" y="1057" as="geometry" />
+        </mxCell>
+        <mxCell id="yVjJXgIILAg_Cf4bvZ7F-70" edge="1" parent="yVjJXgIILAg_Cf4bvZ7F-57" style="endArrow=blockThin;html=1;strokeColor=#000000;strokeWidth=2;dashed=1;dashPattern=5 5;fixDash=1;fontSize=12;rounded=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1160" y="1178" as="sourcePoint" />
+            <mxPoint x="1160" y="1415" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yVjJXgIILAg_Cf4bvZ7F-71" edge="1" parent="yVjJXgIILAg_Cf4bvZ7F-57" style="endArrow=blockThin;html=1;strokeColor=#000000;strokeWidth=2;dashed=1;dashPattern=5 5;fixDash=1;fontSize=12;rounded=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1360" y="1178" as="sourcePoint" />
+            <mxPoint x="1360" y="1415" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yVjJXgIILAg_Cf4bvZ7F-72" edge="1" parent="yVjJXgIILAg_Cf4bvZ7F-57" style="endArrow=blockThin;html=1;strokeColor=#000000;strokeWidth=2;dashed=1;dashPattern=5 5;fixDash=1;fontSize=12;rounded=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1560" y="1178" as="sourcePoint" />
+            <mxPoint x="1560" y="1415" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yVjJXgIILAg_Cf4bvZ7F-73" edge="1" parent="yVjJXgIILAg_Cf4bvZ7F-57" style="endArrow=blockThin;html=1;strokeColor=#000000;strokeWidth=2;dashed=1;dashPattern=5 5;fixDash=1;fontSize=12;rounded=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1760" y="1178" as="sourcePoint" />
+            <mxPoint x="1760" y="1415" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="" mermaidId="n:event:0:0" mermaidBaseStyle="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#a1a1ff;strokeColor=none;" mermaidBaseValue="" id="yVjJXgIILAg_Cf4bvZ7F-74">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-57" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#a1a1ff;strokeColor=none;" vertex="1">
+            <mxGeometry height="83" width="190" x="1065" y="1257" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="yVjJXgIILAg_Cf4bvZ7F-75" parent="yVjJXgIILAg_Cf4bvZ7F-57" style="rounded=0;fillColor=#ffffde;strokeColor=none;html=1;" value="" vertex="1">
+          <mxGeometry height="3" width="190" x="1065" y="1340" as="geometry" />
+        </mxCell>
+        <mxCell id="yVjJXgIILAg_Cf4bvZ7F-76" parent="yVjJXgIILAg_Cf4bvZ7F-57" style="text;html=1;strokeColor=none;fillColor=none;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;fontColor=#ffffff;align=center;verticalAlign=middle;whiteSpace=wrap;spacingLeft=20;spacingRight=20;" value="Mentorship + Startup Sprint + Prototype Labs" vertex="1">
+          <mxGeometry height="83" width="190" x="1065" y="1257" as="geometry" />
+        </mxCell>
+        <UserObject label="" mermaidId="n:event:1:0" mermaidBaseStyle="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffff90;strokeColor=none;" mermaidBaseValue="" id="yVjJXgIILAg_Cf4bvZ7F-77">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-57" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffff90;strokeColor=none;" vertex="1">
+            <mxGeometry height="83" width="190" x="1265" y="1257" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="yVjJXgIILAg_Cf4bvZ7F-78" parent="yVjJXgIILAg_Cf4bvZ7F-57" style="rounded=0;fillColor=#cdcdff;strokeColor=none;html=1;" value="" vertex="1">
+          <mxGeometry height="3" width="190" x="1265" y="1340" as="geometry" />
+        </mxCell>
+        <mxCell id="yVjJXgIILAg_Cf4bvZ7F-79" parent="yVjJXgIILAg_Cf4bvZ7F-57" style="text;html=1;strokeColor=none;fillColor=none;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;fontColor=#333333;align=center;verticalAlign=middle;whiteSpace=wrap;spacingLeft=20;spacingRight=20;" value="Faculty training + Local incubation partnerships" vertex="1">
+          <mxGeometry height="83" width="190" x="1265" y="1257" as="geometry" />
+        </mxCell>
+        <UserObject label="" mermaidId="n:event:2:0" mermaidBaseStyle="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffffa1;strokeColor=none;" mermaidBaseValue="" id="yVjJXgIILAg_Cf4bvZ7F-80">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-57" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffffa1;strokeColor=none;" vertex="1">
+            <mxGeometry height="65" width="190" x="1465" y="1257" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="yVjJXgIILAg_Cf4bvZ7F-81" parent="yVjJXgIILAg_Cf4bvZ7F-57" style="rounded=0;fillColor=#fadeff;strokeColor=none;html=1;" value="" vertex="1">
+          <mxGeometry height="3" width="190" x="1465" y="1323" as="geometry" />
+        </mxCell>
+        <mxCell id="yVjJXgIILAg_Cf4bvZ7F-82" parent="yVjJXgIILAg_Cf4bvZ7F-57" style="text;html=1;strokeColor=none;fillColor=none;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;fontColor=#333333;align=center;verticalAlign=middle;whiteSpace=wrap;spacingLeft=20;spacingRight=20;" value="CSR tie‑ups + state innovation missions" vertex="1">
+          <mxGeometry height="65" width="190" x="1465" y="1257" as="geometry" />
+        </mxCell>
+        <UserObject label="" mermaidId="n:event:3:0" mermaidBaseStyle="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#e9a1ff;strokeColor=none;" mermaidBaseValue="" id="yVjJXgIILAg_Cf4bvZ7F-83">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-57" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#e9a1ff;strokeColor=none;" vertex="1">
+            <mxGeometry height="101" width="190" x="1665" y="1257" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="yVjJXgIILAg_Cf4bvZ7F-84" parent="yVjJXgIILAg_Cf4bvZ7F-57" style="rounded=0;fillColor=#ffffde;strokeColor=none;html=1;" value="" vertex="1">
+          <mxGeometry height="3" width="190" x="1665" y="1358" as="geometry" />
+        </mxCell>
+        <mxCell id="yVjJXgIILAg_Cf4bvZ7F-85" parent="yVjJXgIILAg_Cf4bvZ7F-57" style="text;html=1;strokeColor=none;fillColor=none;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;fontColor=#ffffff;align=center;verticalAlign=middle;whiteSpace=wrap;spacingLeft=20;spacingRight=20;" value="Community employment + regional economic growth" vertex="1">
+          <mxGeometry height="101" width="190" x="1665" y="1257" as="geometry" />
+        </mxCell>
+        <UserObject label="" mermaidId="n:section:0" mermaidBaseStyle="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#8686ff;strokeColor=none;" mermaidBaseValue="" id="yVjJXgIILAg_Cf4bvZ7F-86">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-57" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#8686ff;strokeColor=none;" vertex="1">
+            <mxGeometry height="85" width="190" x="1065" y="922" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="yVjJXgIILAg_Cf4bvZ7F-87" parent="yVjJXgIILAg_Cf4bvZ7F-57" style="rounded=0;fillColor=#ffffb9;strokeColor=none;html=1;" value="" vertex="1">
+          <mxGeometry height="3" width="190" x="1065" y="1007" as="geometry" />
+        </mxCell>
+        <mxCell id="yVjJXgIILAg_Cf4bvZ7F-88" parent="yVjJXgIILAg_Cf4bvZ7F-57" style="text;html=1;strokeColor=none;fillColor=none;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;fontColor=#ffffff;align=center;verticalAlign=top;whiteSpace=wrap;spacingLeft=20;spacingRight=20;spacingTop=10;" value="Pilot Phase (Year 1)" vertex="1">
+          <mxGeometry height="85" width="190" x="1065" y="922" as="geometry" />
+        </mxCell>
+        <UserObject label="" mermaidId="n:section:1" mermaidBaseStyle="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffff78;strokeColor=none;" mermaidBaseValue="" id="yVjJXgIILAg_Cf4bvZ7F-89">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-57" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffff78;strokeColor=none;" vertex="1">
+            <mxGeometry height="85" width="190" x="1265" y="922" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="yVjJXgIILAg_Cf4bvZ7F-90" parent="yVjJXgIILAg_Cf4bvZ7F-57" style="rounded=0;fillColor=#ababff;strokeColor=none;html=1;" value="" vertex="1">
+          <mxGeometry height="3" width="190" x="1265" y="1007" as="geometry" />
+        </mxCell>
+        <mxCell id="yVjJXgIILAg_Cf4bvZ7F-91" parent="yVjJXgIILAg_Cf4bvZ7F-57" style="text;html=1;strokeColor=none;fillColor=none;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;fontColor=#333333;align=center;verticalAlign=top;whiteSpace=wrap;spacingLeft=20;spacingRight=20;spacingTop=10;" value="Expansion Phase (Years 2–3)" vertex="1">
+          <mxGeometry height="85" width="190" x="1265" y="922" as="geometry" />
+        </mxCell>
+        <UserObject label="" mermaidId="n:section:2" mermaidBaseStyle="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d7ff86;strokeColor=none;" mermaidBaseValue="" id="yVjJXgIILAg_Cf4bvZ7F-92">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-57" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d7ff86;strokeColor=none;" vertex="1">
+            <mxGeometry height="85" width="190" x="1465" y="922" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="yVjJXgIILAg_Cf4bvZ7F-93" parent="yVjJXgIILAg_Cf4bvZ7F-57" style="rounded=0;fillColor=#d0b9ff;strokeColor=none;html=1;" value="" vertex="1">
+          <mxGeometry height="3" width="190" x="1465" y="1007" as="geometry" />
+        </mxCell>
+        <mxCell id="yVjJXgIILAg_Cf4bvZ7F-94" parent="yVjJXgIILAg_Cf4bvZ7F-57" style="text;html=1;strokeColor=none;fillColor=none;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;fontColor=#333333;align=center;verticalAlign=top;whiteSpace=wrap;spacingLeft=20;spacingRight=20;spacingTop=10;" value="Scale Phase (Years 3–4)" vertex="1">
+          <mxGeometry height="85" width="190" x="1465" y="922" as="geometry" />
+        </mxCell>
+        <UserObject label="" mermaidId="n:section:3" mermaidBaseStyle="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#c286ff;strokeColor=none;" mermaidBaseValue="" id="yVjJXgIILAg_Cf4bvZ7F-95">
+          <mxCell parent="yVjJXgIILAg_Cf4bvZ7F-57" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#c286ff;strokeColor=none;" vertex="1">
+            <mxGeometry height="85" width="190" x="1665" y="922" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="yVjJXgIILAg_Cf4bvZ7F-96" parent="yVjJXgIILAg_Cf4bvZ7F-57" style="rounded=0;fillColor=#dcffb9;strokeColor=none;html=1;" value="" vertex="1">
+          <mxGeometry height="3" width="190" x="1665" y="1007" as="geometry" />
+        </mxCell>
+        <mxCell id="yVjJXgIILAg_Cf4bvZ7F-97" parent="yVjJXgIILAg_Cf4bvZ7F-57" style="text;html=1;strokeColor=none;fillColor=none;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;fontColor=#ffffff;align=center;verticalAlign=top;whiteSpace=wrap;spacingLeft=20;spacingRight=20;spacingTop=10;" value="Impact Phase (Year 5)" vertex="1">
+          <mxGeometry height="85" width="190" x="1665" y="922" as="geometry" />
+        </mxCell>
+        <mxCell id="yVjJXgIILAg_Cf4bvZ7F-98" edge="1" parent="yVjJXgIILAg_Cf4bvZ7F-57" style="endArrow=blockThin;html=1;strokeColor=#000000;strokeWidth=4;exitX=0;exitY=0;entryX=1;entryY=1;fontSize=12;rounded=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1015" y="1228" as="sourcePoint" />
+            <mxPoint x="2105" y="1228" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yVjJXgIILAg_Cf4bvZ7F-99" parent="yVjJXgIILAg_Cf4bvZ7F-57" style="text;html=1;strokeColor=none;fillColor=none;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=34;fontStyle=1;fontColor=#333333;align=left;verticalAlign=middle;spacingLeft=0;" value="Innovat Bharat Roadmap (2026 – 2031)" vertex="1">
+          <mxGeometry height="40" width="688" x="1110" y="860" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

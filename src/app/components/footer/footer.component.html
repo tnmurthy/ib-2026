@@ -1,0 +1,65 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Innovat Bharat</h3>
+        <p>Bridging the gap between education and industry in rural and tier 3 colleges across India.</p>
+        <div class="hashtag-brand">
+          <span style="color: #e67e22; font-weight: 700; font-size: 1.1rem; display: inline-block; margin-bottom: 1rem;">#InnovatBharat</span>
+        </div>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/company/innovatbharat/" target="_blank" aria-label="LinkedIn"><i class="social-icon">in</i></a>
+          <a href="https://www.instagram.com/innovatbharat" target="_blank" aria-label="Instagram"><i class="social-icon">ig</i></a>
+          <a href="https://www.youtube.com/channel/UCf-zolIdFukLk_vT0dpfEdA" target="_blank" aria-label="YouTube"><i class="social-icon">yt</i></a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a routerLink="/">Home</a></li>
+          <li><a routerLink="/about">About</a></li>
+
+          <li><a routerLink="/programs">Programs</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>For You</h4>
+        <ul>
+          <li><a routerLink="/for-colleges">For Colleges</a></li>
+          <li><a routerLink="/for-students-parents">For Students & Parents</a></li>
+          <li><a routerLink="/partners-mentors">Partners & Mentors</a></li>
+          <li><a routerLink="/resources">Resources</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Get in Touch</h4>
+        <ul>
+          <li><a routerLink="/contact">Contact Us</a></li>
+          <li><a href="mailto:innovatbharat@zohomail.in">innovatbharat&#64;zohomail.in</a></li>
+          <li><a href="https://wa.me/918431609806">+91 8431 609 806 (WhatsApp)</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Stay Updated</h4>
+        <p>Subscribe to our newsletter for insights on rural education and tech.</p>
+        <form class="newsletter-form" (submit)="subscribeNewsletter($event)">
+          <input type="email" name="email" [(ngModel)]="email" placeholder="Email address" required [disabled]="submitting">
+          <button type="submit" [disabled]="submitting" class="btn-subscribe">
+            {{ submitting ? 'Wait...' : 'Subscribe' }}
+          </button>
+        </form>
+        <p *ngIf="successMessage" class="feedback success">{{ successMessage }}</p>
+        <p *ngIf="errorMessage" class="feedback error">{{ errorMessage }}</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {{ currentYear }} Innovat Bharat. All rights reserved.</p>
+      <p>Building a nation through education and innovation.</p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,15 @@
+<div class="step-flow">
+  <div class="steps-grid">
+    <div class="step-item" *ngFor="let step of steps; let i = index">
+      <div class="step-visual">
+        <div class="step-circle">{{ i + 1 }}</div>
+        <div class="connector" *ngIf="showConnector && i < steps.length - 1"></div>
+      </div>
+      <div class="step-content">
+        <div class="step-icon">{{ step.icon }}</div>
+        <h3 class="step-title">{{ step.title }}</h3>
+        <p class="step-description">{{ step.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>

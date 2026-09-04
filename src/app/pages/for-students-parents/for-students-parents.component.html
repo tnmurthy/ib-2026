@@ -1,0 +1,70 @@
+<div class="for-students-parents">
+  <!-- Tabs Navigation -->
+  <app-pill-tabs [tabs]="tabs" [activeTabId]="activeTabId" (tabChange)="onTabChange($event)"></app-pill-tabs>
+
+  <div class="content-wrapper transition-fade">
+    
+    <!-- TAB 1: THE JOURNEY -->
+    <div *ngIf="activeTabId === 'journey'" class="tab-view">
+      <app-hero-block 
+        title="Your Journey to Success Starts Here" 
+        subtitle="Moving from confusion to clarity, skills, and real opportunities."
+        background="gradient"
+      ></app-hero-block>
+
+      <div class="container py-3">
+        <h2 class="section-title text-center">A Typical Student Growth Cycle</h2>
+        <app-step-flow [steps]="studentJourney"></app-step-flow>
+      </div>
+
+      <app-cta-block 
+        title="Ready to Start?" 
+        value="Join the ecosystem if your college is partnered."
+        primaryText="Connect with Coordinator"
+        variant="emphasized"
+      ></app-cta-block>
+    </div>
+
+    <!-- TAB 2: WHY JOIN? (BENEFITS) -->
+    <div *ngIf="activeTabId === 'benefits'" class="tab-view">
+      <app-hero-block 
+        title="Why Students & Parents Trust Us" 
+        subtitle="Addressing the real-world needs of families and the jobs of tomorrow."
+        align="center"
+      ></app-hero-block>
+
+      <div class="container py-3">
+        <h2 class="section-title text-center">For Students</h2>
+        <app-card-grid [cards]="studentBenefits" [columns]="3" cardStyle="accent"></app-card-grid>
+
+        <h2 class="section-title text-center mt-5">For Parents</h2>
+        <app-card-grid [cards]="parentBenefits" [columns]="3" cardStyle="default"></app-card-grid>
+      </div>
+    </div>
+
+    <!-- TAB 3: FAQS -->
+    <div *ngIf="activeTabId === 'faqs'" class="tab-view">
+      <app-hero-block 
+        title="Got Questions? We Have Answers" 
+        subtitle="Everything you need to know about joining the Innovat Bharat ecosystem."
+        align="center"
+        background="light"
+      ></app-hero-block>
+
+      <div class="container py-3">
+        <div class="faq-list">
+          <div class="faq-item" *ngFor="let faq of faqs; let i = index" [class.open]="faq.isOpen">
+            <div class="faq-question" (click)="toggleFaq(i)">
+              <h3>{{ faq.question }}</h3>
+              <span class="faq-toggle">{{ faq.isOpen ? '−' : '+' }}</span>
+            </div>
+            <div class="faq-answer" *ngIf="faq.isOpen">
+              <p>{{ faq.answer }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

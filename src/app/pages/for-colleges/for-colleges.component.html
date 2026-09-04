@@ -1,0 +1,53 @@
+<div class="for-colleges-modular">
+  <app-hero-block 
+    title="For Colleges" 
+    subtitle="Transform your college into a hub of innovation and opportunity"
+    background="gradient"
+  ></app-hero-block>
+
+  <section class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">Why Partner with Innovat Bharat?</h2>
+      <!-- Aligned in single line (4 columns) -->
+      <app-card-grid [cards]="whyPartnerCards" [columns]="4" cardStyle="accent"></app-card-grid>
+    </div>
+  </section>
+
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">Engagement Models</h2>
+      <app-step-flow [steps]="engagementSteps" [showConnector]="true"></app-step-flow>
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">Expected Outcomes</h2>
+      <app-card-grid [cards]="outcomeCards" [columns]="2" cardStyle="outline"></app-card-grid>
+    </div>
+  </section>
+
+  <!-- College List Placeholder -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">Our Partner Colleges</h2>
+      <div class="college-list-placeholder">
+        <p class="placeholder-label">College List?</p>
+        <p class="placeholder-note">This section will display our partner colleges once live.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="container" style="text-align: center;">
+      <h2 class="section-title text-center mb-5">Register Your College</h2>
+      <p style="max-width: 600px; margin: 0 auto 2rem; color: #4a5568; font-size: 1.1rem; line-height: 1.7;">
+        Ready to transform your college? Fill out our registration form and our team will reach out within 48 hours.
+      </p>
+      <a href="https://forms.gle/xXMzuv7gXTks5MvU7" target="_blank" class="btn btn-primary btn-large">
+        Register Your College →
+      </a>
+    </div>
+  </section>
+
+</div>

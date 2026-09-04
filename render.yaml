@@ -1,0 +1,40 @@
+services:
+  # ── Static Site (Angular SPA) ─────────────────────────────────────────────
+  - type: web
+    name: innovat-bharat-web
+    runtime: static
+    buildCommand: npm install && npx ng build --configuration production
+    staticPublishPath: dist/demo/browser
+    pullRequestPreviewsEnabled: false
+    routes:
+      # Send all non-file requests to index.html so Angular router works
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: DENY
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+
+  # ── API Web Service (Express + Resend) ────────────────────────────────────
+  - type: web
+    name: innovat-bharat-api
+    runtime: node
+    buildCommand: npm install
+    startCommand: node server/index.js
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: RESEND_API_KEY
+        sync: false          # set manually in Render dashboard
+      - key: IB_TEAM_EMAIL
+        sync: false          # e.g. info@innovatbharat.org
+      - key: IB_FROM_EMAIL
+        sync: false          # e.g. noreply@innovatbharat.org (must be verified in Resend)
+      - key: ALLOWED_ORIGIN
+        sync: false          # your Render static site URL, e.g. https://innovat-bharat-web.onrender.com

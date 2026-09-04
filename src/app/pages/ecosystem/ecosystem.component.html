@@ -1,0 +1,97 @@
+<div class="ecosystem">
+  <!-- Tabs Navigation -->
+  <app-pill-tabs [tabs]="tabs" [activeTabId]="activeTabId" (tabChange)="onTabChange($event)"></app-pill-tabs>
+
+  <div class="content-wrapper transition-fade">
+    
+    <!-- TAB 1: THE PROBLEM -->
+    <div *ngIf="activeTabId === 'problem'" class="tab-view">
+      <app-hero-block 
+        title="The Formal Education Gap" 
+        subtitle="Why degrees alone aren't enough in the modern industry landscape."
+        background="gradient"
+      ></app-hero-block>
+
+      <div class="container py-3">
+        <div class="problem-content-block">
+          <p>
+            Formal degrees focus on theoretical knowledge, while industries value **practical skills, problem-solving, and adaptability**. 
+            Students in tier 3 colleges often realize this gap too late—usually in their final year.
+          </p>
+          <p>
+            Meanwhile, premier institutions benefit from **ecosystems**: mentorship, startup culture, and exposure from day one. 
+            **Innovat Bharat brings that same premier ecosystem to ordinary colleges.**
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: THE SOLUTION -->
+    <div *ngIf="activeTabId === 'solution'" class="tab-view">
+      <app-hero-block 
+        title="A Parallel Campus Ecosystem" 
+        subtitle="Building mindset, skills, and entrepreneurship alongside formal education."
+        align="center"
+      ></app-hero-block>
+
+      <div class="container py-3">
+        <app-card-grid [cards]="ecosystemFeatures" [columns]="4" cardStyle="accent"></app-card-grid>
+      </div>
+
+      <div class="container py-3">
+        <h2 class="section-title text-center">What & How Students Learn</h2>
+        <div class="grid-stack">
+          <app-card-grid [cards]="learningTopics" [columns]="4" cardStyle="default"></app-card-grid>
+          <app-card-grid [cards]="learningMethods" [columns]="4" cardStyle="accent"></app-card-grid>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: LEARNING JOURNEY -->
+    <div *ngIf="activeTabId === 'journey'" class="tab-view">
+      <app-hero-block 
+        title="Structured Growth Path" 
+        subtitle="A clear roadmap from first year to professional thriving."
+        background="light"
+      ></app-hero-block>
+
+      <div class="container py-3">
+        <app-step-flow [steps]="learningJourney"></app-step-flow>
+      </div>
+
+      <app-cta-block 
+        title="Transform Your Campus" 
+        value="Discussion to deployment in weeks."
+        primaryText="Get Started"
+        variant="emphasized"
+      ></app-cta-block>
+    </div>
+
+    <!-- TAB 4: FUTURE-READY -->
+    <div *ngIf="activeTabId === 'future'" class="tab-view">
+      <app-hero-block 
+        title="Building for the AI Era" 
+        subtitle="Skills that remain valuable regardless of technological cycles."
+        align="center"
+      ></app-hero-block>
+
+      <div class="container py-3">
+        <div class="community-grid">
+          <div class="info-card">
+            <h3>Traditional Business Wisdom</h3>
+            <p>We apply principles from India's traditional business communities—mentorship and networks—to all students.</p>
+          </div>
+          <div class="info-card">
+            <h3>Adaptable Skillsets</h3>
+            <p>Focus on problem-solving, creativity, and entrepreneurship—qualities AI cannot easily replicate.</p>
+          </div>
+          <div class="info-card">
+            <h3>Collective Impact</h3>
+            <p>Students start ventures, create local jobs, and contribute to regional economic development.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

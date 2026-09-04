@@ -1,0 +1,18 @@
+<div class="amla-flow">
+  <div class="amla-container">
+    <div class="amla-item" *ngFor="let item of items; let i = index">
+      <div class="amla-circle">
+        <span class="amla-letter">{{ item.letter }}</span>
+      </div>
+      <div class="amla-info">
+        <h3 class="amla-term">{{ item.term }}</h3>
+        <p class="amla-desc">{{ item.desc }}</p>
+      </div>
+      <div class="amla-arrow" *ngIf="i < items.length - 1">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>

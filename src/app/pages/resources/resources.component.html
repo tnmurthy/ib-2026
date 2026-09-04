@@ -1,0 +1,98 @@
+<div class="resources">
+  <!-- Tabs Navigation -->
+  <app-pill-tabs [tabs]="tabs" [activeTabId]="activeTabId" (tabChange)="onTabChange($event)"></app-pill-tabs>
+
+  <div class="content-wrapper transition-fade">
+    
+    <app-hero-block 
+      title="Knowledge Hub" 
+      subtitle="Resources, Insights, and Tools for the Ecosystem"
+      background="gradient"
+    ></app-hero-block>
+
+    <div class="container py-3">
+      
+      <!-- ARTICLES -->
+      <div *ngIf="activeTabId === 'articles'" class="tab-view">
+        <div class="featured-banner">
+          <div class="badge">Featured Read</div>
+          <h2>Why Rural Colleges Need Ecosystem Thinking, Not Just Better Syllabi</h2>
+          <p>The real gap in Indian higher education isn't about curriculum—it's about environment. Premier institutions produce better outcomes because of the ecosystem around the classroom.</p>
+          <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <div class="resource-grid-modern">
+          <div class="resource-card-modern" *ngFor="let art of [
+            {t:'From Confusion to Clarity', c:'Student Journey', d:'Practical steps for first-years to build skills and direction.'},
+            {t:'Tier-3 Excellence', c:'For Colleges', d:'Why investing in ecosystems builds lasting institutional reputation.'},
+            {t:'The Jagriti Yatra Model', c:'Entrepreneurship', d:'Learning from rural India\'s grassroots entrepreneurs.'}
+          ]">
+            <div class="card-category">{{art.c}}</div>
+            <h3>{{art.t}}</h3>
+            <p>{{art.d}}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TEMPLATES -->
+      <div *ngIf="activeTabId === 'templates'" class="tab-view">
+        <div class="download-grid-compact">
+          <div class="download-item" *ngFor="let item of [
+            {t:'Self-Assessment Worksheet', i:'📋', d:'Discover strengths and initial direction.'},
+            {t:'College Intro Deck', i:'🏫', d:'One-pager for campus decision-makers.'},
+            {t:'Startup Ideation Canvas', i:'💡', d:'Guide for early-stage student teams.'},
+            {t:'Mentor Tracking sheet', i:'📊', d:'Outcome monitoring for coordinators.'}
+          ]">
+            <div class="dl-icon">{{item.i}}</div>
+            <div class="dl-info">
+              <h4>{{item.t}}</h4>
+              <p>{{item.d}}</p>
+              <button class="btn btn-outline coming-soon-btn" disabled>Request Access</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIDEOS -->
+      <div *ngIf="activeTabId === 'videos'" class="tab-view">
+        <div class="video-grid-modern">
+          <div class="video-placeholder-card" *ngFor="let vid of [
+            {t:'Founder\'s Vision Talk', d:'Mahesh Chillakuru on disrupting rural education.'},
+            {t:'Student Success Stories', d:'Real transformations sharing their journey.'},
+            {t:'Campus Walkthrough', d:'How sessions run at a partner college.'}
+          ]">
+            <div class="video-thumb">
+              <div class="play-btn">▶</div>
+              <span class="dur-tag">Coming Soon</span>
+            </div>
+            <h4>{{vid.t}}</h4>
+            <p>{{vid.d}}</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Newsletter Integration -->
+    <div class="newsletter-wrap">
+      <div class="container">
+        <div class="newsletter-box">
+          <div class="nl-text">
+            <h3>Stay Updated</h3>
+            <p>Get insights and tools directly in your inbox.</p>
+          </div>
+          <div class="nl-form" *ngIf="!newsletterSubmitted">
+            <input type="email" [(ngModel)]="newsletterEmail" placeholder="Email Address">
+            <button (click)="subscribeNewsletter()" [disabled]="newsletterLoading">
+              {{ newsletterLoading ? '...' : 'Subscribe' }}
+            </button>
+          </div>
+          <div class="nl-success" *ngIf="newsletterSubmitted">
+            Success! Check your inbox soon.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,41 @@
+.angular
+dist
+node_modules
+.env
+.env.local
+.env.*.local
+.vercel
+
+# --- added by second-brain safe-publish (2026-09-04) ---
+# secrets
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+secrets/
+# deps & build
+node_modules/
+dist/
+build/
+.next/
+out/
+.turbo/
+.cache/
+coverage/
+.venv/
+venv/
+__pycache__/
+*.pyc
+.vercel/
+# os / logs / media
+.DS_Store
+Thumbs.db
+*.log
+*.mp4
+*.mov
+*.zip
+# large capture, keep local
+*.mp4
+
